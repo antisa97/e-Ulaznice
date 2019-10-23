@@ -3,40 +3,40 @@ Projekt za Korisnička sučelja (250)
 
 ## Low Fidelity:
 
-![Slika 1](slike/low_fidelity1.jpeg)
+![LF Naslovnica](slike/low_fidelity1.jpeg)
 
-![Slika 2](slike/low_fidelity2.jpeg)
+![LF Događaji](slike/low_fidelity2.jpeg)
 
-![Slika 3](slike/low_fidelity3.jpeg)
+![LF Novosti](slike/low_fidelity3.jpeg)
 
-![Slika 4](slike/low_fidelity4.jpeg)
+![LF Izvještaji](slike/low_fidelity4.jpeg)
 
-![Slika 5](slike/low_fidelity5.jpeg)
+![LF Registracija](slike/low_fidelity5.jpeg)
 
-![Slika 6](slike/low_fidelity6.jpeg)
+![LF Novost](slike/low_fidelity6.jpeg)
 
-![Slika 7](slike/low_fidelity7.jpeg)
+![LF Kupnja](slike/low_fidelity7.jpeg)
 
-![Slika m1](slike/low_fidelity_mob1.jpeg)
+![LF Mob Naslovnica](slike/low_fidelity_mob1.jpeg)
 
-![Slika m2](slike/low_fidelity_mob2.jpeg)
+![LF Mob Događaji](slike/low_fidelity_mob2.jpeg)
 
-![Slika m3](slike/low_fidelity_mob3.jpeg)
+![LF Mob Novosti](slike/low_fidelity_mob3.jpeg)
 
-![Slika m4](slike/low_fidelity_mob4.jpeg)
+![LF Mob Izvještaji](slike/low_fidelity_mob4.jpeg)
 
-![Slika m5](slike/low_fidelity_mob5.jpeg)
+![LF Mob Registracija](slike/low_fidelity_mob5.jpeg)
 
-![Slika m6](slike/low_fidelity_mob6.jpeg)
+![LF Mob Novost](slike/low_fidelity_mob6.jpeg)
 
-![Slika m7](slike/low_fidelity_mob7.jpeg)
+![LF Mob Kupnja](slike/low_fidelity_mob7.jpeg)
 
 ## High Fidelity:
 
-![Slika h1](https://i.ibb.co/VpZV7P5/Whats-App-Image-2019-10-23-at-01-29-15-2.jpg)
+![HF Naslovnica](slike/high_fidelity1.jpeg)
 
-![Slika h2](https://i.ibb.co/qd7dJSP/Whats-App-Image-2019-10-23-at-01-29-15.jpg)
+![HF Događaji](slike/high_fidelity2.jpeg)
 
-![Slika h3](https://i.ibb.co/hsQ56XF/Whats-App-Image-2019-10-23-at-01-29-15-3.jpg)
+![HF Novosti](slike/high_fidelity3.jpeg)
 
-![Slika h4](https://i.ibb.co/LCVHFQX/Whats-App-Image-2019-10-23-at-01-29-15-1.jpg)
+![HF Registracija](slike/high_fidelity4.jpeg)

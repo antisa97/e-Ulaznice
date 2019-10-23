@@ -1,6 +1,8 @@
 # e-Ulaznice
 Projekt za Korisnička sučelja (250)
 
+## Low Fidelity:
+
 ![Slika 1](https://i.ibb.co/n3WSgvz/1.jpg)
 
 ![Slika 2](https://i.ibb.co/zn4NrKM/2.jpg)
@@ -28,3 +30,13 @@ Projekt za Korisnička sučelja (250)
 ![Slika m6](https://i.ibb.co/xhQgHC8/m6.jpg)
 
 ![Slika m7](https://i.ibb.co/vdFsJSV/m7.jpg)
+
+## High Fidelity:
+
+![Slika h1](https://i.ibb.co/VpZV7P5/Whats-App-Image-2019-10-23-at-01-29-15-2.jpg)
+
+![Slika h2](https://i.ibb.co/qd7dJSP/Whats-App-Image-2019-10-23-at-01-29-15.jpg)
+
+![Slika h3](https://i.ibb.co/hsQ56XF/Whats-App-Image-2019-10-23-at-01-29-15-3.jpg)
+
+![Slika h4](https://i.ibb.co/LCVHFQX/Whats-App-Image-2019-10-23-at-01-29-15-1.jpg)

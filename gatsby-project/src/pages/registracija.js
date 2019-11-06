@@ -4,8 +4,11 @@ import Layout from "../components/layout"
 const NaslovnicaPage = () => {
   return (
     <Layout>
-      <h1>Naslovnica</h1>
-      <p>Ovo je Naslovna stranica.</p>
+      <h1>Registracija</h1>
+      <p>
+        Ovo je stranica na kojoj će se korisnici registrirati pri prvom
+        korištenju.
+      </p>
     </Layout>
   )
 }

@@ -33,10 +33,22 @@ Projekt za Korisnička sučelja (250)
 
 ## High Fidelity:
 
-![HF Naslovnica](slike/high_fidelity1.jpeg)
+![HF Naslovnica](slike/high_fidelity2.jpeg)
 
-![HF Događaji](slike/high_fidelity2.jpeg)
+![HF Događaji](slike/high_fidelity1.jpeg)
 
 ![HF Novosti](slike/high_fidelity3.jpeg)
 
-![HF Registracija](slike/high_fidelity4.jpeg)
+![HF Izvještaj](slike/high_fidelity4.jpeg)
+
+![HF Registracija](slike/high_fidelity5.jpeg)
+
+![HF Mob Naslovnica](slike/high_fidelity_mob2.jpeg)
+
+![HF Mob Događaji](slike/high_fidelity_mob1.jpeg)
+
+![HF Mob Novosti](slike/high_fidelity_mob3.jpeg)
+
+![HF Mob Izvještaj](slike/high_fidelity_mob4.jpeg)
+
+![HF Mob Registracija](slike/high_fidelity_mob5.jpeg)

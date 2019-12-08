@@ -1,0 +1,38 @@
+body {
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --secondary-color: rgb(230, 230, 230);
+}
+
+.main-p-title {
+  font-size: larger;
+  font-weight: 600;
+}
+
+#main-container-najpopularnije {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2.5em;
+}
+
+.main-container-item-najpopularnije {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.2em;
+}
+
+.main-najpopularnije-img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-item-najpopularnije-kategorija {
+  align-self: center;
+  font-weight: 500;
+}
+
+.main-item-najpopularnije-dogadaj {
+  margin-left: 0.3em;
+}

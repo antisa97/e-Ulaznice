@@ -1,0 +1,79 @@
+.dogadaji-title {
+  font-size: larger;
+  font-weight: 600;
+}
+
+#dogadaji-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2.5em;
+}
+
+.dogadaji-container-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(202, 196, 196);
+  border-radius: 0.2em;
+  background-color: #e8e7e7;
+}
+
+.dogadaji-img {
+  width: 100%;
+  height: 100%;
+  /* padding: 0.4em; */
+}
+
+/* .dogadaji-item-dogadaj-all {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.dogadaji-item-dogadaj-all {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  padding: 0.4em;
+}
+
+.dogadaji-item-dogadaj-left {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0.4em; */
+  /* display: grid;
+  grid-template-rows: 1.5fr 1fr 1fr; */
+}
+
+.dogadaji-item-dogadaj {
+  margin: 0;
+}
+
+.dogadaji-item-dogadaj-naziv {
+  margin: 0.2em 0;
+  font-weight: 500;
+  font-size: large;
+}
+
+.dogadaji-item-dogadaj-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dogadaji-button-kupi {
+  border: none;
+  padding: 0.5em;
+  background-color: rgb(223, 49, 69);
+  color: WHITE;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.dogadaji-item-cijena {
+  margin: 0.2em;
+  align-self: center;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 1.75em 0;
+}

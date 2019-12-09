@@ -1,15 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
-
+import Img from "gatsby-image"
 import Layout from "../components/Layout/layout"
 import "../styles/index.css"
-import Img from "gatsby-image"
 
 const NaslovnicaPage = props => {
   return (
     <Layout>
       <main>
-        <p class="main-p-title">Najpopularnije</p>
+        <p class="main-title">Najpopularnije</p>
         <div id="main-container-najpopularnije">
           <div class="main-container-item-najpopularnije">
             <p class="main-item-najpopularnije-kategorija">Glazba</p>

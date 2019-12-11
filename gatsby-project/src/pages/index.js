@@ -3,11 +3,24 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/Layout/layout"
 import "../styles/index.css"
+import ImageGallery from "react-image-gallery"
+import "react-image-gallery/styles/css/image-gallery.css"
 
 const NaslovnicaPage = props => {
   return (
     <Layout>
       <main>
+        <ImageGallery
+          items={[
+            props.data.glazba.childImageSharp.fluid,
+            props.data.kazaliste.childImageSharp.fluid,
+            props.data.sport.childImageSharp.fluid,
+            props.data.ostalo.childImageSharp.fluid,
+          ]}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          showThumbnails={false}
+        />
         <p class="main-title">Najpopularnije</p>
         <div id="main-container-najpopularnije">
           <div class="main-container-item-najpopularnije">

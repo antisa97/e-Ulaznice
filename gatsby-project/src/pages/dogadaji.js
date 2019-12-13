@@ -1,16 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import Layout from "../components/Layout/layout"
+import Layout from "../components/layout"
 import "../styles/dogadaji.css"
 
 const DogadajiPage = props => {
   return (
     <Layout>
-      <p class="dogadaji-title">Događaji</p>
-      <div class="search">
-        <input type="search" class="search-box text" placeholder="Search..." />
-        <select class="select main-filter-box courses-input-row text">
+      <p className="dogadaji-title">Događaji</p>
+      <div className="search">
+        <input
+          type="search"
+          className="search-box text"
+          placeholder="Search..."
+        />
+        {/* <select className="select main-filter-box courses-input-row text">
           <option selected disabled>
             Pretraži prema...
           </option>
@@ -18,57 +22,57 @@ const DogadajiPage = props => {
           <option value="Datum">Datum</option>
           <option value="Mjesto">Mjesto</option>
           <option value="Cijena">Cijena</option>
-        </select>
+        </select> */}
       </div>
       <div id="dogadaji-container">
-        <div class="dogadaji-container-item">
+        <div className="dogadaji-container-item">
           <Img
             className="dogadaji-img"
             fluid={props.data.glazba.childImageSharp.fluid}
           />
-          <div class="dogadaji-item-dogadaj-all">
-            <div class="dogadaji-item-dogadaj-left">
-              <p class="dogadaji-item-dogadaj-naziv">Parni valjak</p>
-              <p class="dogadaji-item-dogadaj">17. 1. 2020.</p>
-              <p class="dogadaji-item-dogadaj">Pula</p>
+          <div className="dogadaji-item-dogadaj-all">
+            <div className="dogadaji-item-dogadaj-left">
+              <p className="dogadaji-item-dogadaj-naziv">Parni valjak</p>
+              <p className="dogadaji-item-dogadaj">17. 1. 2020.</p>
+              <p className="dogadaji-item-dogadaj">Pula</p>
             </div>
-            <div class="dogadaji-item-dogadaj-right">
-              <p class="dogadaji-item-cijena">120,00 kn</p>
-              <button class="dogadaji-button-kupi">KUPI</button>
+            <div className="dogadaji-item-dogadaj-right">
+              <p className="dogadaji-item-cijena">120,00 kn</p>
+              <button className="dogadaji-button-kupi">KUPI</button>
             </div>
           </div>
         </div>
-        <div class="dogadaji-container-item">
+        <div className="dogadaji-container-item">
           <Img
             className="dogadaji-img"
             fluid={props.data.sport.childImageSharp.fluid}
           />
-          <div class="dogadaji-item-dogadaj-all">
-            <div class="dogadaji-item-dogadaj-left">
-              <p class="dogadaji-item-dogadaj-naziv">Hajduk-Dinamo</p>
-              <p class="dogadaji-item-dogadaj">1. 12. 2019.</p>
-              <p class="dogadaji-item-dogadaj">Split</p>
+          <div className="dogadaji-item-dogadaj-all">
+            <div className="dogadaji-item-dogadaj-left">
+              <p className="dogadaji-item-dogadaj-naziv">Hajduk-Dinamo</p>
+              <p className="dogadaji-item-dogadaj">1. 12. 2019.</p>
+              <p className="dogadaji-item-dogadaj">Split</p>
             </div>
-            <div class="dogadaji-item-dogadaj-right">
-              <p class="dogadaji-item-cijena">100,00 kn</p>
-              <button class="dogadaji-button-kupi">KUPI</button>
+            <div className="dogadaji-item-dogadaj-right">
+              <p className="dogadaji-item-cijena">100,00 kn</p>
+              <button className="dogadaji-button-kupi">KUPI</button>
             </div>
           </div>
         </div>
-        <div class="dogadaji-container-item">
+        <div className="dogadaji-container-item">
           <Img
             className="dogadaji-img"
             fluid={props.data.ostalo.childImageSharp.fluid}
           />
-          <div class="dogadaji-item-dogadaj-all">
-            <div class="dogadaji-item-dogadaj-left">
-              <p class="dogadaji-item-dogadaj-naziv">Kralj lavova</p>
-              <p class="dogadaji-item-dogadaj">12. 2. 2020.</p>
-              <p class="dogadaji-item-dogadaj">Cinestar Split</p>
+          <div className="dogadaji-item-dogadaj-all">
+            <div className="dogadaji-item-dogadaj-left">
+              <p className="dogadaji-item-dogadaj-naziv">Kralj lavova</p>
+              <p className="dogadaji-item-dogadaj">12. 2. 2020.</p>
+              <p className="dogadaji-item-dogadaj">Cinestar Split</p>
             </div>
-            <div class="dogadaji-item-dogadaj-right">
-              <p class="dogadaji-item-cijena">30,00 kn</p>
-              <button class="dogadaji-button-kupi">KUPI</button>
+            <div className="dogadaji-item-dogadaj-right">
+              <p className="dogadaji-item-cijena">30,00 kn</p>
+              <button className="dogadaji-button-kupi">KUPI</button>
             </div>
           </div>
         </div>

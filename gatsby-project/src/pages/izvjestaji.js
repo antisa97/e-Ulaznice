@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/Layout/layout"
+import Layout from "../components/layout"
 import {
   Card,
   CardImg,
@@ -10,10 +10,10 @@ import {
   CardDeck,
   Button,
 } from "reactstrap"
-import "bootstrap/dist/css/bootstrap.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/izvjestaji.css"
 import { graphql } from "gatsby"
-import naslovna_konc from "../assets/naslovna_konc.jpg"
+import naslovna_konc from "../images/naslovna_konc.jpg"
 
 const IzvjestajiPage = props => {
   return (

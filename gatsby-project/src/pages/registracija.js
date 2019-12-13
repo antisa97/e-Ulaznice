@@ -1,16 +1,13 @@
 import React from "react"
-import Layout from "../components/Layout/layout"
+import Layout from "../components/layout"
 
-const NaslovnicaPage = () => {
+const RegistracijaPage = () => {
   return (
     <Layout>
       <h1>Registracija</h1>
-      <p>
-        Ovo je stranica na kojoj će se korisnici registrirati pri prvom
-        korištenju.
-      </p>
+      <p>Ovo je stranica na kojoj će se korisnici registrirati.</p>
     </Layout>
   )
 }
 
-export default NaslovnicaPage
+export default RegistracijaPage

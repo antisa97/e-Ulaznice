@@ -3,7 +3,7 @@ import FooterStyle from "../components/componentsStyles/footer.module.css"
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={FooterStyle.footer}>
       <p>Napravljeno u sklopu kolegija Korisnička sučelja, © 2019</p>
     </footer>
   )

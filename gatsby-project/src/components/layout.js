@@ -6,7 +6,7 @@ import LayoutStyle from "../components/componentsStyles/layout.module.css"
 
 const Layout = props => {
   return (
-    <div>
+    <div className={LayoutStyle.layout}>
       <Header />
       <Main>{props.children}</Main>
       <Footer />

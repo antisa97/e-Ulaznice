@@ -1,5 +1,13 @@
 import React, { useState } from "react"
-import { Collapse, Navbar, NavbarToggler, NavbarBrand } from "reactstrap"
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  InputGroup,
+  Input,
+  Button,
+} from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import logo from "../images/logo.png"
 import HeaderStyle from "../components/componentsStyles/header.module.css"
@@ -9,8 +17,15 @@ const Header = props => {
 
   const toggle = () => setIsOpen(!isOpen)
   return (
-    <div>
-      <Navbar color="light" light expand="md">
+    <div className={HeaderStyle.header}>
+      <Navbar
+        className={HeaderStyle.navbar}
+        fixed="top"
+        color="light"
+        light
+        expand="md"
+        width="100px"
+      >
         <NavbarBrand className={HeaderStyle.logo} href="/">
           <img
             className={HeaderStyle.logoImg}
@@ -20,28 +35,36 @@ const Header = props => {
           />
           <h1 className={HeaderStyle.logoName}>e-Ulaznice</h1>
         </NavbarBrand>
-        <div className={HeaderStyle.restnavbar}>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            <NavbarBrand className={HeaderStyle.navbarName} href="/">
-              Naslovnica
-            </NavbarBrand>
-            <NavbarBrand className={HeaderStyle.navbarName} href="/dogadaji">
-              Događaji
-            </NavbarBrand>
-            <NavbarBrand className={HeaderStyle.navbarName} href="/novosti">
-              Novosti
-            </NavbarBrand>
-            <NavbarBrand className={HeaderStyle.navbarName} href="/izvjestaji">
-              Izvještaji
-            </NavbarBrand>
-            <NavbarBrand
-              className={HeaderStyle.navbarName}
-              href="/registracija"
-            >
-              Registracija
-            </NavbarBrand>
-          </Collapse>
+        {/* <div className={HeaderStyle.restnavbar}> */}
+        {/* <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar> */}
+        <NavbarBrand className={HeaderStyle.navbarName} href="/">
+          NASLOVNICA
+        </NavbarBrand>
+        <NavbarBrand className={HeaderStyle.navbarName} href="/dogadaji">
+          DOGAĐAJI
+        </NavbarBrand>
+        <NavbarBrand className={HeaderStyle.navbarName} href="/novosti">
+          NOVOSTI
+        </NavbarBrand>
+        <NavbarBrand className={HeaderStyle.navbarName} href="/izvjestaji">
+          IZVJEŠTAJI
+        </NavbarBrand>
+        <NavbarBrand className={HeaderStyle.navbarName} href="/registracija">
+          REGISTRACIJA
+        </NavbarBrand>
+        {/* </Collapse> */}
+        {/* </div> */}
+        <div className={HeaderStyle.input}>
+          <InputGroup size="sm">
+            <Input placeholder="e-mail" />
+          </InputGroup>
+          <InputGroup size="sm">
+            <Input placeholder="lozinka" />
+          </InputGroup>
+          <Button className={HeaderStyle.button} color="primary" size="sm">
+            PRIJAVI ME
+          </Button>{" "}
         </div>
       </Navbar>
     </div>

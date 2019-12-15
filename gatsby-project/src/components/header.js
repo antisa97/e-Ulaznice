@@ -21,7 +21,7 @@ const Header = props => {
       <Navbar
         className={HeaderStyle.navbar}
         fixed="top"
-        color="light"
+        // color="light"
         light
         expand="md"
         width="100px"
@@ -38,23 +38,25 @@ const Header = props => {
         {/* <div className={HeaderStyle.restnavbar}> */}
         {/* <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar> */}
-        <NavbarBrand className={HeaderStyle.navbarName} href="/">
-          NASLOVNICA
-        </NavbarBrand>
-        <NavbarBrand className={HeaderStyle.navbarName} href="/dogadaji">
-          DOGAĐAJI
-        </NavbarBrand>
-        <NavbarBrand className={HeaderStyle.navbarName} href="/novosti">
-          NOVOSTI
-        </NavbarBrand>
-        <NavbarBrand className={HeaderStyle.navbarName} href="/izvjestaji">
-          IZVJEŠTAJI
-        </NavbarBrand>
-        <NavbarBrand className={HeaderStyle.navbarName} href="/registracija">
-          REGISTRACIJA
-        </NavbarBrand>
+        <div className={HeaderStyle.navbarNames}>
+          <NavbarBrand className={HeaderStyle.navbarName} href="/">
+            NASLOVNICA
+          </NavbarBrand>
+          <NavbarBrand className={HeaderStyle.navbarName} href="/dogadaji">
+            DOGAĐAJI
+          </NavbarBrand>
+          <NavbarBrand className={HeaderStyle.navbarName} href="/novosti">
+            NOVOSTI
+          </NavbarBrand>
+          <NavbarBrand className={HeaderStyle.navbarName} href="/izvjestaji">
+            IZVJEŠTAJI
+          </NavbarBrand>
+          <NavbarBrand className={HeaderStyle.navbarName} href="/registracija">
+            REGISTRACIJA
+          </NavbarBrand>
+        </div>
         {/* </Collapse> */}
-        {/* </div> */}
+
         <div className={HeaderStyle.input}>
           <InputGroup size="sm">
             <Input placeholder="e-mail" />
@@ -62,7 +64,7 @@ const Header = props => {
           <InputGroup size="sm">
             <Input placeholder="lozinka" />
           </InputGroup>
-          <Button className={HeaderStyle.button} color="primary" size="sm">
+          <Button className={HeaderStyle.button} color="success" size="sm">
             PRIJAVI ME
           </Button>{" "}
         </div>

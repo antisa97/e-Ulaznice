@@ -64,9 +64,12 @@ const Header = props => {
           <InputGroup size="sm">
             <Input placeholder="lozinka" />
           </InputGroup>
-          <Button className={HeaderStyle.button} color="success" size="sm">
+          <Button className={HeaderStyle.button} color="info" size="sm">
             PRIJAVI ME
           </Button>{" "}
+          {/* <Button className={HeaderStyle.button2} outline color="info">
+            PRIJAVI ME
+          </Button>{" "} */}
         </div>
       </Navbar>
     </div>

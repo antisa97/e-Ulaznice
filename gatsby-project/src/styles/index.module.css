@@ -36,3 +36,13 @@
 .main-item-najpopularnije-dogadaj {
   margin-left: 0.3em;
 } */
+
+/* .cardImage {
+  flex-shrink: 0;
+  width: 100%;
+} */
+
+.crouselImage {
+  height: 470px;
+  width: 100%;
+}

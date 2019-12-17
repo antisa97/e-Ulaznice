@@ -16,32 +16,34 @@ import {
   CardDeck,
   Button,
 } from "reactstrap"
+import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
 import NaslovnicaStyle from "../styles/index.module.css"
-import "bootstrap/dist/css/bootstrap.min.css"
-import naslovna_konc from "../images/naslovna_konc.jpg"
-
-const items = [
-  {
-    src: naslovna_konc,
-    altText: "Slide 1",
-    caption: "Slide 1",
-  },
-  {
-    src:
-      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
-    altText: "Slide 2",
-    caption: "Slide 2",
-  },
-  {
-    src:
-      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
-    altText: "Slide 3",
-    caption: "Slide 3",
-  },
-]
 
 const NaslovnicaPage = props => {
+  const items = [
+    {
+      src: props.data.ostalo.childImageSharp.fluid,
+      altText: "Slide 1",
+      caption: "Slide 1",
+    },
+    {
+      src: props.data.glazba.childImageSharp.fluid,
+      altText: "Slide 2",
+      caption: "Slide 2",
+    },
+    {
+      src: props.data.sport.childImageSharp.fluid,
+      altText: "Slide 3",
+      caption: "Slide 3",
+    },
+    {
+      src: props.data.koncert.childImageSharp.fluid,
+      altText: "Slide 4",
+      caption: "Slide 4",
+    },
+  ]
+
   const [activeIndex, setActiveIndex] = useState(0)
   const [animating, setAnimating] = useState(false)
 
@@ -69,10 +71,13 @@ const NaslovnicaPage = props => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img
-          src={item.src}
+        <Img
+          fluid={item.src}
           alt={item.altText}
-          style={{ height: "450px", width: "100%" }}
+          className={NaslovnicaStyle.crouselImage}
+          imgStyle={{
+            objectFit: "cover", //PROMIJENITI
+          }}
         />
         <CarouselCaption
           // captionText={item.caption}
@@ -85,11 +90,7 @@ const NaslovnicaPage = props => {
   return (
     <Layout>
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-        <CarouselIndicators
-          items={items}
-          activeIndex={activeIndex}
-          onClickHandler={goToIndex}
-        />
+        <CarouselIndicators items={items} />
         {slides}
         <CarouselControl
           direction="prev"
@@ -104,7 +105,11 @@ const NaslovnicaPage = props => {
       </Carousel>
       <CardDeck>
         <Card>
-          <CardImg top width="100%" src={naslovna_konc} alt="Card image cap" />
+          {/* <CardImg top width="100%" src={naslovna_konc} alt="Card image cap" /> */}
+          <Img
+            className={NaslovnicaStyle.cardImage}
+            fluid={props.data.glazba.childImageSharp.fluid}
+          />
           <CardBody>
             <CardTitle>Card title</CardTitle>
             <CardSubtitle>Card subtitle</CardSubtitle>
@@ -115,8 +120,11 @@ const NaslovnicaPage = props => {
             <Button>Button</Button>
           </CardBody>
         </Card>
-        <Card id="a">
-          <CardImg top width="100%" src={naslovna_konc} alt="Card image cap" />
+        <Card>
+          <Img
+            className={NaslovnicaStyle.cardImage}
+            fluid={props.data.sport.childImageSharp.fluid}
+          />
           <CardBody>
             <CardTitle>Card title</CardTitle>
             <CardSubtitle>Card subtitle</CardSubtitle>
@@ -127,8 +135,11 @@ const NaslovnicaPage = props => {
             <Button>Button</Button>
           </CardBody>
         </Card>
-        <Card id="a">
-          <CardImg top width="100%" src={naslovna_konc} alt="Card image cap" />
+        <Card>
+          <Img
+            className={NaslovnicaStyle.cardImage}
+            fluid={props.data.ostalo.childImageSharp.fluid}
+          />
           <CardBody>
             <CardTitle>Card title</CardTitle>
             <CardSubtitle>Card subtitle</CardSubtitle>
@@ -145,3 +156,43 @@ const NaslovnicaPage = props => {
 }
 
 export default NaslovnicaPage
+
+export const query = graphql`
+  query {
+    glazba: file(relativePath: { eq: "naslovnica_glazba.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    kazaliste: file(relativePath: { eq: "naslovnica_kazaliste.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    sport: file(relativePath: { eq: "naslovnica_sport.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    ostalo: file(relativePath: { eq: "naslovnica_ostalo.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    koncert: file(relativePath: { eq: "naslovna_konc.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`

@@ -1,6 +1,8 @@
 .main {
-  margin: 85px auto 0 auto;
-  max-width: 1000px;
+  /* box-shadow: 0 0 50px 17px rgba(225, 226, 228, 0.7); */
+  /* margin: 85px auto 0 auto; */
+  margin-top: 85px;
+  /* max-width: 1000px; */
   background-color: white;
   display: flex;
   flex-direction: column;

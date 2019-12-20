@@ -26,6 +26,7 @@ import naslovna_konc from "../images/naslovna_konc.jpg"
 import naslovnica_sport from "../images/naslovnica_sport.jpeg"
 import naslovnica_glazba from "../images/naslovnica_glazba.jpg"
 import naslovnica_ostalo from "../images/naslovnica_ostalo.jpg"
+import NovostiStyle from "../styles/novosti.module.css"
 
 const items = [
   {
@@ -84,7 +85,7 @@ const NovostiPage = props => {
           style={{ height: "450px", width: "100%" }}
         />
         <CarouselCaption
-          // captionText={item.caption}
+          captionText={item.caption}
           captionHeader={item.caption}
         />
       </CarouselItem>
@@ -93,8 +94,12 @@ const NovostiPage = props => {
 
   return (
     <Layout>
-      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-        <CarouselIndicators items={items} />
+      <Carousel next={next} previous={previous}>
+        <CarouselIndicators
+          activeIndex={activeIndex}
+          onClickHandler={true}
+          items={items}
+        />
         {slides}
         <CarouselControl
           direction="prev"

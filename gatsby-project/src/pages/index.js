@@ -19,6 +19,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
 import NaslovnicaStyle from "../styles/index.module.css"
+import naslovna_konc from "../images/naslovna_konc.jpg"
 
 const NaslovnicaPage = props => {
   const items = [
@@ -76,11 +77,11 @@ const NaslovnicaPage = props => {
           alt={item.altText}
           className={NaslovnicaStyle.crouselImage}
           imgStyle={{
-            objectFit: "cover", //PROMIJENITI
+            objectFit: "fill", //PROMIJENITI
           }}
         />
         <CarouselCaption
-          // captionText={item.caption}
+          captionText={item.caption}
           captionHeader={item.caption}
         />
       </CarouselItem>
@@ -89,68 +90,124 @@ const NaslovnicaPage = props => {
 
   return (
     <Layout>
-      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-        <CarouselIndicators items={items} />
-        {slides}
-        <CarouselControl
-          direction="prev"
-          directionText="Previous"
-          onClickHandler={previous}
-        />
-        <CarouselControl
-          direction="next"
-          directionText="Next"
-          onClickHandler={next}
-        />
-      </Carousel>
-      <CardDeck>
-        <Card>
-          {/* <CardImg top width="100%" src={naslovna_konc} alt="Card image cap" /> */}
-          <Img
-            className={NaslovnicaStyle.cardImage}
-            fluid={props.data.glazba.childImageSharp.fluid}
+      <div className={NaslovnicaStyle.divCarousel}>
+        <Carousel
+          className={NaslovnicaStyle.Carousel}
+          activeIndex={activeIndex}
+          next={next}
+          previous={previous}
+        >
+          <CarouselIndicators items={items} />
+          {slides}
+          <CarouselControl
+            direction="prev"
+            directionText="Previous"
+            onClickHandler={previous}
           />
-          <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
-            <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>
-        <Card>
-          <Img
-            className={NaslovnicaStyle.cardImage}
-            fluid={props.data.sport.childImageSharp.fluid}
+          <CarouselControl
+            direction="next"
+            directionText="Next"
+            onClickHandler={next}
           />
-          <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
-            <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>
-        <Card>
-          <Img
-            className={NaslovnicaStyle.cardImage}
-            fluid={props.data.ostalo.childImageSharp.fluid}
-          />
-          <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
-            <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>
-      </CardDeck>
+        </Carousel>
+      </div>
+      <div className={NaslovnicaStyle.divRest}>
+        <div className={NaslovnicaStyle.rest}>
+          <h2 className={NaslovnicaStyle.categoryTitle}>Kategorije</h2>
+          <div className={NaslovnicaStyle.cardContainer}>
+            {/* <Card className={NaslovnicaStyle.cards}>
+              <CardImg
+                top
+                width="100%"
+                src={naslovna_konc}
+                alt="Card image cap"
+              /> */}
+            {/* <Img
+                className={NaslovnicaStyle.cardImage}
+                fluid={props.data.glazba.childImageSharp.fluid}
+              /> */}
+            {/* <CardBody>
+                <CardTitle>hgf</CardTitle>
+                <Button>Saznaj više</Button>
+              </CardBody>
+            </Card> */}
+            {/* <Card className={NaslovnicaStyle.cards}>
+              <Img
+                className={NaslovnicaStyle.cardImage}
+                fluid={props.data.sport.childImageSharp.fluid}
+              />
+              <CardBody>
+                <CardTitle>Card title</CardTitle>
+                <Button>Saznaj više</Button>
+              </CardBody>
+            </Card> */}
+            <div className={NaslovnicaStyle.novoCards}>
+              <Img
+                className={NaslovnicaStyle.cardImage}
+                fluid={props.data.cultureIcon.childImageSharp.fluid}
+              />
+              <h4 className={NaslovnicaStyle.category}>Kultura</h4>
+              <p className={NaslovnicaStyle.categoryDescription}>
+                From showrooms to sole agents, we have all the tools you need to
+                take your
+              </p>
+              <Button
+                className={NaslovnicaStyle.categoryButton}
+                outline
+                color="info"
+              >
+                Pogledajte više
+              </Button>{" "}
+            </div>
+            <div className={NaslovnicaStyle.novoCards}>
+              <Img
+                className={NaslovnicaStyle.cardImage}
+                fluid={props.data.sportIcon.childImageSharp.fluid}
+              />
+              <h4 className={NaslovnicaStyle.category}>Sport</h4>
+              <p className={NaslovnicaStyle.categoryDescription}>
+                From showrooms to sole agents, we have all the tools you need to
+                take
+              </p>
+              <Button
+                className={NaslovnicaStyle.categoryButton}
+                outline
+                color="info"
+              >
+                Pogledajte više
+              </Button>{" "}
+            </div>
+            <div className={NaslovnicaStyle.novoCards}>
+              <Img
+                className={NaslovnicaStyle.cardImage}
+                fluid={props.data.filmIcon.childImageSharp.fluid}
+              />
+              <h4 className={NaslovnicaStyle.category}>Film</h4>
+              <p className={NaslovnicaStyle.categoryDescription}>
+                All the insights you require to get your vehicles off the
+                production line and
+              </p>
+              <Button
+                className={NaslovnicaStyle.categoryButton}
+                outline
+                color="info"
+              >
+                Pogledajte više
+              </Button>{" "}
+            </div>
+            {/* <Card className={NaslovnicaStyle.cards}>
+              <Img
+                className={NaslovnicaStyle.cardImage}
+                fluid={props.data.ostalo.childImageSharp.fluid}
+              />
+              <CardBody>
+                <CardTitle>Card title</CardTitle>
+                <Button>Saznaj više</Button>
+              </CardBody>
+            </Card> */}
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -159,7 +216,7 @@ export default NaslovnicaPage
 
 export const query = graphql`
   query {
-    glazba: file(relativePath: { eq: "naslovnica_glazba.jpg" }) {
+    glazba: file(relativePath: { eq: "slika1.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -188,6 +245,27 @@ export const query = graphql`
       }
     }
     koncert: file(relativePath: { eq: "naslovna_konc.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    cultureIcon: file(relativePath: { eq: "culture.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    sportIcon: file(relativePath: { eq: "sport.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    filmIcon: file(relativePath: { eq: "film.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

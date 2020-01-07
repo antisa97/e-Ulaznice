@@ -42,18 +42,18 @@
   align-self: center;
   padding: 0.2em;
   font-size: 2vw;
-  letter-spacing: 1.1px;
+  /* letter-spacing: 1.1px; */
 }
 
 .navbarName {
   font-size: 1.3vw;
   font-weight: 600;
-  letter-spacing: 0.8px;
+  /* letter-spacing: 0.8px; */
 }
 
 .input {
   display: grid;
-  grid-template-columns: 0.7fr 0.7fr 0.5fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
   /* display: flex;
   flex-direction: row;
@@ -61,19 +61,21 @@
 }
 
 .button {
-  width: 88px;
+  min-width: 88px;
+  max-width: 130px;
   background-color: lightseagreen;
   border: none;
 }
 
 .button2 {
-  width: 130px;
+  min-width: 88px;
+  max-width: 130px;
   padding: 0em 0.2em;
   /* border-radius: 10px; */
-  letter-spacing: 1.1px;
+  /* letter-spacing: 1.1px; */
   border-width: 1.5px;
   text-transform: uppercase;
-  font-weight: 500;
+  /* font-weight: 500; */
   line-height: 1;
   border-radius: 25px;
   /* padding-top: 18px; */
@@ -91,3 +93,9 @@
 /* .button:hover {
   background-color: lightseagreen;
 } */
+
+.mail,
+.lozinka {
+  min-width: 80px;
+  max-width: 130px;
+}

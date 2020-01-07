@@ -58,10 +58,10 @@ const Header = props => {
       {/* </Collapse> */}
 
       <div className={HeaderStyle.input}>
-        <InputGroup size="sm">
+        <InputGroup className={HeaderStyle.mail} size="sm">
           <Input placeholder="e-mail" />
         </InputGroup>
-        <InputGroup size="sm">
+        <InputGroup className={HeaderStyle.lozinka} size="sm">
           <Input placeholder="lozinka" />
         </InputGroup>
         {/* <Button className={HeaderStyle.button} color="info" size="sm">

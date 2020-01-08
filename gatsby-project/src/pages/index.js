@@ -146,7 +146,12 @@ const NaslovnicaPage = props => {
                 className={NaslovnicaStyle.cardImage}
                 fluid={props.data.cultureIcon.childImageSharp.fluid}
               />
-              <h4 className={NaslovnicaStyle.category}>Kultura</h4>
+              <h4
+                className={NaslovnicaStyle.category}
+                id={NaslovnicaStyle.kultura}
+              >
+                Kultura
+              </h4>
               <p className={NaslovnicaStyle.categoryDescription}>
                 From showrooms to sole agents, we have all the tools you need to
                 take your
@@ -154,7 +159,7 @@ const NaslovnicaPage = props => {
               <Button
                 className={NaslovnicaStyle.categoryButton}
                 outline
-                color="info"
+                color="success"
               >
                 Pogledajte više
               </Button>{" "}
@@ -164,7 +169,12 @@ const NaslovnicaPage = props => {
                 className={NaslovnicaStyle.cardImage}
                 fluid={props.data.sportIcon.childImageSharp.fluid}
               />
-              <h4 className={NaslovnicaStyle.category}>Sport</h4>
+              <h4
+                className={NaslovnicaStyle.category}
+                id={NaslovnicaStyle.sport}
+              >
+                Sport
+              </h4>
               <p className={NaslovnicaStyle.categoryDescription}>
                 From showrooms to sole agents, we have all the tools you need to
                 take
@@ -172,7 +182,7 @@ const NaslovnicaPage = props => {
               <Button
                 className={NaslovnicaStyle.categoryButton}
                 outline
-                color="info"
+                color="primary"
               >
                 Pogledajte više
               </Button>{" "}
@@ -182,7 +192,12 @@ const NaslovnicaPage = props => {
                 className={NaslovnicaStyle.cardImage}
                 fluid={props.data.filmIcon.childImageSharp.fluid}
               />
-              <h4 className={NaslovnicaStyle.category}>Film</h4>
+              <h4
+                className={NaslovnicaStyle.category}
+                id={NaslovnicaStyle.film}
+              >
+                Film
+              </h4>
               <p className={NaslovnicaStyle.categoryDescription}>
                 All the insights you require to get your vehicles off the
                 production line and
@@ -190,7 +205,7 @@ const NaslovnicaPage = props => {
               <Button
                 className={NaslovnicaStyle.categoryButton}
                 outline
-                color="info"
+                color="danger"
               >
                 Pogledajte više
               </Button>{" "}

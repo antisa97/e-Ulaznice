@@ -7,8 +7,10 @@
   height: 85px;
   display: flex;
   justify-content: space-around;
-  background-color: #f7f7f9;
-  box-shadow: 0 0 50px 17px rgba(225, 226, 228, 0.7);
+  /* background-color: #f7f7f9; */
+  /* box-shadow: 0 0 50px 17px rgba(225, 226, 228, 0.7); */
+  background-color: #EEF6FA;
+  box-shadow: 0 0 50px 17px #E7F3F9;
   /* background-color: #f1f0f6; */
   /* border-bottom: 1px solid #ced4da; */
 }
@@ -43,6 +45,9 @@
   padding: 0.2em;
   font-size: 2vw;
   /* letter-spacing: 1.1px; */
+  color: #ffff33;
+  text-shadow: -1px 0 lightgrey, 0 1px lightgrey, 1px 0 lightgrey,
+    0 -1px lightgrey;
 }
 
 .navbarName {

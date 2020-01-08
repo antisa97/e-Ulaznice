@@ -83,7 +83,7 @@
 }
 
 .cardImage {
-  width: 80%;
+  width: 50%;
   height: 80%;
   object-fit: fill;
 }
@@ -139,4 +139,15 @@
   padding-left: 32px;
   font-size: 0.93em;
   margin-top: 1em;
+}
+
+#kultura {
+  color: #3d8c32;
+}
+
+#sport {
+  color: rgba(0, 123, 255, 0.72);
+}
+#film {
+  color: #8e1a1a;
 }

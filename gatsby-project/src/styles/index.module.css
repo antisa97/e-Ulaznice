@@ -51,7 +51,8 @@
   /* box-shadow: 0 0 200px 7px rgba(225, 226, 228, 0.7); */
   box-shadow: 0 0 50px 17px rgba(225, 226, 228, 0.7);
   z-index: 1;
-  background-color: #f7f7f9;
+  /* background-color: #f7f7f9; */
+  background-color: #eef6fa;
 }
 
 .crouselImage {
@@ -61,7 +62,9 @@
 
 .divRest {
   /* background-color: #86b2e3; */
-  background-color: lightpink;
+  /* background-color: lightpink; */
+  /* background-color: #ffc5c5; */
+  background-color: #ffff33;
 }
 .rest {
   padding: 2em 0em;
@@ -108,7 +111,8 @@
 }
 
 .novoCards:hover {
-  background-color: #f7f7f9;
+  /* background-color: #f7f7f9; */
+  background-color: #eef6fa;
   /* transform: scaleY(1.1); */
   transform: scale(1.05);
   z-index: 1;

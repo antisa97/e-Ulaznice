@@ -7,13 +7,6 @@ import {
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
-  Card,
-  CardImg,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  CardDeck,
   Button,
 } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"

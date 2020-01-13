@@ -1,0 +1,9 @@
+.page {
+  background-color: #ffff33;
+}
+
+.pageDiv {
+  margin: 0 auto;
+  max-width: 1000px;
+  background-color: #eef6fa;
+}

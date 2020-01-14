@@ -68,7 +68,7 @@ const Header = props => {
           PRIJAVI ME
         </Button>{" "} */}
         <Button className={HeaderStyle.button2} outline color="info">
-          PRIJAVI ME
+          PRIJAVI SE
         </Button>{" "}
       </div>
     </Navbar>

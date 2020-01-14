@@ -1,76 +1,134 @@
 import React from "react"
 import Layout from "../components/layout"
 import RegistracijaStyle from "../styles/registracija.module.css"
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
+import {
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText,
+  CustomInput,
+} from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const RegistracijaPage = () => {
   return (
     <Layout>
-      <h1>Registracija</h1>
-      <p>Ovo je stranica na kojoj će se korisnici registrirati.</p>
-      <Form className={RegistracijaStyle.form}>
-        <FormGroup>
-          <Label for="exampleEmail">Email</Label>
-          <Input
-            type="email"
-            name="email"
-            id="exampleEmail"
-            placeholder="Unesite e-mail adresu"
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="examplePassword">Lozinka</Label>
-          <Input
-            type="password"
-            name="password"
-            id="examplePassword"
-            placeholder="Unesite lozinku"
-          />{" "}
-          <FormText color="muted">Lozinka mora imati ...</FormText>
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleSelect">Select</Label>
-          <Input type="select" name="select" id="exampleSelect">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </Input>
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleText">Text Area</Label>
-          <Input type="textarea" name="text" id="exampleText" />
-        </FormGroup>
-        <FormGroup tag="fieldset">
-          <legend>Radio Buttons</legend>
-          <FormGroup check>
-            <Label check>
-              <Input type="radio" name="radio1" /> Option one is this and
-              that—be sure to include why it's great
-            </Label>
-          </FormGroup>
-          <FormGroup check>
-            <Label check>
-              <Input type="radio" name="radio1" /> Option two can be something
-              else and selecting it will deselect option one
-            </Label>
-          </FormGroup>
-          <FormGroup check disabled>
-            <Label check>
-              <Input type="radio" name="radio1" disabled /> Option three is
-              disabled
-            </Label>
-          </FormGroup>
-        </FormGroup>
-        <FormGroup check>
-          <Label check>
-            <Input type="checkbox" /> Želim primati obavijesti na e-mail
-          </Label>
-        </FormGroup>
-        <Button>Submit</Button>
-      </Form>
+      <div className={RegistracijaStyle.page}>
+        <div className={RegistracijaStyle.pageDiv}>
+          <h3 className={RegistracijaStyle.pageTitle}>Registracija</h3>
+
+          <Form className={RegistracijaStyle.form}>
+            <div className={RegistracijaStyle.forms}>
+              <FormGroup>
+                <Label for="exampleName" className={RegistracijaStyle.label}>
+                  Ime
+                </Label>
+                <Input type="name" name="name" id="exampleName" />
+              </FormGroup>
+              <FormGroup>
+                <Label for="exampleSurname" className={RegistracijaStyle.label}>
+                  Prezime
+                </Label>
+                <Input type="surname" name="surname" id="exampleSurname" />
+              </FormGroup>
+            </div>
+            <div className={RegistracijaStyle.forms}>
+              <FormGroup>
+                <Label for="exampleDate" className={RegistracijaStyle.label}>
+                  Datum rođenja
+                </Label>
+                <Input type="date" name="date" id="exampleDate" />
+              </FormGroup>
+              <FormGroup>
+                <Label
+                  for="exampleCheckbox"
+                  className={RegistracijaStyle.label}
+                >
+                  Spol
+                </Label>
+                <div className={RegistracijaStyle.genderContainer}>
+                  <CustomInput
+                    type="radio"
+                    id="exampleCustomRadio"
+                    name="customRadio"
+                    label="žensko"
+                  />
+                  <CustomInput
+                    type="radio"
+                    id="exampleCustomRadio2"
+                    name="customRadio"
+                    label="muško"
+                  />
+                </div>
+              </FormGroup>
+            </div>
+            <div className={RegistracijaStyle.forms}>
+              <FormGroup>
+                <Label for="exampleEmail" className={RegistracijaStyle.label}>
+                  e-mail
+                </Label>
+                <Input
+                  type="email"
+                  name="email"
+                  id="exampleEmail"
+                  placeholder="user@domain.com"
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label for="exampleNumber" className={RegistracijaStyle.label}>
+                  Broj mobitela
+                </Label>
+                <Input type="name" name="name" id="exampleName" />
+              </FormGroup>
+            </div>
+            <div className={RegistracijaStyle.forms}>
+              <FormGroup>
+                <Label
+                  for="examplePassword"
+                  className={RegistracijaStyle.label}
+                >
+                  Lozinka
+                </Label>
+                <Input
+                  type="password"
+                  name="password"
+                  id="examplePassword"
+                  placeholder=""
+                />
+                <FormText color="muted">
+                  Lozinka mora imati najmanje 8 znakova.
+                </FormText>
+              </FormGroup>
+              <FormGroup>
+                <Label
+                  for="examplePassword"
+                  className={RegistracijaStyle.label}
+                >
+                  Potvrdite lozinku
+                </Label>
+                <Input
+                  type="password"
+                  name="password"
+                  id="examplePassword"
+                  placeholder=""
+                />
+              </FormGroup>
+            </div>
+            <CustomInput
+              type="checkbox"
+              id="exampleCustomCheckbox"
+              label="Prihvaćam uvjete korištenja stranice i
+                slažem se s pravilima privatnosti tijekom procesa registracije."
+              className={RegistracijaStyle.accept}
+            />
+            <Button className={RegistracijaStyle.button} outline color="danger">
+              Registriraj se
+            </Button>
+          </Form>
+        </div>
+      </div>
     </Layout>
   )
 }

@@ -1,5 +1,7 @@
 .page {
   background-color: #ffff33;
+  /* background-color: #ffb366; */
+  /* background-color: #ffa257; */
 }
 
 .pageDiv {
@@ -10,7 +12,7 @@
 .pageTitle {
   text-transform: uppercase;
   margin: 1em 0 0 1em;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   margin-bottom: 0.5em;
 }
 
@@ -35,11 +37,11 @@
   border: none;
   text-align: center;
   /* font-weight: 500; */
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
   background-color: #eef6fa;
   max-width: 170px;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 ::placeholder {

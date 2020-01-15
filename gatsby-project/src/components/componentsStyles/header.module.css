@@ -109,7 +109,7 @@
 }
 
 .navbarName__active {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: green;
 }
 

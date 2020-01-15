@@ -12,30 +12,45 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
 import NaslovnicaStyle from "../styles/index.module.css"
-import naslovna_konc from "../images/naslovna_konc.jpg"
-import DogadajiStyle from "../styles/dogadaji.module.css"
 
 const NaslovnicaPage = props => {
   const items = [
     {
-      src: props.data.ostalo.childImageSharp.fluid,
-      altText: "Slide 1",
-      caption: "Slide 1",
+      src: props.data.kazaliste.childImageSharp.fluid,
+      altText: "Prljavo kazalište",
+      caption: "Prljavo kazalište",
+      captionText: "Kultura",
     },
+
     {
       src: props.data.glazba.childImageSharp.fluid,
-      altText: "Slide 2",
-      caption: "Slide 2",
+      altText: "Kralj lavova",
+      caption: "Kralj lavova",
+      captionText: "Film",
     },
     {
       src: props.data.sport.childImageSharp.fluid,
-      altText: "Slide 3",
-      caption: "Slide 3",
+      altText: "Hrvatska-Engleska",
+      caption: "Hrvatska-Engleska",
+      captionText: "Sport",
     },
     {
-      src: props.data.koncert.childImageSharp.fluid,
-      altText: "Slide 4",
-      caption: "Slide 4",
+      src: props.data.ostalo.childImageSharp.fluid,
+      altText: "Ero s onoga svijeta",
+      caption: "Ero s onoga svijeta",
+      captionText: "Kultura",
+    },
+    {
+      src: props.data.once.childImageSharp.fluid,
+      altText: "Bilo jednom u Hollywoodu",
+      caption: "Bilo jednom u Hollywoodu",
+      captionText: "Film",
+    },
+    {
+      src: props.data.orasar.childImageSharp.fluid,
+      altText: "Orašar",
+      caption: "Orašar",
+      captionText: "Kultura",
     },
   ]
 
@@ -66,6 +81,7 @@ const NaslovnicaPage = props => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
+        {/* <img src={item.src} alt={item.altText} /> */}
         <Img
           fluid={item.src}
           alt={item.altText}
@@ -74,10 +90,13 @@ const NaslovnicaPage = props => {
             objectFit: "fill", //PROMIJENITI
           }}
         />
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        <Link to="/dogadaji">
+          <CarouselCaption
+            captionText={item.captionText}
+            captionHeader={item.caption}
+            id={NaslovnicaStyle.caption}
+          />
+        </Link>
       </CarouselItem>
     )
   })
@@ -91,7 +110,11 @@ const NaslovnicaPage = props => {
           next={next}
           previous={previous}
         >
-          <CarouselIndicators items={items} />
+          <CarouselIndicators
+            items={items}
+            activeIndex={activeIndex}
+            onClickHandler={goToIndex}
+          />
           {slides}
           <CarouselControl
             direction="prev"
@@ -109,33 +132,7 @@ const NaslovnicaPage = props => {
         <div className={NaslovnicaStyle.rest}>
           <h2 className={NaslovnicaStyle.categoryTitle}>Kategorije</h2>
           <div className={NaslovnicaStyle.cardContainer}>
-            {/* <Card className={NaslovnicaStyle.cards}>
-              <CardImg
-                top
-                width="100%"
-                src={naslovna_konc}
-                alt="Card image cap"
-              /> */}
-            {/* <Img
-                className={NaslovnicaStyle.cardImage}
-                fluid={props.data.glazba.childImageSharp.fluid}
-              /> */}
-            {/* <CardBody>
-                <CardTitle>hgf</CardTitle>
-                <Button>Saznaj više</Button>
-              </CardBody>
-            </Card> */}
-            {/* <Card className={NaslovnicaStyle.cards}>
-              <Img
-                className={NaslovnicaStyle.cardImage}
-                fluid={props.data.sport.childImageSharp.fluid}
-              />
-              <CardBody>
-                <CardTitle>Card title</CardTitle>
-                <Button>Saznaj više</Button>
-              </CardBody>
-            </Card> */}
-            <div className={NaslovnicaStyle.novoCards}>
+            <div className={NaslovnicaStyle.card}>
               <Img
                 className={NaslovnicaStyle.cardImage}
                 fluid={props.data.cultureIcon.childImageSharp.fluid}
@@ -154,12 +151,11 @@ const NaslovnicaPage = props => {
                 className={NaslovnicaStyle.categoryButton}
                 outline
                 color="success"
-                href="/dogadaji"
               >
                 Pogledajte više
               </Button>
             </div>
-            <div className={NaslovnicaStyle.novoCards}>
+            <div className={NaslovnicaStyle.card}>
               <Img
                 className={NaslovnicaStyle.cardImage}
                 fluid={props.data.sportIcon.childImageSharp.fluid}
@@ -180,9 +176,9 @@ const NaslovnicaPage = props => {
                 color="primary"
               >
                 Pogledajte više
-              </Button>{" "}
+              </Button>
             </div>
-            <div className={NaslovnicaStyle.novoCards}>
+            <div className={NaslovnicaStyle.card}>
               <Img
                 className={NaslovnicaStyle.cardImage}
                 fluid={props.data.filmIcon.childImageSharp.fluid}
@@ -203,18 +199,8 @@ const NaslovnicaPage = props => {
                 color="danger"
               >
                 Pogledajte više
-              </Button>{" "}
+              </Button>
             </div>
-            {/* <Card className={NaslovnicaStyle.cards}>
-              <Img
-                className={NaslovnicaStyle.cardImage}
-                fluid={props.data.ostalo.childImageSharp.fluid}
-              />
-              <CardBody>
-                <CardTitle>Card title</CardTitle>
-                <Button>Saznaj više</Button>
-              </CardBody>
-            </Card> */}
           </div>
         </div>
       </div>
@@ -226,35 +212,42 @@ export default NaslovnicaPage
 
 export const query = graphql`
   query {
-    glazba: file(relativePath: { eq: "slika1.jpg" }) {
+    orasar: file(relativePath: { eq: "orasar1.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    kazaliste: file(relativePath: { eq: "naslovnica_kazaliste.jpg" }) {
+    once: file(relativePath: { eq: "once1.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    sport: file(relativePath: { eq: "naslovnica_sport.jpeg" }) {
+    glazba: file(relativePath: { eq: "kralj.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    ostalo: file(relativePath: { eq: "naslovnica_ostalo.jpg" }) {
+    kazaliste: file(relativePath: { eq: "parni.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    koncert: file(relativePath: { eq: "naslovna_konc.jpg" }) {
+    sport: file(relativePath: { eq: "sp.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    ostalo: file(relativePath: { eq: "ero.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

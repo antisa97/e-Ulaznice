@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import NovostiStyle from "../styles/novosti.module.css"
 import { Media } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import img1 from "../images/naslovnica_kazaliste.jpg"
 
 const NovostiPage = props => {

@@ -1,46 +1,3 @@
-/* body {
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-/* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --secondary-color: rgb(230, 230, 230);
-} */
-
-/* .main-title {
-  font-size: larger;
-  font-weight: 600;
-}
-
-#main-container-najpopularnije {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2.5em;
-}
-
-.main-container-item-najpopularnije {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--secondary-color);
-  border-radius: 0.2em;
-}
-
-.main-najpopularnije-img {
-  width: 100%;
-  height: 100%;
-}
-
-.main-item-najpopularnije-kategorija {
-  align-self: center;
-  font-weight: 500;
-}
-
-.main-item-najpopularnije-dogadaj {
-  margin-left: 0.3em;
-} */
-
-/* .cardImage {
-  flex-shrink: 0;
-  width: 100%;
-} */
 .Carousel,
 .rest {
   margin: 0 auto;
@@ -67,6 +24,7 @@
   background-color: #ffff33;
   box-shadow: inset 0 -21px 35px -8px rgba(225, 226, 228, 0.7);
 }
+
 .rest {
   padding: 2em 0em;
 }
@@ -92,18 +50,7 @@
   object-fit: fill;
 }
 
-/* .cards {
-  border: none;
-  border-radius: 0;
-  background-color: lightpink;
-  transition: all 1s ease;
-}
-.cards :hover {
-  background-color: #f7f7f9;
-  transform: scale(1.1);
-} */
-
-.novoCards {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,7 +58,7 @@
   transition: all 1s ease;
 }
 
-.novoCards:hover {
+.card:hover {
   /* background-color: #f7f7f9; */
   background-color: #eef6fa;
   /* transform: scaleY(1.1); */

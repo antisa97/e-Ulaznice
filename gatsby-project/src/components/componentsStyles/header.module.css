@@ -54,12 +54,9 @@
   font-size: 1.3vw;
   font-weight: 600;
   /* letter-spacing: 0.8px; */
-}
-
-.navbarName:active {
-  border-bottom: 1px solid red;
-  color: red;
-  padding-bottom: 1px;
+  margin: 0px 16px 0px 0px;
+  padding: 5px 0px;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .input {
@@ -109,4 +106,14 @@
 .lozinka {
   min-width: 80px;
   max-width: 130px;
+}
+
+.navbarName__active {
+  text-decoration: underline;
+  color: green;
+}
+
+.navbarName:hover {
+  color: green;
+  text-decoration: none;
 }

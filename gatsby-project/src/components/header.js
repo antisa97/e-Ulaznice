@@ -11,6 +11,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css"
 import logo from "../images/logo.png"
 import HeaderStyle from "../components/componentsStyles/header.module.css"
+import NavLink from "./links"
 
 const Header = props => {
   const [isOpen, setIsOpen] = useState(false)
@@ -39,21 +40,21 @@ const Header = props => {
       {/* <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar> */}
       <div className={HeaderStyle.navbarNames}>
-        <NavbarBrand className={HeaderStyle.navbarName} href="/">
+        <NavLink to="/" exact="true" className={HeaderStyle.navbarName}>
           NASLOVNICA
-        </NavbarBrand>
-        <NavbarBrand className={HeaderStyle.navbarName} href="/dogadaji">
+        </NavLink>
+        <NavLink to="/dogadaji" className={HeaderStyle.navbarName}>
           DOGAĐAJI
-        </NavbarBrand>
-        <NavbarBrand className={HeaderStyle.navbarName} href="/novosti">
+        </NavLink>
+        <NavLink to="/novosti" className={HeaderStyle.navbarName}>
           NOVOSTI
-        </NavbarBrand>
-        <NavbarBrand className={HeaderStyle.navbarName} href="/izvjestaji">
+        </NavLink>
+        <NavLink to="/izvjestaji" className={HeaderStyle.navbarName}>
           IZVJEŠTAJI
-        </NavbarBrand>
-        <NavbarBrand className={HeaderStyle.navbarName} href="/registracija">
+        </NavLink>
+        <NavLink to="/registracija" className={HeaderStyle.navbarName}>
           REGISTRACIJA
-        </NavbarBrand>
+        </NavLink>
       </div>
       {/* </Collapse> */}
 

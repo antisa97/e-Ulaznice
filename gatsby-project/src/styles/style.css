@@ -31,6 +31,23 @@ figure {
   width: 100%;
   height: 100%;
 }
+body {
+  padding-right: 0 !important;
+}
+.modal-open {
+  overflow: auto;
+  padding-right: 0 !important;
+}
+body.modal-open {
+  overflow: auto !important;
+}
+body.modal-open[style] {
+  padding-right: 0px !important;
+}
+.modal-open {
+  padding-right: 0px !important;
+  overflow-y: scroll;
+}
 #fixed {
   position: fixed;
   display: block;

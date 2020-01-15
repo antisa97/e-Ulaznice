@@ -5,6 +5,13 @@ import Layout from "../components/layout"
 import DogadajiStyle from "../styles/dogadaji.module.css"
 import { Button } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
+import Swal from "sweetalert2"
+import $ from "jquery"
+import "../styles/style.css"
+
+function ok() {
+  Swal.fire("Vaša kupnja je uspješno obavljena!", "", "success")
+}
 
 const DogadajiPage = props => {
   return (
@@ -47,7 +54,12 @@ const DogadajiPage = props => {
               </div>
               <div className={DogadajiStyle.priceButton}>
                 <p className={DogadajiStyle.price}>80,00 kn</p>
-                <Button className={DogadajiStyle.button} outline color="danger">
+                <Button
+                  className={DogadajiStyle.button}
+                  outline
+                  color="danger"
+                  onClick={ok}
+                >
                   Kupi ulaznice
                 </Button>
               </div>
@@ -75,7 +87,12 @@ const DogadajiPage = props => {
               </div>
               <div className={DogadajiStyle.priceButton}>
                 <p className={DogadajiStyle.price}>35,00 kn</p>
-                <Button className={DogadajiStyle.button} outline color="danger">
+                <Button
+                  className={DogadajiStyle.button}
+                  outline
+                  color="danger"
+                  onClick={ok}
+                >
                   Kupi ulaznice
                 </Button>
               </div>
@@ -103,7 +120,12 @@ const DogadajiPage = props => {
               </div>
               <div className={DogadajiStyle.priceButton}>
                 <p className={DogadajiStyle.price}>100,00 kn</p>
-                <Button className={DogadajiStyle.button} outline color="danger">
+                <Button
+                  className={DogadajiStyle.button}
+                  outline
+                  color="danger"
+                  onClick={ok}
+                >
                   Kupi ulaznice
                 </Button>
               </div>
@@ -131,7 +153,12 @@ const DogadajiPage = props => {
               </div>
               <div className={DogadajiStyle.priceButton}>
                 <p className={DogadajiStyle.price}>80,00 kn</p>
-                <Button className={DogadajiStyle.button} outline color="danger">
+                <Button
+                  className={DogadajiStyle.button}
+                  outline
+                  color="danger"
+                  onClick={ok}
+                >
                   Kupi ulaznice
                 </Button>
               </div>

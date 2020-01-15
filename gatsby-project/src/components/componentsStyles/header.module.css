@@ -9,8 +9,8 @@
   justify-content: space-around;
   /* background-color: #f7f7f9; */
   /* box-shadow: 0 0 50px 17px rgba(225, 226, 228, 0.7); */
-  background-color: #EEF6FA;
-  box-shadow: 0 0 50px 17px #E7F3F9;
+  background-color: #eef6fa;
+  box-shadow: 0 0 50px 17px #e7f3f9;
   /* background-color: #f1f0f6; */
   /* border-bottom: 1px solid #ced4da; */
 }
@@ -54,6 +54,12 @@
   font-size: 1.3vw;
   font-weight: 600;
   /* letter-spacing: 0.8px; */
+}
+
+.navbarName:active {
+  border-bottom: 1px solid red;
+  color: red;
+  padding-bottom: 1px;
 }
 
 .input {

@@ -5,5 +5,37 @@
 .pageDiv {
   margin: 0 auto;
   max-width: 1000px;
+}
+
+.pageTitle {
+  text-transform: uppercase;
+  padding: 1em 0 1em 1.3em;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+.media {
+  padding: 3em 3em 3.5em 3em;
+  margin-bottom: 75px;
+  box-shadow: 0 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
   background-color: #eef6fa;
+  display: grid;
+  /* grid-template-columns: auto auto; */
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 30px;
+  margin-bottom: 18px;
+}
+
+.slika1 {
+  max-width: 100%;
+}
+
+.slika2 {
+  max-width: 40%;
+}
+
+.media-left {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
 }

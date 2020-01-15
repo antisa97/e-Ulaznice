@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import {
   Carousel,
@@ -13,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
 import NaslovnicaStyle from "../styles/index.module.css"
 import naslovna_konc from "../images/naslovna_konc.jpg"
+import DogadajiStyle from "../styles/dogadaji.module.css"
 
 const NaslovnicaPage = props => {
   const items = [
@@ -153,9 +154,10 @@ const NaslovnicaPage = props => {
                 className={NaslovnicaStyle.categoryButton}
                 outline
                 color="success"
+                href="/dogadaji"
               >
                 Pogledajte više
-              </Button>{" "}
+              </Button>
             </div>
             <div className={NaslovnicaStyle.novoCards}>
               <Img

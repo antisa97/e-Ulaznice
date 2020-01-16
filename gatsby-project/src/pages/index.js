@@ -12,6 +12,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
 import NaslovnicaStyle from "../styles/index.module.css"
+import DogadajiStyle from "../styles/dogadaji.module.css"
 
 const NaslovnicaPage = props => {
   const items = [

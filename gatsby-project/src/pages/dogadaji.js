@@ -51,10 +51,10 @@ const DogadajiPage = props => {
         <div className={DogadajiStyle.pageDiv}>
           <h3 className={DogadajiStyle.pageTitle}>Događaji</h3>
           <div id={DogadajiStyle.searchContainer}>
-            <Img
+            {/* <Img
               className={DogadajiStyle.searchImage}
               fluid={props.data.searchIcon.childImageSharp.fluid}
-            />
+            /> */}
             <input
               type="text"
               //ovdje
@@ -63,50 +63,51 @@ const DogadajiPage = props => {
               id={DogadajiStyle.search}
               placeholder="Pretraživanje"
             />
-            <div
-              className={DogadajiStyle.cardContainer}
-              id={DogadajiStyle.cardCont}
-            >
-              {searchResult.map(item => (
-                <div className={DogadajiStyle.card}>
-                  <div className={DogadajiStyle.cardImage}>
-                    <Img
-                      className={DogadajiStyle.image}
-                      fluid={props.data.glazba.childImageSharp.fluid}
-                    />
+          </div>
+          <div
+            className={DogadajiStyle.cardContainer}
+            id={DogadajiStyle.cardCont}
+          >
+            {searchResult.map(item => (
+              <div className={DogadajiStyle.card}>
+                <div className={DogadajiStyle.cardImage}>
+                  <Img
+                    className={DogadajiStyle.image}
+                    fluid={props.data.kazaliste.childImageSharp.fluid}
+                  />
+                </div>
+                <div className={DogadajiStyle.content}>
+                  <p className={DogadajiStyle.cardTitle}>{item.caption}</p>
+                  <div className={DogadajiStyle.category}>
+                    <p className={DogadajiStyle.categoryTitle}>
+                      {item.captionText}
+                    </p>
+                    {/* <Img
+                      className={DogadajiStyle.categoryImage}
+                      fluid={props.data.cultureIcon.childImageSharp.fluid}
+                    /> */}
                   </div>
-                  <div className={DogadajiStyle.content}>
-                    <p className={DogadajiStyle.cardTitle}>{item.caption}</p>
-                    <div className={DogadajiStyle.category}>
-                      <p className={DogadajiStyle.categoryTitle}>
-                        {item.captionText}
-                      </p>
-                      <Img
-                        className={DogadajiStyle.categoryImage}
-                        fluid={props.data.cultureIcon.childImageSharp.fluid}
-                      />
-                    </div>
-                    <div className={DogadajiStyle.dateLocation}>
-                      <p className={DogadajiStyle.location}>Pulska arena</p>
-                      <p className={DogadajiStyle.date}>17.01.2020. u 20:00</p>
-                    </div>
-                  </div>
-                  <div className={DogadajiStyle.priceButton}>
-                    <p className={DogadajiStyle.price}>80,00 kn</p>
-                    <Button
-                      className={DogadajiStyle.button}
-                      outline
-                      color="danger"
-                      onClick={ok}
-                    >
-                      Kupi ulaznice
-                    </Button>
+                  <div className={DogadajiStyle.dateLocation}>
+                    <p className={DogadajiStyle.location}>Pulska arena</p>
+                    <p className={DogadajiStyle.date}>17.01.2020. u 20:00</p>
                   </div>
                 </div>
-              ))}
-            </div>
+                <div className={DogadajiStyle.priceButton}>
+                  <p className={DogadajiStyle.price}>80,00 kn</p>
+                  <Button
+                    className={DogadajiStyle.button}
+                    outline
+                    color="danger"
+                    onClick={ok}
+                  >
+                    Kupi ulaznice
+                  </Button>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className={DogadajiStyle.cardContainer} id="cardCont">
+        </div>
+        {/* <div className={DogadajiStyle.cardContainer} id="cardCont">
             <div className={DogadajiStyle.card}>
               <div className={DogadajiStyle.cardImage}>
                 <Img
@@ -239,8 +240,7 @@ const DogadajiPage = props => {
                 </Button>
               </div>
             </div>
-          </div>
-        </div>
+          </div> */}
       </div>
     </Layout>
   )
@@ -250,28 +250,42 @@ export default DogadajiPage
 
 export const query = graphql`
   query {
-    glazba: file(relativePath: { eq: "naslovnica_glazba.jpg" }) {
+    orasar: file(relativePath: { eq: "orasar1.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    kazaliste: file(relativePath: { eq: "naslovnica_kazaliste.jpg" }) {
+    once: file(relativePath: { eq: "once1.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    sport: file(relativePath: { eq: "naslovnica_sport.jpeg" }) {
+    glazba: file(relativePath: { eq: "kralj.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    ostalo: file(relativePath: { eq: "naslovnica_ostalo.jpg" }) {
+    kazaliste: file(relativePath: { eq: "parni.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    sport: file(relativePath: { eq: "sp.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    ostalo: file(relativePath: { eq: "ero.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -293,13 +307,6 @@ export const query = graphql`
       }
     }
     filmIcon: file(relativePath: { eq: "film.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    searchIcon: file(relativePath: { eq: "searchModro.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

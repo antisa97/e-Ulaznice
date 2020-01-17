@@ -8,8 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Swal from "sweetalert2"
 import $ from "jquery"
 import "../styles/style.css"
-
-const evnt = ["Siri", "Alexa", "Google"]
+import eventsList from "../data/dogadaji.json"
 
 function ok() {
   Swal.fire("Vaša kupnja je uspješno obavljena!", "", "success")
@@ -33,14 +32,16 @@ function ok() {
 
 const DogadajiPage = props => {
   //dodano
+
   const [searchInput, setSearchInput] = useState("")
   const [searchResult, setSearchResult] = useState([])
-  const handleChange = val => {
-    setSearchInput(val)
-    console.log("value", val)
+  const handleChange = e => {
+    setSearchInput(e.target.value)
   }
   useEffect(() => {
-    const results = evnt.filter(eve => eve.toLowerCase().includes(searchInput))
+    const results = eventsList.filter(eve =>
+      eve.caption.toLowerCase().includes(searchInput)
+    )
     setSearchResult(results)
   }, [searchInput])
   //do tu
@@ -58,15 +59,15 @@ const DogadajiPage = props => {
               type="text"
               //ovdje
               value={searchInput}
-              onChange={e => handleChange(e.target.value)}
+              onChange={handleChange}
               id={DogadajiStyle.search}
               placeholder="Pretraživanje"
             />
-            {searchResult.map(item => (
-              <div
-                className={DogadajiStyle.cardContainer}
-                id={DogadajiStyle.cardCont}
-              >
+            <div
+              className={DogadajiStyle.cardContainer}
+              id={DogadajiStyle.cardCont}
+            >
+              {searchResult.map(item => (
                 <div className={DogadajiStyle.card}>
                   <div className={DogadajiStyle.cardImage}>
                     <Img
@@ -75,9 +76,11 @@ const DogadajiPage = props => {
                     />
                   </div>
                   <div className={DogadajiStyle.content}>
-                    <p className={DogadajiStyle.cardTitle}>{item}</p>
+                    <p className={DogadajiStyle.cardTitle}>{item.caption}</p>
                     <div className={DogadajiStyle.category}>
-                      <p className={DogadajiStyle.categoryTitle}>Kultura</p>
+                      <p className={DogadajiStyle.categoryTitle}>
+                        {item.captionText}
+                      </p>
                       <Img
                         className={DogadajiStyle.categoryImage}
                         fluid={props.data.cultureIcon.childImageSharp.fluid}
@@ -100,9 +103,8 @@ const DogadajiPage = props => {
                     </Button>
                   </div>
                 </div>
-              </div>
-            ))}
-            {/* do tu */}
+              ))}
+            </div>
           </div>
           <div className={DogadajiStyle.cardContainer} id="cardCont">
             <div className={DogadajiStyle.card}>

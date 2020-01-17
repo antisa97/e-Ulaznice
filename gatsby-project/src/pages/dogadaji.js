@@ -40,7 +40,7 @@ const DogadajiPage = props => {
   }
   useEffect(() => {
     const results = eventsList.filter(eve =>
-      eve.caption.toLowerCase().includes(searchInput)
+      eve.caption.toLowerCase().includes(searchInput.toLowerCase())
     )
     setSearchResult(results)
   }, [searchInput])

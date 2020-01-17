@@ -130,3 +130,46 @@ Extra (xl) large devices (large desktops, 1200px and up)
   z-index: -1;
   background-color: lightgray;
 }
+
+/* button.swal2-styled.swal2-confirm {
+  letter-spacing: 1.1px;
+  border-width: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 25px;
+  padding-top: 13px;
+  padding-right: 32px;
+  padding-bottom: 13px;
+  padding-left: 32px;
+  margin-top: 2px;
+  width: 190px;
+  background-color: white;
+  color: #3085d6;
+  border: 1.5px solid #3085d6;
+  border-left-color: #3085d6;
+  border-right-color: #3085d6;
+}*/
+
+button.swal2-confirm.swal2-styled {
+  letter-spacing: 1.1px;
+  border-width: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 25px;
+  padding-top: 13px;
+  padding-right: 32px;
+  padding-bottom: 13px;
+  padding-left: 32px;
+  margin-top: 2px;
+  width: 190px;
+
+  /* background-color: white; */
+  /* color: #3085d6; */
+  /* border: 1.5px solid #3085d6; */
+  /* border-left-color: #3085d6;
+  border-right-color: #3085d6; */
+
+  background-color: #3085d6;
+}

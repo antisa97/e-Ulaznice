@@ -51,10 +51,10 @@ const DogadajiPage = props => {
         <div className={DogadajiStyle.pageDiv}>
           <h3 className={DogadajiStyle.pageTitle}>Događaji</h3>
           <div id={DogadajiStyle.searchContainer}>
-            {/* <Img
+            <Img
               className={DogadajiStyle.searchImage}
               fluid={props.data.searchIcon.childImageSharp.fluid}
-            /> */}
+            />
             <input
               type="text"
               //ovdje
@@ -99,6 +99,7 @@ const DogadajiPage = props => {
                     outline
                     color="danger"
                     onClick={ok}
+                    onclick="this.blur();"
                   >
                     Kupi ulaznice
                   </Button>
@@ -300,6 +301,13 @@ export const query = graphql`
       }
     }
     sportIcon: file(relativePath: { eq: "sport.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    searchIcon: file(relativePath: { eq: "searchModro.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

@@ -165,11 +165,15 @@ button.swal2-confirm.swal2-styled {
   margin-top: 2px;
   width: 190px;
 
-  /* background-color: white; */
-  /* color: #3085d6; */
-  /* border: 1.5px solid #3085d6; */
-  /* border-left-color: #3085d6;
-  border-right-color: #3085d6; */
+  background-color: white;
+  color: #3085d6;
+  border: 1.5px solid #3085d6;
+  border-left-color: #3085d6 !important;
+  border-right-color: #3085d6 !important;
 
-  background-color: #3085d6;
+  /* background-color: #3085d6; */
+}
+
+.button.swal2-confirm.swal2-styled:hover {
+  outline: 0 !important;
 }

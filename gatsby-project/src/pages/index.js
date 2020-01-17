@@ -145,8 +145,8 @@ const NaslovnicaPage = props => {
                 Kultura
               </h4>
               <p className={NaslovnicaStyle.categoryDescription}>
-                From showrooms to sole agents, we have all the tools you need to
-                take your
+                Pregled najaktualnijih događaja iz svijeta kulture i hrvatske
+                kulturne scene.
               </p>
               <Button
                 className={NaslovnicaStyle.categoryButton}
@@ -168,8 +168,8 @@ const NaslovnicaPage = props => {
                 Sport
               </h4>
               <p className={NaslovnicaStyle.categoryDescription}>
-                From showrooms to sole agents, we have all the tools you need to
-                take
+                Širok izbor uzbudljivih sportskih zbivanja sa domaćih i stranih
+                terena.
               </p>
               <Button
                 className={NaslovnicaStyle.categoryButton}
@@ -191,8 +191,7 @@ const NaslovnicaPage = props => {
                 Film
               </h4>
               <p className={NaslovnicaStyle.categoryDescription}>
-                All the insights you require to get your vehicles off the
-                production line and
+                Za sve filmoljupce, pogledajte našu ponudu najnovijih filmova
               </p>
               <Button
                 className={NaslovnicaStyle.categoryButton}

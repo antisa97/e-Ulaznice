@@ -121,5 +121,6 @@
 
   .categoryTitle {
     text-transform: capitalize;
+    letter-spacing: 0;
   }
 }

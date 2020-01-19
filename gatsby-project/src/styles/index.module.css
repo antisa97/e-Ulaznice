@@ -115,7 +115,11 @@
   .card:hover {
     background-color: #eef6fa;
     transform: scale(1);
-    z-index: 1;
+    /* z-index: 1; */
     box-shadow: 0 0 20px 7px rgba(230, 231, 233, 0.5);
+  }
+
+  .categoryTitle {
+    text-transform: capitalize;
   }
 }

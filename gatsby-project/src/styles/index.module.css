@@ -114,7 +114,7 @@
   }
 
   .card:hover {
-    background-color: #eef6fa;
+    background-color: #ffff33;
     transform: scale(1);
     z-index: 0;
     box-shadow: 0 0 20px 7px rgba(230, 231, 233, 0.5);
@@ -130,5 +130,9 @@
   .crouselImage {
     /* height: 470px; */
     width: 120%;
+  }
+
+  .card {
+    padding: 1.5em 4em;
   }
 }

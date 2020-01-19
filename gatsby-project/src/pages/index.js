@@ -152,6 +152,7 @@ const NaslovnicaPage = props => {
                 className={NaslovnicaStyle.categoryButton}
                 outline
                 color="success"
+                href="/dogadajKultura"
               >
                 Pogledajte više
               </Button>
@@ -175,6 +176,7 @@ const NaslovnicaPage = props => {
                 className={NaslovnicaStyle.categoryButton}
                 outline
                 color="primary"
+                href="/dogadajSport"
               >
                 Pogledajte više
               </Button>
@@ -197,6 +199,7 @@ const NaslovnicaPage = props => {
                 className={NaslovnicaStyle.categoryButton}
                 outline
                 color="danger"
+                href="/dogadajFilm"
               >
                 Pogledajte više
               </Button>

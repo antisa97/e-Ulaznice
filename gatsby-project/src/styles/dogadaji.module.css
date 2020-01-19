@@ -177,3 +177,15 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media only screen and (max-width: 630px) {
+  .cardContainer {
+    grid-template-columns: auto;
+  }
+
+  .pageTitle {
+    margin-bottom: 0.8em;
+    text-align: center;
+    margin-left: 0;
+  }
+}

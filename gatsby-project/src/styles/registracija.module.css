@@ -71,3 +71,30 @@
   background-color: red;
   border-color: red;
 } */
+
+@media screen and (max-width: 530px) {
+  .pageTitle {
+    /* margin-bottom: 0.8em; */
+    text-align: center;
+    padding-left: 0;
+  }
+
+  /* .label {
+    margin-bottom: 0;
+  } */
+
+  .forms {
+    /* grid-template-columns: auto; */
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formGroup {
+    margin-bottom: 1.7em;
+  }
+
+  .accept {
+    margin-bottom: 1em;
+  }
+}

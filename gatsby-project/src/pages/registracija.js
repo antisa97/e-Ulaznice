@@ -21,13 +21,13 @@ const RegistracijaPage = () => {
 
           <Form className={RegistracijaStyle.form}>
             <div className={RegistracijaStyle.forms}>
-              <FormGroup>
+              <FormGroup className={RegistracijaStyle.formGroup}>
                 <Label for="exampleName" className={RegistracijaStyle.label}>
                   Ime
                 </Label>
                 <Input type="name" name="name" id="exampleName" />
               </FormGroup>
-              <FormGroup>
+              <FormGroup className={RegistracijaStyle.formGroup}>
                 <Label for="exampleSurname" className={RegistracijaStyle.label}>
                   Prezime
                 </Label>
@@ -35,13 +35,13 @@ const RegistracijaPage = () => {
               </FormGroup>
             </div>
             <div className={RegistracijaStyle.forms}>
-              <FormGroup>
+              <FormGroup className={RegistracijaStyle.formGroup}>
                 <Label for="exampleDate" className={RegistracijaStyle.label}>
                   Datum rođenja
                 </Label>
                 <Input type="date" name="date" id="exampleDate" />
               </FormGroup>
-              <FormGroup>
+              <FormGroup className={RegistracijaStyle.formGroup}>
                 <Label
                   for="exampleCheckbox"
                   className={RegistracijaStyle.label}
@@ -65,7 +65,7 @@ const RegistracijaPage = () => {
               </FormGroup>
             </div>
             <div className={RegistracijaStyle.forms}>
-              <FormGroup>
+              <FormGroup className={RegistracijaStyle.formGroup}>
                 <Label for="exampleEmail" className={RegistracijaStyle.label}>
                   e-mail
                 </Label>
@@ -76,7 +76,7 @@ const RegistracijaPage = () => {
                   placeholder="user@domain.com"
                 />
               </FormGroup>
-              <FormGroup>
+              <FormGroup className={RegistracijaStyle.formGroup}>
                 <Label for="exampleNumber" className={RegistracijaStyle.label}>
                   Broj mobitela
                 </Label>
@@ -84,7 +84,7 @@ const RegistracijaPage = () => {
               </FormGroup>
             </div>
             <div className={RegistracijaStyle.forms}>
-              <FormGroup>
+              <FormGroup className={RegistracijaStyle.formGroup}>
                 <Label
                   for="examplePassword"
                   className={RegistracijaStyle.label}
@@ -101,7 +101,7 @@ const RegistracijaPage = () => {
                   Lozinka mora imati najmanje 8 znakova.
                 </FormText>
               </FormGroup>
-              <FormGroup>
+              <FormGroup className={RegistracijaStyle.formGroup}>
                 <Label
                   for="examplePassword"
                   className={RegistracijaStyle.label}

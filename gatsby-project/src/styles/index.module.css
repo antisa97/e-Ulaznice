@@ -13,7 +13,7 @@
 }
 
 .crouselImage {
-  height: 470px;
+  /* height: 470px; */
   width: 100%;
 }
 
@@ -100,6 +100,22 @@
 #sport {
   color: rgba(0, 123, 255, 0.72);
 }
+
 #film {
   color: #8e1a1a;
+}
+
+@media screen and (max-width: 731px) {
+  .cardContainer {
+    grid-template-columns: auto;
+    justify-items: center;
+    grid-row-gap: 2.5em;
+  }
+
+  .card:hover {
+    background-color: #eef6fa;
+    transform: scale(1);
+    z-index: 1;
+    box-shadow: 0 0 20px 7px rgba(230, 231, 233, 0.5);
+  }
 }

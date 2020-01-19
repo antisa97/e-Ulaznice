@@ -17,38 +17,38 @@ import DogadajiStyle from "../styles/dogadaji.module.css"
 const NaslovnicaPage = props => {
   const items = [
     {
-      src: props.data.kazaliste.childImageSharp.fluid,
+      src: props.data.carousel1.childImageSharp.fluid,
       altText: "Prljavo kazalište",
       caption: "Prljavo kazalište",
       captionText: "Kultura",
     },
 
     {
-      src: props.data.glazba.childImageSharp.fluid,
+      src: props.data.carousel2.childImageSharp.fluid,
       altText: "Kralj lavova",
       caption: "Kralj lavova",
       captionText: "Film",
     },
     {
-      src: props.data.sport.childImageSharp.fluid,
+      src: props.data.carousel3.childImageSharp.fluid,
       altText: "Hrvatska-Engleska",
       caption: "Hrvatska-Engleska",
       captionText: "Sport",
     },
     {
-      src: props.data.ostalo.childImageSharp.fluid,
+      src: props.data.carousel4.childImageSharp.fluid,
       altText: "Ero s onoga svijeta",
       caption: "Ero s onoga svijeta",
       captionText: "Kultura",
     },
+    // {
+    //   src: props.data.carousel5.childImageSharp.fluid,
+    //   altText: "Bilo jednom u Hollywoodu",
+    //   caption: "Bilo jednom u Hollywoodu",
+    //   captionText: "Film",
+    // },
     {
-      src: props.data.once.childImageSharp.fluid,
-      altText: "Bilo jednom u Hollywoodu",
-      caption: "Bilo jednom u Hollywoodu",
-      captionText: "Film",
-    },
-    {
-      src: props.data.orasar.childImageSharp.fluid,
+      src: props.data.carousel6.childImageSharp.fluid,
       altText: "Orašar",
       caption: "Orašar",
       captionText: "Kultura",
@@ -212,42 +212,42 @@ export default NaslovnicaPage
 
 export const query = graphql`
   query {
-    orasar: file(relativePath: { eq: "orasar1.jpg" }) {
+    carousel1: file(relativePath: { eq: "carouselParniValjak.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    once: file(relativePath: { eq: "once1.jpg" }) {
+    carousel2: file(relativePath: { eq: "carouselKraljLavova.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    glazba: file(relativePath: { eq: "kralj.jpg" }) {
+    carousel3: file(relativePath: { eq: "carouselFootball.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    kazaliste: file(relativePath: { eq: "parni.jpg" }) {
+    carousel4: file(relativePath: { eq: "carouselEro.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    sport: file(relativePath: { eq: "sp.jpg" }) {
+    carousel5: file(relativePath: { eq: "once1.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    ostalo: file(relativePath: { eq: "ero.jpg" }) {
+    carousel6: file(relativePath: { eq: "carouselOrasar.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

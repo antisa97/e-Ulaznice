@@ -88,7 +88,7 @@ const NaslovnicaPage = props => {
           alt={item.altText}
           className={NaslovnicaStyle.crouselImage}
           imgStyle={{
-            objectFit: "fill", //PROMIJENITI
+            objectFit: "cover ", //PROMIJENITI
           }}
         />
         <Link to="/dogadaji">

@@ -124,3 +124,10 @@
     letter-spacing: 0;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .crouselImage {
+    /* height: 470px; */
+    width: 120%;
+  }
+}

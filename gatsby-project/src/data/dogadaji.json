@@ -2,31 +2,37 @@
   {
     "caption": "Prljavo kazalište",
     "captionText": "Kultura",
-    "image": { "src": "naslovnica_sport.jpeg" }
+    "image": { "src": "naslovnica_sport.jpeg" },
+    "icon": { "src": "culture.png" }
   },
   {
     "caption": "Kralj lavova",
     "captionText": "Film",
-    "image": { "src": "naslovna_konc.jpg" }
+    "image": { "src": "naslovna_konc.jpg" },
+    "icon": { "src": "culture.png" }
   },
   {
     "caption": "Hrvatska-Engleska",
     "captionText": "Sport",
-    "image": { "src": "naslovnica_glazba.jpg" }
+    "image": { "src": "naslovnica_glazba.jpg" },
+    "icon": { "src": "culture.png" }
   },
   {
     "caption": "Ero s onoga svijeta",
     "captionText": "Kultura",
-    "image": { "src": "naslovnica_kazaliste.jpg" }
+    "image": { "src": "naslovnica_kazaliste.jpg" },
+    "icon": { "src": "culture.png" }
   },
   {
     "caption": "Bilo jednom u Hollywoodu",
     "captionText": "Film",
-    "image": { "src": "naslovnica_ostalo.jpg" }
+    "image": { "src": "naslovnica_ostalo.jpg" },
+    "icon": { "src": "culture.png" }
   },
   {
     "caption": "Orašar",
     "captionText": "Kultura",
-    "image": { "src": "orasar1.jpg" }
+    "image": { "src": "orasar1.jpg" },
+    "icon": { "src": "culture.png" }
   }
 ]

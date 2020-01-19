@@ -214,42 +214,42 @@ export const query = graphql`
   query {
     carousel1: file(relativePath: { eq: "carouselParniValjak.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1200, maxHeight: 564) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     carousel2: file(relativePath: { eq: "carouselKraljLavova.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1281, maxHeight: 603) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     carousel3: file(relativePath: { eq: "carouselFootball.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1004, maxHeight: 472) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     carousel4: file(relativePath: { eq: "carouselEro.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1386, maxHeight: 651) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     carousel5: file(relativePath: { eq: "once1.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 2000, maxHeight: 470) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     carousel6: file(relativePath: { eq: "carouselOrasar.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 2013, maxHeight: 946) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

@@ -9,6 +9,8 @@ import Swal from "sweetalert2"
 import $ from "jquery"
 import "../styles/style.css"
 import eventsList from "../data/dogadaji.json"
+import DogadajImage from "../components/dogadajImage"
+import IconImage from "../components/iconImage"
 
 function ok() {
   Swal.fire("Vaša kupnja je uspješno obavljena!", "", "success")
@@ -71,9 +73,13 @@ const DogadajiPage = props => {
             {searchResult.map(item => (
               <div className={DogadajiStyle.card}>
                 <div className={DogadajiStyle.cardImage}>
-                  <Img
+                  {/* <Img
                     className={DogadajiStyle.image}
                     fluid={props.data.kazaliste.childImageSharp.fluid}
+                  /> */}
+                  <DogadajImage
+                    className={DogadajiStyle.image}
+                    filename={item.image.src}
                   />
                 </div>
                 <div className={DogadajiStyle.content}>
@@ -86,6 +92,36 @@ const DogadajiPage = props => {
                       className={DogadajiStyle.categoryImage}
                       fluid={props.data.cultureIcon.childImageSharp.fluid}
                     /> */}
+                    {/* <IconImage
+                      className={DogadajiStyle.categoryImage}
+                      filename={item.icon.src}
+                    /> */}
+                    <div
+                      className={DogadajiStyle.categoryImage}
+                      // style={{
+                      //   position: "relative",
+                      // }}
+                    >
+                      <IconImage
+                        // className={DogadajiStyle.categoryImage}
+                        filename={item.icon.src}
+                        // style={{
+                        //   display: "flex",
+                        //   flexDirection: "column",
+                        //   justifyContent: "center",
+                        // }}
+                        // imgStyle={{
+                        //   objectFit: "fill ", //PROMIJENITI
+                        // }}
+                        // style={
+                        //   {
+                        //     // maxWidth: "22px",
+                        //     // maxHeight: "22px",
+                        //     // position: "absolute",
+                        //   }
+                        // }
+                      />
+                    </div>
                   </div>
                   <div className={DogadajiStyle.dateLocation}>
                     <p className={DogadajiStyle.location}>Pulska arena</p>
@@ -99,7 +135,6 @@ const DogadajiPage = props => {
                     outline
                     color="danger"
                     onClick={ok}
-                    onclick="this.blur();"
                   >
                     Kupi ulaznice
                   </Button>

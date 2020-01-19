@@ -117,10 +117,11 @@
     background-color: #ffff33;
     transform: scale(1);
     z-index: 0;
+    box-shadow: none;
   }
 
   .categoryTitle {
-    text-transform: capitalize;
+    font-size: 1.7rem;
     letter-spacing: 0;
   }
 

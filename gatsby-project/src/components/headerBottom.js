@@ -27,27 +27,31 @@ const Header = props => {
           id={HeaderBottomStyle.homeIcon}
           src={home}
         ></img>
-        <NavLink to="/" exact="true" className={HeaderBottomStyle.navbarName}>
+        {/* <NavLink to="/" exact="true" className={HeaderBottomStyle.navbarName}>
           NASLOVNICA
-        </NavLink>
+        </NavLink> */}
+        <p className={HeaderBottomStyle.navbarName}>NASLOVNICA</p>
       </NavLink>
       <NavLink to="/dogadaji" className={HeaderBottomStyle.iconContainer}>
         <img className={HeaderBottomStyle.icon} src={events}></img>
-        <NavLink to="/dogadaji" className={HeaderBottomStyle.navbarName}>
+        {/* <NavLink to="/dogadaji" className={HeaderBottomStyle.navbarName}>
           DOGAĐAJI
-        </NavLink>
+        </NavLink> */}
+        <p className={HeaderBottomStyle.navbarName}> DOGAĐAJI</p>
       </NavLink>
       <NavLink to="/novosti" className={HeaderBottomStyle.iconContainer}>
         <img className={HeaderBottomStyle.icon} src={news}></img>
-        <NavLink to="/novosti" className={HeaderBottomStyle.navbarName}>
+        {/* <NavLink to="/novosti" className={HeaderBottomStyle.navbarName}>
           NOVOSTI
-        </NavLink>
+        </NavLink> */}
+        <p className={HeaderBottomStyle.navbarName}> NOVOSTI</p>
       </NavLink>
       <NavLink to="/izvjestaji" className={HeaderBottomStyle.iconContainer}>
         <img className={HeaderBottomStyle.icon} src={blog}></img>
-        <NavLink to="/izvjestaji" className={HeaderBottomStyle.navbarName}>
+        {/* <NavLink to="/izvjestaji" className={HeaderBottomStyle.navbarName}>
           IZVJEŠTAJI
-        </NavLink>
+        </NavLink> */}
+        <p className={HeaderBottomStyle.navbarName}> IZVJEŠTAJI</p>
       </NavLink>
       <NavLink to="/registracija">Više</NavLink>
     </div>

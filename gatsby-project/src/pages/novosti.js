@@ -21,8 +21,18 @@ import img6 from "../images/parnivaljak.jpg"
 
 const NovostiPage = props => {
   const [modal, setModal] = useState(false)
+  const [modal1, setModal1] = useState(false)
+  const [modal2, setModal2] = useState(false)
+  const [modal3, setModal3] = useState(false)
+  const [modal4, setModal4] = useState(false)
+  const [modal5, setModal5] = useState(false)
 
   const toggle = () => setModal(!modal)
+  const toggle1 = () => setModal1(!modal1)
+  const toggle2 = () => setModal2(!modal2)
+  const toggle3 = () => setModal3(!modal3)
+  const toggle4 = () => setModal4(!modal4)
+  const toggle5 = () => setModal5(!modal5)
   return (
     <Layout>
       <div className={NovostiStyle.page}>
@@ -50,9 +60,13 @@ const NovostiPage = props => {
                 rujna u Quebecu. COURAGE WORLD TOUR uključivati će više od 100
                 gradova diljem svijeta, a za produkciju na najvećem svjetskom
                 nivou, uz Star produkciju, zadužen će biti i Concerts West...
-                <a href="#celineModal" onClick={toggle}>
-                  {" "}
-                  Pročitaj više{" "}
+                <a
+                  href="#celineModal"
+                  data-target="#celineModal"
+                  onClick={toggle}
+                  data-modal="#celineModal"
+                >
+                  Launch Modal
                 </a>
                 <Modal
                   isOpen={modal}
@@ -141,7 +155,6 @@ const NovostiPage = props => {
                   <ModalFooter>
                     <Button
                       color="primary"
-                      onClick={toggle}
                       href="https://www.facebook.com/"
                       target="_blank"
                     >
@@ -169,18 +182,18 @@ const NovostiPage = props => {
                     <h6 style={{ paddingLeft: 10 }}>
                       ANDREA BOCELLI PONOVNO U SLOVENIJI: NASTUPA U SLAVNOJ
                       DVORANI STOŽICE{" "}
-                      <a href="#boticeliModal" onClick={toggle}>
+                      <a href="#boticeliModal" onClick={toggle1}>
                         {" "}
                         <h7>Pročitaj više </h7>
                       </a>
                     </h6>
 
                     <Modal
-                      isOpen={modal}
-                      toggle={toggle}
+                      isOpen={modal1}
+                      toggle={toggle1}
                       id={NovostiStyle.boticeliModal}
                     >
-                      <ModalHeader toggle={toggle}>
+                      <ModalHeader toggle={toggle1}>
                         ANDREA BOCELLI PONOVNO U SLOVENIJI: NASTUPA U SLAVNOJ
                         DVORANI STOŽICE{" "}
                       </ModalHeader>
@@ -243,13 +256,12 @@ const NovostiPage = props => {
                       <ModalFooter>
                         <Button
                           color="primary"
-                          onClick={toggle}
                           href="https://www.facebook.com/"
                           target="_blank"
                         >
                           Podijeli
                         </Button>{" "}
-                        <Button color="secondary" onClick={toggle}>
+                        <Button color="secondary" onClick={toggle1}>
                           Zatvori
                         </Button>
                       </ModalFooter>
@@ -271,18 +283,18 @@ const NovostiPage = props => {
                     <h6 style={{ paddingLeft: 10 }}>
                       ZORICA KONDŽA I KLAPA CAMBI PREZENTIRAJU SVOJU MAGIJU U
                       ARSENALU, ZADAR{" "}
-                      <a href="#zoricaModal" onClick={toggle}>
+                      <a onClick={toggle2} href="#zoricaModal">
                         {" "}
                         <h7>Pročitaj više </h7>
                       </a>
                     </h6>
 
                     <Modal
-                      isOpen={modal}
-                      toggle={toggle}
+                      isOpen={modal2}
+                      toggle={toggle2}
                       id={NovostiStyle.zoricaModal}
                     >
-                      <ModalHeader toggle={toggle}>
+                      <ModalHeader toggle={toggle2}>
                         ZORICA KONDŽA I KLAPA CAMBI PREZENTIRAJU SVOJU MAGIJU U
                         ARSENALU, ZADAR{" "}
                       </ModalHeader>
@@ -345,13 +357,12 @@ const NovostiPage = props => {
                       <ModalFooter>
                         <Button
                           color="primary"
-                          onClick={toggle}
                           href="https://www.facebook.com/"
                           target="_blank"
                         >
                           Podijeli
                         </Button>{" "}
-                        <Button color="secondary" onClick={toggle}>
+                        <Button color="secondary" onClick={toggle2}>
                           Zatvori
                         </Button>
                       </ModalFooter>
@@ -373,18 +384,18 @@ const NovostiPage = props => {
                     <h6 style={{ paddingLeft: 10 }}>
                       EKSKLUZIVNO – TONY CETINSKI I #SAMOLJUBAV, 30.05.2020., U
                       ARENI ZAGREB!{" "}
-                      <a href="#toniModal" onClick={toggle}>
+                      <a onClick={toggle3} href="#toniModal">
                         {" "}
                         <h7>Pročitaj više </h7>
                       </a>
                     </h6>
 
                     <Modal
-                      isOpen={modal}
-                      toggle={toggle}
+                      isOpen={modal3}
+                      toggle={toggle3}
                       id={NovostiStyle.toniModal}
                     >
-                      <ModalHeader toggle={toggle}>
+                      <ModalHeader toggle={toggle3}>
                         EKSKLUZIVNO – TONY CETINSKI I #SAMOLJUBAV, 30.05.2020.,
                         U ARENI ZAGREB!{" "}
                       </ModalHeader>
@@ -485,13 +496,12 @@ const NovostiPage = props => {
                       <ModalFooter>
                         <Button
                           color="primary"
-                          onClick={toggle}
                           href="https://www.facebook.com/"
                           target="_blank"
                         >
                           Podijeli
                         </Button>{" "}
-                        <Button color="secondary" onClick={toggle}>
+                        <Button color="secondary" onClick={toggle3}>
                           Zatvori
                         </Button>
                       </ModalFooter>
@@ -513,18 +523,18 @@ const NovostiPage = props => {
                     <h6 style={{ paddingLeft: 10 }}>
                       GLAS KOJI POPUT KUPIDOVE STRIJELE SPAJA, UČINITI ĆE
                       VALENTINOVO POSEBNIM{" "}
-                      <a href="#massimoModal" onClick={toggle}>
+                      <a onClick={toggle4} href="#massimoModal">
                         {" "}
                         <h7>Pročitaj više </h7>
                       </a>
                     </h6>
 
                     <Modal
-                      isOpen={modal}
-                      toggle={toggle}
+                      isOpen={modal4}
+                      toggle={toggle4}
                       id={NovostiStyle.massimoModal}
                     >
-                      <ModalHeader toggle={toggle}>
+                      <ModalHeader toggle={toggle4}>
                         GLAS KOJI POPUT KUPIDOVE STRIJELE SPAJA, UČINITI ĆE
                         VALENTINOVO POSEBNIM{" "}
                       </ModalHeader>
@@ -666,13 +676,12 @@ const NovostiPage = props => {
                       <ModalFooter>
                         <Button
                           color="primary"
-                          onClick={toggle}
                           href="https://www.facebook.com/"
                           target="_blank"
                         >
                           Podijeli
                         </Button>{" "}
-                        <Button color="secondary" onClick={toggle}>
+                        <Button color="secondary" onClick={toggle4}>
                           Zatvori
                         </Button>
                       </ModalFooter>
@@ -694,18 +703,18 @@ const NovostiPage = props => {
                     <h6 style={{ paddingLeft: 10 }}>
                       PARNI VALJAK STIŽE U ARENU ZAGREB 18.4.2020. NA FINALNI
                       KONCERT TURNEJE #RUNDA44{" "}
-                      <a href="#parniValjakModal" onClick={toggle}>
+                      <a onClick={toggle5} href="#parniValjakModal">
                         {" "}
                         <h7>Pročitaj više </h7>
                       </a>
                     </h6>
 
                     <Modal
-                      isOpen={modal}
-                      toggle={toggle}
+                      isOpen={modal5}
+                      toggle={toggle5}
                       id={NovostiStyle.parniValjakModal}
                     >
-                      <ModalHeader toggle={toggle}>
+                      <ModalHeader toggle={toggle5}>
                         PARNI VALJAK STIŽE U ARENU ZAGREB 18.4.2020. NA FINALNI
                         KONCERT TURNEJE #RUNDA44{" "}
                       </ModalHeader>
@@ -740,13 +749,12 @@ const NovostiPage = props => {
                       <ModalFooter>
                         <Button
                           color="primary"
-                          onClick={toggle}
                           href="https://www.facebook.com/"
                           target="_blank"
                         >
                           Podijeli
                         </Button>{" "}
-                        <Button color="secondary" onClick={toggle}>
+                        <Button color="secondary" onClick={toggle5}>
                           Zatvori
                         </Button>
                       </ModalFooter>

@@ -34,7 +34,7 @@
 }
 
 .slika2 {
-  width: 110px;
+  max-width: 110px;
   height: 80px;
 }
 
@@ -44,7 +44,7 @@
 }
 .modalMainImage {
   height: 190px;
-  width: 466px;
+  max-width: 466px;
 }
 .media-heading {
   margin-top: 20px !important;

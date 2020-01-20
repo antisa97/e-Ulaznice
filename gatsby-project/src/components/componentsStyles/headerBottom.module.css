@@ -58,6 +58,17 @@
     color: green;
     text-decoration: none;
   }
+
+  .button {
+    background-color: #eef6fa;
+    border: none;
+  }
+
+  .dropU {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
 }
 
 .mail,

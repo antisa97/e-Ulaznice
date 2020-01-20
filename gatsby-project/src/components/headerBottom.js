@@ -9,6 +9,7 @@ import {
   Input,
   Button,
 } from "reactstrap"
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import NavLink from "./links"
 import HeaderBottomStyle from "../components/componentsStyles/headerBottom.module.css"
@@ -17,8 +18,18 @@ import events from "../images/iconCalendar4.png"
 import news from "../images/iconNews.png"
 import blog from "../images/iconBlog.png"
 import HeaderStyle from "../components/componentsStyles/header.module.css"
+import {
+  ButtonDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap"
+import dots from "../images/dots.png"
 
 const Header = props => {
+  const [dropdownOpen, setOpen] = useState(false)
+
+  const toggle = () => setOpen(!dropdownOpen)
   return (
     <div className={HeaderBottomStyle.nav}>
       <div className={HeaderBottomStyle.iconContainer}>
@@ -97,13 +108,46 @@ const Header = props => {
       </div>
       {/* <p className={HeaderBottomStyle.navbarName}> IZVJEŠTAJI</p> */}
       {/* </NavLink> */}
-      <Link
+      {/* <Link
         to="/registracija"
         className={HeaderBottomStyle.navbarName}
         activeClassName={HeaderBottomStyle.navbarName__active}
       >
         Više
-      </Link>
+      </Link> */}
+      <ButtonDropdown isOpen={dropdownOpen} toggle={toggle} direction="up">
+        <DropdownToggle
+          caret
+          className={HeaderBottomStyle.button}
+          class="btn noHover"
+        >
+          {" "}
+          <img className={HeaderBottomStyle.icon} src={dots}></img>
+        </DropdownToggle>
+        <DropdownMenu>
+          <div className={HeaderBottomStyle.dropU}>
+            <Link
+              to="/registracija"
+              className={HeaderBottomStyle.navbarName}
+              activeClassName={HeaderBottomStyle.navbarName__active}
+            >
+              REGISTRACIJA
+            </Link>
+            <Link
+              to="/registracija"
+              className={HeaderBottomStyle.navbarName}
+              activeClassName={HeaderBottomStyle.navbarName__active}
+            >
+              PRIJAVA
+            </Link>
+          </div>
+          {/* <DropdownItem header>Header</DropdownItem>
+          <DropdownItem disabled>Action</DropdownItem>
+          <DropdownItem>Another Action</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem>Another Action</DropdownItem> */}
+        </DropdownMenu>
+      </ButtonDropdown>
     </div>
   )
 }

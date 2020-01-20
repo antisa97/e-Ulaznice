@@ -181,5 +181,49 @@ button.swal2-confirm.swal2-styled:hover {
 }
 
 button.swal2-confirm.swal2-styled:focus {
-  outline: none !important;
+  box-shadow: none;
 }
+
+.dropup .dropdown-toggle::after {
+  display: none;
+}
+
+.btn-secondary:focus {
+  outline: 0;
+}
+
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: none !important;
+}
+
+.btn-secondary:focus {
+  /* color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+  box-shadow: 0 0 0 0.2rem rgba(130,138,145,.5); */
+  color: #eef6fa;
+  background-color: #eef6fa;
+  border-color: #eef6fa;
+  box-shadow: none !important;
+}
+
+.show > .btn-secondary.dropdown-toggle {
+  color: #eef6fa;
+  background-color: #eef6fa;
+  border-color: #eef6fa;
+}
+
+.show > .btn-secondary.dropdown-toggle:hover {
+  background-color: unset !important;
+  color: unset !important;
+}
+
+.dropup .dropdown-toggle:hover {
+  background-color: unset !important;
+  color: unset !important;
+}
+
+/* .dropdown-menu.show {
+  /* transform: translate3d(-100px, -100px, 0px); */
+/* transform: none;
+} */

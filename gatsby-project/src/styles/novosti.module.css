@@ -16,7 +16,7 @@
 
 .media {
   padding: 3em 3em 3.5em 3em;
-  margin-bottom: 75px;
+  margin-bottom: 75px !important;
   box-shadow: 0 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   background-color: #eef6fa;
@@ -25,17 +25,31 @@
   grid-template-columns: 1.5fr 1fr;
   grid-gap: 30px;
   margin-bottom: 18px;
+  max-height: 620px;
 }
 
 .slika1 {
   max-width: 100%;
+  height: 300px;
 }
 
 .slika2 {
-  max-width: 40%;
+  width: 110px;
+  height: 80px;
 }
 
 .media-left {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+}
+.modalMainImage {
+  height: 190px;
+  width: 466px;
+}
+.media-heading {
+  margin-top: 20px !important;
+}
+.secondMedia {
+  margin-top: 17px;
+  margin-bottom: 17px;
 }

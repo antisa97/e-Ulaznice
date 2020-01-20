@@ -54,5 +54,10 @@
   justify-content: space-between; */
 
 .navbarName {
-  font-size: 2.5vw;
+  font-size: 2.8vw;
+  margin-bottom: 0;
+}
+
+.icon {
+  width: 30px;
 }

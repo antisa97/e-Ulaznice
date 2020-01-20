@@ -1,30 +1,15 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  InputGroup,
-  Input,
-  Button,
-} from "reactstrap"
-
+import { ButtonDropdown, DropdownToggle, DropdownMenu } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
-import NavLink from "./links"
 import HeaderBottomStyle from "../components/componentsStyles/headerBottom.module.css"
-import home from "../images/home.png"
-import events from "../images/iconCalendar4.png"
+import home from "../images/iconHome.png"
+import events from "../images/iconCalendar.png"
 import news from "../images/iconNews.png"
 import blog from "../images/iconBlog.png"
-import HeaderStyle from "../components/componentsStyles/header.module.css"
-import {
-  ButtonDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from "reactstrap"
-import dots from "../images/dots.png"
+import dots from "../images/iconDots.png"
+import registration from "../images/iconRegistration.png"
+import login from "../images/iconUser.png"
 
 const Header = props => {
   const [dropdownOpen, setOpen] = useState(false)
@@ -33,17 +18,14 @@ const Header = props => {
   return (
     <div className={HeaderBottomStyle.nav}>
       <div className={HeaderBottomStyle.iconContainer}>
-        {/* <NavLink to="/" exact="true" className={HeaderBottomStyle.iconContainer}> */}
         <Link to="/">
           <img
             className={HeaderBottomStyle.icon}
             id={HeaderBottomStyle.homeIcon}
             src={home}
+            alt="home"
           ></img>
         </Link>
-        {/* <NavLink to="/" exact="true" className={HeaderBottomStyle.navbarName}>
-          NASLOVNICA
-        </NavLink> */}
         <Link
           to="/"
           className={HeaderBottomStyle.navbarName}
@@ -52,16 +34,14 @@ const Header = props => {
           NASLOVNICA
         </Link>
       </div>
-      {/* <p className={HeaderBottomStyle.navbarName}>NASLOVNICA</p> */}
-      {/* </NavLink> */}
-      {/* <NavLink to="/dogadaji" className={HeaderBottomStyle.iconContainer}> */}
       <div className={HeaderBottomStyle.iconContainer}>
         <Link to="/dogadaji">
-          <img className={HeaderBottomStyle.icon} src={events}></img>
+          <img
+            className={HeaderBottomStyle.icon}
+            src={events}
+            alt="events"
+          ></img>
         </Link>
-        {/* <NavLink to="/dogadaji" className={HeaderBottomStyle.navbarName}>
-          DOGAĐAJI
-        </NavLink> */}
         <Link
           to="/dogadaji"
           className={HeaderBottomStyle.navbarName}
@@ -69,17 +49,11 @@ const Header = props => {
         >
           DOGAĐAJI
         </Link>
-        {/* <p className={HeaderBottomStyle.navbarName}> DOGAĐAJI</p> */}
-        {/* </NavLink> */}
       </div>
-      {/* <NavLink to="/novosti" className={HeaderBottomStyle.iconContainer}> */}
       <div className={HeaderBottomStyle.iconContainer}>
         <Link to="/novosti">
-          <img className={HeaderBottomStyle.icon} src={news}></img>
+          <img className={HeaderBottomStyle.icon} src={news} alt="news"></img>
         </Link>
-        {/* <NavLink to="/novosti" className={HeaderBottomStyle.navbarName}>
-          NOVOSTI
-        </NavLink> */}
         <Link
           to="/novosti"
           className={HeaderBottomStyle.navbarName}
@@ -87,17 +61,11 @@ const Header = props => {
         >
           NOVOSTI
         </Link>
-        {/* <p className={HeaderBottomStyle.navbarName}> NOVOSTI</p> */}
-        {/* </NavLink> */}
       </div>
-      {/* <NavLink to="/izvjestaji" className={HeaderBottomStyle.iconContainer}> */}
       <div className={HeaderBottomStyle.iconContainer}>
         <Link to="/izvjestaji">
-          <img className={HeaderBottomStyle.icon} src={blog}></img>
+          <img className={HeaderBottomStyle.icon} src={blog} alt="blog"></img>
         </Link>
-        {/* <NavLink to="/izvjestaji" className={HeaderBottomStyle.navbarName}>
-          IZVJEŠTAJI
-        </NavLink> */}
         <Link
           to="/izvjestaji"
           className={HeaderBottomStyle.navbarName}
@@ -106,46 +74,49 @@ const Header = props => {
           IZVJEŠTAJI
         </Link>
       </div>
-      {/* <p className={HeaderBottomStyle.navbarName}> IZVJEŠTAJI</p> */}
-      {/* </NavLink> */}
-      {/* <Link
-        to="/registracija"
-        className={HeaderBottomStyle.navbarName}
-        activeClassName={HeaderBottomStyle.navbarName__active}
-      >
-        Više
-      </Link> */}
+
       <ButtonDropdown isOpen={dropdownOpen} toggle={toggle} direction="up">
-        <DropdownToggle
-          caret
-          className={HeaderBottomStyle.button}
-          class="btn noHover"
-        >
-          {" "}
-          <img className={HeaderBottomStyle.icon} src={dots}></img>
+        <DropdownToggle caret className={HeaderBottomStyle.button}>
+          <img className={HeaderBottomStyle.icon} src={dots} alt="dots"></img>
         </DropdownToggle>
         <DropdownMenu>
-          <div className={HeaderBottomStyle.dropU}>
-            <Link
-              to="/registracija"
-              className={HeaderBottomStyle.navbarName}
-              activeClassName={HeaderBottomStyle.navbarName__active}
+          <div className={HeaderBottomStyle.dropUp}>
+            <div
+              className={HeaderBottomStyle.iconContainer}
+              id={HeaderBottomStyle.loginContainer}
             >
-              REGISTRACIJA
-            </Link>
-            <Link
-              to="/registracija"
-              className={HeaderBottomStyle.navbarName}
-              activeClassName={HeaderBottomStyle.navbarName__active}
-            >
-              PRIJAVA
-            </Link>
+              <Link to="/registracija">
+                <img
+                  className={HeaderBottomStyle.icon}
+                  src={login}
+                  alt="login"
+                ></img>
+              </Link>
+              <Link
+                to="/registracija"
+                className={HeaderBottomStyle.navbarName}
+                activeClassName={HeaderBottomStyle.navbarName__active}
+              >
+                PRIJAVA
+              </Link>
+            </div>
+            <div className={HeaderBottomStyle.iconContainer}>
+              <Link to="/registracija">
+                <img
+                  className={HeaderBottomStyle.icon}
+                  src={registration}
+                  alt="registration"
+                ></img>
+              </Link>
+              <Link
+                to="/registracija"
+                className={HeaderBottomStyle.navbarName}
+                activeClassName={HeaderBottomStyle.navbarName__active}
+              >
+                REGISTRACIJA
+              </Link>
+            </div>
           </div>
-          {/* <DropdownItem header>Header</DropdownItem>
-          <DropdownItem disabled>Action</DropdownItem>
-          <DropdownItem>Another Action</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>Another Action</DropdownItem> */}
         </DropdownMenu>
       </ButtonDropdown>
     </div>

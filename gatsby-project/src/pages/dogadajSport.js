@@ -6,7 +6,7 @@ import DogadajiStyle from "../styles/dogadaji.module.css"
 import { Button } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Swal from "sweetalert2"
-import $ from "jquery"
+
 import "../styles/style.css"
 import eventsList from "../data/dogadaji.json"
 import DogadajImage from "../components/dogadajImage"

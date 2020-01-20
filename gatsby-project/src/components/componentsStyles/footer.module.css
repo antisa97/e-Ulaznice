@@ -36,7 +36,7 @@
 }
 
 .title {
-  color: #eef6fa;
+  color: var(--secondary-color);
   margin-bottom: 1em;
 }
 
@@ -46,7 +46,7 @@
 
 .number,
 .mail {
-  color: #eef6fa;
+  color: var(--secondary-color);
   /* display: grid; */
   /* grid-template-columns: 10% 90%;*/
   align-items: center;

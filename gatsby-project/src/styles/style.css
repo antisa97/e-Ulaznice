@@ -227,3 +227,12 @@ button.swal2-confirm.swal2-styled:focus {
   /* transform: translate3d(-100px, -100px, 0px); */
 /* transform: none;
 } */
+
+.dropdown-menu {
+  color: #eef6fa;
+}
+
+:root {
+  --primary-color: #ffff33;
+  --secondary-color: #eef6fa;
+}

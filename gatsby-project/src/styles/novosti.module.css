@@ -1,5 +1,5 @@
 .page {
-  background-color: #ffff33;
+  background-color: var(--primary-color);
 }
 
 .pageDiv {
@@ -19,7 +19,7 @@
   margin-bottom: 75px !important;
   box-shadow: 0 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.08);
   border-radius: 4px;
-  background-color: #eef6fa;
+  background-color: var(--secondary-color);
   display: grid;
   /* grid-template-columns: auto auto; */
   grid-template-columns: 1.5fr 1fr;

@@ -9,7 +9,7 @@
   box-shadow: 0 0 50px 17px rgba(225, 226, 228, 0.7);
   z-index: 1;
   /* background-color: #f7f7f9; */
-  background-color: #eef6fa;
+  background-color: var(--secondary-color);
 }
 
 .crouselImage {
@@ -22,7 +22,7 @@
   /* background-color: #86b2e3; */
   /* background-color: lightpink; */
   /* background-color: #ffc5c5; */
-  background-color: #ffff33;
+  background-color: var(--primary-color);
   box-shadow: inset 0 -21px 35px -8px rgba(225, 226, 228, 0.7);
 }
 
@@ -61,7 +61,7 @@
 
 .card:hover {
   /* background-color: #f7f7f9; */
-  background-color: #eef6fa;
+  background-color: var(--secondary-color);
   /* transform: scaleY(1.1); */
   transform: scale(1.05);
   z-index: 1;
@@ -114,7 +114,7 @@
   }
 
   .card:hover {
-    background-color: #ffff33;
+    background-color: var(--primary-color);
     transform: scale(1);
     z-index: 0;
     box-shadow: none;

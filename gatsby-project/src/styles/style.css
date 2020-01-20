@@ -84,7 +84,6 @@ Extra (xl) large devices (large desktops, 1200px and up)
 */
 
 /*za tekst i pozadinu teksta carousela*/
-
 .carousel-caption h3 {
   position: relative;
   z-index: 1;
@@ -94,7 +93,6 @@ Extra (xl) large devices (large desktops, 1200px and up)
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
-  /* display: flex; */
 }
 
 .carousel-caption h3::before {
@@ -116,7 +114,11 @@ Extra (xl) large devices (large desktops, 1200px and up)
   padding-bottom: 0.3rem;
   letter-spacing: 1px;
   font-size: 18px;
-  /* display: flex; */
+  display: block !important;
+}
+
+.d-block p {
+  display: block !important;
 }
 
 .carousel-caption p::before {
@@ -131,26 +133,27 @@ Extra (xl) large devices (large desktops, 1200px and up)
   background-color: lightgray;
 }
 
-/* button.swal2-styled.swal2-confirm {
-  letter-spacing: 1.1px;
-  border-width: 1.5px;
-  text-transform: uppercase;
-  font-weight: 500;
-  line-height: 1;
-  border-radius: 25px;
-  padding-top: 13px;
-  padding-right: 32px;
-  padding-bottom: 13px;
-  padding-left: 32px;
-  margin-top: 2px;
-  width: 190px;
-  background-color: white;
-  color: #3085d6;
-  border: 1.5px solid #3085d6;
-  border-left-color: #3085d6;
-  border-right-color: #3085d6;
-}*/
+@media (max-width: 768px) {
+  .d-md-block {
+    display: block !important;
+  }
 
+  .carousel-caption p {
+    display: none !important;
+  }
+
+  .carousel-caption h3 {
+    padding-bottom: 0.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption h3 {
+    font-size: 5vw;
+  }
+}
+
+/*sweet alert button*/
 button.swal2-confirm.swal2-styled {
   letter-spacing: 1.1px;
   border-width: 1.5px;
@@ -164,14 +167,11 @@ button.swal2-confirm.swal2-styled {
   padding-left: 32px;
   margin-top: 2px;
   width: 190px;
-
   background-color: white;
   color: #3085d6;
   border: 1.5px solid #3085d6;
   border-left-color: #3085d6 !important;
   border-right-color: #3085d6 !important;
-
-  /* background-color: #3085d6; */
 }
 
 button.swal2-confirm.swal2-styled:hover {
@@ -184,6 +184,7 @@ button.swal2-confirm.swal2-styled:focus {
   box-shadow: none;
 }
 
+/*dropUp*/
 .dropup .dropdown-toggle::after {
   display: none;
 }
@@ -197,10 +198,6 @@ button.swal2-confirm.swal2-styled:focus {
 }
 
 .btn-secondary:focus {
-  /* color: #fff;
-  background-color: #5a6268;
-  border-color: #545b62;
-  box-shadow: 0 0 0 0.2rem rgba(130,138,145,.5); */
   color: var(--secondary-color);
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
@@ -223,19 +220,12 @@ button.swal2-confirm.swal2-styled:focus {
   color: unset !important;
 }
 
-/* .dropdown-menu.show {
-  /* transform: translate3d(-100px, -100px, 0px); */
-/* transform: none;
-} */
-
 .dropdown-menu {
   background-color: var(--secondary-color) !important;
   top: -7.5px !important;
   border-radius: 0;
   left: 6px !important;
-
   border: 1px solid grey !important;
-  /* width: 140px !important; */
   min-width: 0 !important;
 }
 

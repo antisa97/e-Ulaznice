@@ -1,4 +1,4 @@
-#inputBottom {
+.nav {
   display: none;
 }
 
@@ -7,7 +7,7 @@
     display: none;
   } */
 
-  #inputBottom {
+  .nav {
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -15,6 +15,9 @@
     width: 100%;
     padding: 0.6em 0.4em 0.4em 0.4em;
     background-color: #eef6fa;
+    z-index: 1;
+    border-top: solid 1px grey;
+    box-shadow: 0 0 12px 2px #e7f3f9;
   }
 }
 
@@ -65,8 +68,29 @@
   width: 30px;
 }
 
+#homeIcon {
+  width: 35px;
+  height: 30px;
+}
+
 .iconContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.iconContainer:hover {
+  color: green;
+  text-decoration: none;
+  text-underline-position: 0;
+}
+
+.navbarName__active {
+  /* text-decoration: underline; */
+  color: green;
+}
+
+.navbarName:hover {
+  color: green;
+  text-decoration: none;
 }

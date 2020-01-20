@@ -30,9 +30,16 @@ const Header = props => {
             src={home}
           ></img>
         </Link>
-        <NavLink to="/" exact="true" className={HeaderBottomStyle.navbarName}>
+        {/* <NavLink to="/" exact="true" className={HeaderBottomStyle.navbarName}>
           NASLOVNICA
-        </NavLink>
+        </NavLink> */}
+        <Link
+          to="/"
+          className={HeaderBottomStyle.navbarName}
+          activeClassName={HeaderBottomStyle.navbarName__active}
+        >
+          NASLOVNICA
+        </Link>
       </div>
       {/* <p className={HeaderBottomStyle.navbarName}>NASLOVNICA</p> */}
       {/* </NavLink> */}
@@ -41,9 +48,16 @@ const Header = props => {
         <Link to="/dogadaji">
           <img className={HeaderBottomStyle.icon} src={events}></img>
         </Link>
-        <NavLink to="/dogadaji" className={HeaderBottomStyle.navbarName}>
+        {/* <NavLink to="/dogadaji" className={HeaderBottomStyle.navbarName}>
           DOGAĐAJI
-        </NavLink>
+        </NavLink> */}
+        <Link
+          to="/dogadaji"
+          className={HeaderBottomStyle.navbarName}
+          activeClassName={HeaderBottomStyle.navbarName__active}
+        >
+          DOGAĐAJI
+        </Link>
         {/* <p className={HeaderBottomStyle.navbarName}> DOGAĐAJI</p> */}
         {/* </NavLink> */}
       </div>
@@ -52,9 +66,16 @@ const Header = props => {
         <Link to="/novosti">
           <img className={HeaderBottomStyle.icon} src={news}></img>
         </Link>
-        <NavLink to="/novosti" className={HeaderBottomStyle.navbarName}>
+        {/* <NavLink to="/novosti" className={HeaderBottomStyle.navbarName}>
           NOVOSTI
-        </NavLink>
+        </NavLink> */}
+        <Link
+          to="/novosti"
+          className={HeaderBottomStyle.navbarName}
+          activeClassName={HeaderBottomStyle.navbarName__active}
+        >
+          NOVOSTI
+        </Link>
         {/* <p className={HeaderBottomStyle.navbarName}> NOVOSTI</p> */}
         {/* </NavLink> */}
       </div>
@@ -63,13 +84,26 @@ const Header = props => {
         <Link to="/izvjestaji">
           <img className={HeaderBottomStyle.icon} src={blog}></img>
         </Link>
-        <NavLink to="/izvjestaji" className={HeaderBottomStyle.navbarName}>
+        {/* <NavLink to="/izvjestaji" className={HeaderBottomStyle.navbarName}>
           IZVJEŠTAJI
-        </NavLink>
+        </NavLink> */}
+        <Link
+          to="/izvjestaji"
+          className={HeaderBottomStyle.navbarName}
+          activeClassName={HeaderBottomStyle.navbarName__active}
+        >
+          IZVJEŠTAJI
+        </Link>
       </div>
       {/* <p className={HeaderBottomStyle.navbarName}> IZVJEŠTAJI</p> */}
       {/* </NavLink> */}
-      <NavLink to="/registracija">Više</NavLink>
+      <Link
+        to="/registracija"
+        className={HeaderBottomStyle.navbarName}
+        activeClassName={HeaderBottomStyle.navbarName__active}
+      >
+        Više
+      </Link>
     </div>
   )
 }

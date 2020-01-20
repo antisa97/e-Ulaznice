@@ -6,9 +6,9 @@ import HeaderBottomStyle from "../components/componentsStyles/headerBottom.modul
 export default ({ children, ...rest }) => (
   <Link
     className={HeaderStyle.navbarName}
-    className={HeaderBottomStyle.navbarName}
+    // className={HeaderBottomStyle.navbarName}
     activeClassName={HeaderStyle.navbarName__active}
-    activeClassName={HeaderBottomStyle.navbarName__active}
+    //activeClassName={HeaderBottomStyle.navbarName__active}
     {...rest}
   >
     {children}

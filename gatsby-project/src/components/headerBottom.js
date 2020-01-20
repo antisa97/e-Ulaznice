@@ -12,7 +12,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css"
 import NavLink from "./links"
 import HeaderBottomStyle from "../components/componentsStyles/headerBottom.module.css"
-import home from "../images/iconHome.png"
+import home from "../images/home.png"
 import events from "../images/iconCalendar4.png"
 import news from "../images/iconNews.png"
 import blog from "../images/iconBlog.png"

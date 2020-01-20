@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import { Link } from "gatsby"
 import {
   Collapse,
   Navbar,
@@ -21,38 +21,54 @@ import HeaderStyle from "../components/componentsStyles/header.module.css"
 const Header = props => {
   return (
     <div className={HeaderBottomStyle.nav}>
-      <NavLink to="/" exact="true" className={HeaderBottomStyle.iconContainer}>
-        <img
-          className={HeaderBottomStyle.icon}
-          id={HeaderBottomStyle.homeIcon}
-          src={home}
-        ></img>
-        {/* <NavLink to="/" exact="true" className={HeaderBottomStyle.navbarName}>
+      <div className={HeaderBottomStyle.iconContainer}>
+        {/* <NavLink to="/" exact="true" className={HeaderBottomStyle.iconContainer}> */}
+        <Link to="/">
+          <img
+            className={HeaderBottomStyle.icon}
+            id={HeaderBottomStyle.homeIcon}
+            src={home}
+          ></img>
+        </Link>
+        <NavLink to="/" exact="true" className={HeaderBottomStyle.navbarName}>
           NASLOVNICA
-        </NavLink> */}
-        <p className={HeaderBottomStyle.navbarName}>NASLOVNICA</p>
-      </NavLink>
-      <NavLink to="/dogadaji" className={HeaderBottomStyle.iconContainer}>
-        <img className={HeaderBottomStyle.icon} src={events}></img>
-        {/* <NavLink to="/dogadaji" className={HeaderBottomStyle.navbarName}>
+        </NavLink>
+      </div>
+      {/* <p className={HeaderBottomStyle.navbarName}>NASLOVNICA</p> */}
+      {/* </NavLink> */}
+      {/* <NavLink to="/dogadaji" className={HeaderBottomStyle.iconContainer}> */}
+      <div className={HeaderBottomStyle.iconContainer}>
+        <Link to="/dogadaji">
+          <img className={HeaderBottomStyle.icon} src={events}></img>
+        </Link>
+        <NavLink to="/dogadaji" className={HeaderBottomStyle.navbarName}>
           DOGAĐAJI
-        </NavLink> */}
-        <p className={HeaderBottomStyle.navbarName}> DOGAĐAJI</p>
-      </NavLink>
-      <NavLink to="/novosti" className={HeaderBottomStyle.iconContainer}>
-        <img className={HeaderBottomStyle.icon} src={news}></img>
-        {/* <NavLink to="/novosti" className={HeaderBottomStyle.navbarName}>
+        </NavLink>
+        {/* <p className={HeaderBottomStyle.navbarName}> DOGAĐAJI</p> */}
+        {/* </NavLink> */}
+      </div>
+      {/* <NavLink to="/novosti" className={HeaderBottomStyle.iconContainer}> */}
+      <div className={HeaderBottomStyle.iconContainer}>
+        <Link to="/novosti">
+          <img className={HeaderBottomStyle.icon} src={news}></img>
+        </Link>
+        <NavLink to="/novosti" className={HeaderBottomStyle.navbarName}>
           NOVOSTI
-        </NavLink> */}
-        <p className={HeaderBottomStyle.navbarName}> NOVOSTI</p>
-      </NavLink>
-      <NavLink to="/izvjestaji" className={HeaderBottomStyle.iconContainer}>
-        <img className={HeaderBottomStyle.icon} src={blog}></img>
-        {/* <NavLink to="/izvjestaji" className={HeaderBottomStyle.navbarName}>
+        </NavLink>
+        {/* <p className={HeaderBottomStyle.navbarName}> NOVOSTI</p> */}
+        {/* </NavLink> */}
+      </div>
+      {/* <NavLink to="/izvjestaji" className={HeaderBottomStyle.iconContainer}> */}
+      <div className={HeaderBottomStyle.iconContainer}>
+        <Link to="/izvjestaji">
+          <img className={HeaderBottomStyle.icon} src={blog}></img>
+        </Link>
+        <NavLink to="/izvjestaji" className={HeaderBottomStyle.navbarName}>
           IZVJEŠTAJI
-        </NavLink> */}
-        <p className={HeaderBottomStyle.navbarName}> IZVJEŠTAJI</p>
-      </NavLink>
+        </NavLink>
+      </div>
+      {/* <p className={HeaderBottomStyle.navbarName}> IZVJEŠTAJI</p> */}
+      {/* </NavLink> */}
       <NavLink to="/registracija">Više</NavLink>
     </div>
   )

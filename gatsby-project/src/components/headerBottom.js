@@ -10,24 +10,27 @@ import {
   Button,
 } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
-
+import NavLink from "./links"
 import HeaderBottomStyle from "../components/componentsStyles/headerBottom.module.css"
 
 const Header = props => {
   return (
     <div className={HeaderBottomStyle.input} id={HeaderBottomStyle.inputBottom}>
-      <InputGroup className={HeaderBottomStyle.mail} size="sm">
-        <Input placeholder="e-mail" />
-      </InputGroup>
-      <InputGroup className={HeaderBottomStyle.lozinka} size="sm">
-        <Input placeholder="lozinka" />
-      </InputGroup>
-      {/* <Button className={HeaderBottomStyle.button} color="info" size="sm">
-          PRIJAVI ME
-        </Button>{" "} */}
-      <Button className={HeaderBottomStyle.button2} outline color="info">
-        PRIJAVI ME
-      </Button>{" "}
+      <NavLink to="/" exact="true" className={HeaderBottomStyle.navbarName}>
+        NASLOVNICA
+      </NavLink>
+      <NavLink to="/dogadaji" className={HeaderBottomStyle.navbarName}>
+        DOGAĐAJI
+      </NavLink>
+      <NavLink to="/novosti" className={HeaderBottomStyle.navbarName}>
+        NOVOSTI
+      </NavLink>
+      <NavLink to="/izvjestaji" className={HeaderBottomStyle.navbarName}>
+        IZVJEŠTAJI
+      </NavLink>
+      <NavLink to="/registracija" className={HeaderBottomStyle.navbarName}>
+        Više
+      </NavLink>
     </div>
   )
 }

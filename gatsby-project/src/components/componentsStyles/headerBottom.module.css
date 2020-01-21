@@ -40,13 +40,13 @@
   }
 
   .iconContainer:hover {
-    color: green;
+    color: var(--primary-color);
     text-decoration: none;
     text-underline-position: 0;
   }
 
   .navbarName__active {
-    color: green;
+    color: var(--primary-color);
   }
 
   .navbarName:hover {

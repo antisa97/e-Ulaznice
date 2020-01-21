@@ -230,6 +230,7 @@ button.swal2-confirm.swal2-styled:focus {
 }
 
 :root {
-  --primary-color: #ffff33;
+  /* --primary-color: #ffff33; */
+  --primary-color: #ffe2ae;
   --secondary-color: #eef6fa;
 }

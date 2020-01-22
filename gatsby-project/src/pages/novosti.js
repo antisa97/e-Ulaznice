@@ -13,6 +13,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css"
 import { graphql } from "gatsby"
 import img1 from "../images/celine.jpg"
+import img11 from "../images/celine.png"
 import img2 from "../images/boticeli.jpg"
 import img3 from "../images/zorica.jpg"
 import img4 from "../images/toni.jpg"
@@ -44,7 +45,7 @@ const NovostiPage = props => {
                 <Media
                   className={NovostiStyle.slika1}
                   object
-                  src={img1}
+                  src={img11}
                   alt="Generic placeholder image"
                 />
               </Media>
@@ -66,7 +67,7 @@ const NovostiPage = props => {
                   onClick={toggle}
                   data-modal="#celineModal"
                 >
-                  Launch Modal
+                  Pročitaj više
                 </a>
                 <Modal
                   isOpen={modal}
@@ -180,7 +181,7 @@ const NovostiPage = props => {
                 <Media body>
                   <Media heading>
                     <h6 style={{ paddingLeft: 10 }}>
-                      ANDREA BOCELLI PONOVNO U SLOVENIJI: NASTUPA U SLAVNOJ
+                      ANDREA BOCELLI PONOVNO U SLOVENIJI, NASTUP U SLAVNOJ
                       DVORANI STOŽICE{" "}
                       <a href="#boticeliModal" onClick={toggle1}>
                         {" "}
@@ -194,7 +195,7 @@ const NovostiPage = props => {
                       id={NovostiStyle.boticeliModal}
                     >
                       <ModalHeader toggle={toggle1}>
-                        ANDREA BOCELLI PONOVNO U SLOVENIJI: NASTUPA U SLAVNOJ
+                        ANDREA BOCELLI PONOVNO U SLOVENIJI, NASTUP U SLAVNOJ
                         DVORANI STOŽICE{" "}
                       </ModalHeader>
                       <ModalBody>
@@ -282,7 +283,7 @@ const NovostiPage = props => {
                   <Media heading>
                     <h6 style={{ paddingLeft: 10 }}>
                       ZORICA KONDŽA I KLAPA CAMBI PREZENTIRAJU SVOJU MAGIJU U
-                      ARSENALU, ZADAR{" "}
+                      ARSENALU{" "}
                       <a onClick={toggle2} href="#zoricaModal">
                         {" "}
                         <h7>Pročitaj više </h7>
@@ -296,7 +297,7 @@ const NovostiPage = props => {
                     >
                       <ModalHeader toggle={toggle2}>
                         ZORICA KONDŽA I KLAPA CAMBI PREZENTIRAJU SVOJU MAGIJU U
-                        ARSENALU, ZADAR{" "}
+                        ARSENALU{" "}
                       </ModalHeader>
                       <ModalBody>
                         <img
@@ -382,8 +383,8 @@ const NovostiPage = props => {
                 <Media body>
                   <Media heading>
                     <h6 style={{ paddingLeft: 10 }}>
-                      EKSKLUZIVNO – TONY CETINSKI I #SAMOLJUBAV, 30.05.2020., U
-                      ARENI ZAGREB!{" "}
+                      EKSKLUZIVNO – TONY CETINSKI I #SAMOLJUBAV, 30.05.2020,
+                      ZAGREB!{" "}
                       <a onClick={toggle3} href="#toniModal">
                         {" "}
                         <h7>Pročitaj više </h7>
@@ -396,8 +397,8 @@ const NovostiPage = props => {
                       id={NovostiStyle.toniModal}
                     >
                       <ModalHeader toggle={toggle3}>
-                        EKSKLUZIVNO – TONY CETINSKI I #SAMOLJUBAV, 30.05.2020.,
-                        U ARENI ZAGREB!{" "}
+                        EKSKLUZIVNO – TONY CETINSKI I #SAMOLJUBAV, 30.05.2020,
+                        ZAGREB!{" "}
                       </ModalHeader>
                       <ModalBody>
                         <img
@@ -521,8 +522,8 @@ const NovostiPage = props => {
                 <Media body>
                   <Media heading>
                     <h6 style={{ paddingLeft: 10 }}>
-                      GLAS KOJI POPUT KUPIDOVE STRIJELE SPAJA, UČINITI ĆE
-                      VALENTINOVO POSEBNIM{" "}
+                      MASSIMO - GLAS KOJI POPUT KUPIDOVE STRIJELE SPAJA,
+                      SPECIJALNO ZA VAS{" "}
                       <a onClick={toggle4} href="#massimoModal">
                         {" "}
                         <h7>Pročitaj više </h7>
@@ -535,8 +536,8 @@ const NovostiPage = props => {
                       id={NovostiStyle.massimoModal}
                     >
                       <ModalHeader toggle={toggle4}>
-                        GLAS KOJI POPUT KUPIDOVE STRIJELE SPAJA, UČINITI ĆE
-                        VALENTINOVO POSEBNIM{" "}
+                        MASSIMO - GLAS KOJI POPUT KUPIDOVE STRIJELE SPAJA,
+                        SPECIJALNO ZA VAS{" "}
                       </ModalHeader>
                       <ModalBody>
                         <img
@@ -701,8 +702,8 @@ const NovostiPage = props => {
                 <Media body>
                   <Media heading>
                     <h6 style={{ paddingLeft: 10 }}>
-                      PARNI VALJAK STIŽE U ARENU ZAGREB 18.4.2020. NA FINALNI
-                      KONCERT TURNEJE #RUNDA44{" "}
+                      PARNI VALJAK STIŽE U ARENU ZAGREB 18.4.2020.
+                      #TURNEJARUNDA44{" "}
                       <a onClick={toggle5} href="#parniValjakModal">
                         {" "}
                         <h7>Pročitaj više </h7>
@@ -715,8 +716,8 @@ const NovostiPage = props => {
                       id={NovostiStyle.parniValjakModal}
                     >
                       <ModalHeader toggle={toggle5}>
-                        PARNI VALJAK STIŽE U ARENU ZAGREB 18.4.2020. NA FINALNI
-                        KONCERT TURNEJE #RUNDA44{" "}
+                        PARNI VALJAK STIŽE U ARENU ZAGREB 18.4.2020.
+                        #TURNEJARUNDA44{" "}
                       </ModalHeader>
                       <ModalBody>
                         <img

@@ -34,8 +34,8 @@
 }
 
 .slika2 {
-  max-width: 110px;
-  height: 80px;
+  max-width: 155px;
+  height: 95px;
 }
 
 .media-left {
@@ -50,6 +50,5 @@
   margin-top: 20px !important;
 }
 .secondMedia {
-  margin-top: 17px;
-  margin-bottom: 17px;
+  margin-bottom: 10px;
 }

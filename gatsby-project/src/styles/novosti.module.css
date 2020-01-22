@@ -57,3 +57,61 @@
 #last {
   border-bottom: none;
 }
+
+.link:hover {
+  text-decoration: underline;
+  text-decoration-color: #179add;
+  color: #179add;
+}
+
+.button {
+  letter-spacing: 1.1px;
+  border-width: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 25px;
+  padding-top: 13px;
+  padding-right: 32px;
+  padding-bottom: 13px;
+  padding-left: 32px;
+  font-size: 0.93em;
+  margin-top: 2px;
+  width: 130px;
+  background-color: var(--secondary-color);
+  color: #179add;
+  border: 1.5px solid #179add;
+}
+
+.button:hover {
+  outline: 0 !important;
+  background-color: #179add;
+  color: var(--secondary-color);
+  border-color: #179add;
+}
+
+.button2 {
+  letter-spacing: 1.1px;
+  border-width: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 25px;
+  padding-top: 13px;
+  padding-right: 32px;
+  padding-bottom: 13px;
+  padding-left: 32px;
+  font-size: 0.93em;
+  margin-top: 2px;
+  width: 130px;
+  background-color: var(--secondary-color);
+  color: #003e80;
+  border: 1.5px solid #003e80;
+}
+
+.button2:hover {
+  outline: 0 !important;
+  background-color: #003e80;
+  color: var(--secondary-color);
+  border-color: #003e80;
+}

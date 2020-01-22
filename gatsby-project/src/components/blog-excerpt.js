@@ -25,9 +25,11 @@ export default ({ posts }) => {
             style={{ backgroundColor: "#eef6fa", borderColor: "#eef6fa" }}
           >
             {date}
-            <Link to={`/izvjestaji/${slug}`}>
+            <Link to={`/izvjestaji/${slug}`} className={IzvjestajiStyle.link}>
               {" "}
-              <h3>{title}</h3>
+              <h3 id={IzvjestajiStyle.title} style={{ color: "#179add" }}>
+                {title}
+              </h3>
             </Link>
             <span>{author}</span>
           </span>

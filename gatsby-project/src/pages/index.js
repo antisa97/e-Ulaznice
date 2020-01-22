@@ -16,41 +16,35 @@ import NaslovnicaStyle from "../styles/index.module.css"
 const NaslovnicaPage = props => {
   const items = [
     {
-      src: props.data.carousel1.childImageSharp.fluid,
-      altText: "Prljavo kazalište",
-      caption: "Prljavo kazalište",
-      captionText: "Kultura",
-    },
-
-    {
       src: props.data.carousel2.childImageSharp.fluid,
       altText: "Kralj lavova",
       caption: "Kralj lavova",
-      captionText: "Film",
+      captionText: "Cinestar Rijeka 5. 2. 2020.",
     },
+    {
+      src: props.data.carousel1.childImageSharp.fluid,
+      altText: "Parni valjak",
+      caption: "Parni valjak",
+      captionText: "Pulska arena 17.01.2020.",
+    },
+
     {
       src: props.data.carousel3.childImageSharp.fluid,
       altText: "Hrvatska-Engleska",
       caption: "Hrvatska-Engleska",
-      captionText: "Sport",
+      captionText: "Poljud Split 17. 3. 2020.",
     },
     {
       src: props.data.carousel4.childImageSharp.fluid,
       altText: "Ero s onoga svijeta",
       caption: "Ero s onoga svijeta",
-      captionText: "Kultura",
+      captionText: "HNK Osijek 15. 2. 2020.",
     },
-    // {
-    //   src: props.data.carousel5.childImageSharp.fluid,
-    //   altText: "Bilo jednom u Hollywoodu",
-    //   caption: "Bilo jednom u Hollywoodu",
-    //   captionText: "Film",
-    // },
     {
-      src: props.data.carousel6.childImageSharp.fluid,
+      src: props.data.carousel5.childImageSharp.fluid,
       altText: "Orašar",
       caption: "Orašar",
-      captionText: "Kultura",
+      captionText: "HNK Rijeka 2. 2. 2020.",
     },
   ]
 
@@ -192,7 +186,7 @@ const NaslovnicaPage = props => {
                 Film
               </h4>
               <p className={NaslovnicaStyle.categoryDescription}>
-                Za sve filmoljupce, pogledajte našu ponudu najnovijih filmova
+                Za sve filmoljupce, pogledajte našu ponudu najnovijih filmova.
               </p>
               <Button
                 className={NaslovnicaStyle.categoryButton}
@@ -216,42 +210,35 @@ export const query = graphql`
   query {
     carousel1: file(relativePath: { eq: "carouselParniValjak.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1200, maxHeight: 564) {
+        fluid(maxWidth: 1200, maxHeight: 418) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     carousel2: file(relativePath: { eq: "carouselKraljLavova.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1281, maxHeight: 603) {
+        fluid(maxWidth: 1600, maxHeight: 557) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     carousel3: file(relativePath: { eq: "carouselFootball.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1004, maxHeight: 472) {
+        fluid(maxWidth: 1922, maxHeight: 670) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     carousel4: file(relativePath: { eq: "carouselEro.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1386, maxHeight: 651) {
+        fluid(maxWidth: 1400, maxHeight: 500) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    carousel5: file(relativePath: { eq: "once1.jpg" }) {
+    carousel5: file(relativePath: { eq: "carouselOrasar.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2000, maxHeight: 470) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    carousel6: file(relativePath: { eq: "carouselOrasar.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2013, maxHeight: 946) {
+        fluid(maxWidth: 2202, maxHeight: 767) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

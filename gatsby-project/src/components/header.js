@@ -1,7 +1,7 @@
 import React from "react"
 import { Navbar, NavbarBrand, InputGroup, Input, Button } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
-import logo from "../images/logo.png"
+import logo from "../images/logo1.png"
 import HeaderStyle from "../components/componentsStyles/header.module.css"
 import NavLink from "./links"
 
@@ -48,7 +48,12 @@ const Header = props => {
         <InputGroup className={HeaderStyle.lozinka} size="sm">
           <Input placeholder="lozinka" />
         </InputGroup>
-        <Button className={HeaderStyle.button} outline color="info">
+        <Button
+          className={HeaderStyle.button}
+          outline
+          color="warning"
+          outline="false"
+        >
           PRIJAVI ME
         </Button>{" "}
       </div>

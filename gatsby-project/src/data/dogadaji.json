@@ -1,38 +1,110 @@
 [
   {
-    "caption": "Prljavo kazalište",
+    "caption": "Parni valjak",
     "captionText": "Kultura",
-    "image": { "src": "naslovnica_sport.jpeg" },
-    "icon": { "src": "culture.png" }
+    "image": { "src": "parni.jpg" },
+    "icon": { "src": "culture.png" },
+    "date": "17.01.2020. u 20:00",
+    "place": "Pulska arena",
+    "price": "80,00 kn"
   },
   {
     "caption": "Kralj lavova",
     "captionText": "Film",
-    "image": { "src": "naslovna_konc.jpg" },
-    "icon": { "src": "culture.png" }
+    "image": { "src": "kralj.jpg" },
+    "icon": { "src": "film.png" },
+    "date": "5. 2. 2020. u 14:15",
+    "place": "Cinestar Rijeka",
+    "price": "30,00 kn"
   },
   {
     "caption": "Hrvatska-Engleska",
     "captionText": "Sport",
-    "image": { "src": "naslovnica_glazba.jpg" },
-    "icon": { "src": "culture.png" }
+    "image": { "src": "carouselFootball.jpg" },
+    "icon": { "src": "sport.png" },
+    "date": "17. 3. 2020. u 17:30",
+    "place": "Poljud Split",
+    "price": "130,00 kn"
   },
   {
     "caption": "Ero s onoga svijeta",
     "captionText": "Kultura",
-    "image": { "src": "naslovnica_kazaliste.jpg" },
-    "icon": { "src": "culture.png" }
+    "image": { "src": "ero.jpg" },
+    "icon": { "src": "culture.png" },
+    "date": "15. 2. 2020. u 20:30",
+    "place": "HNK Osijek",
+    "price": "50,00 kn"
   },
   {
-    "caption": "Bilo jednom u Hollywoodu",
+    "caption": "Joker",
     "captionText": "Film",
-    "image": { "src": "naslovnica_ostalo.jpg" },
-    "icon": { "src": "culture.png" }
+    "image": { "src": "joker.png" },
+    "icon": { "src": "film.png" },
+    "date": "21. 3. 2020. u 22:00",
+    "place": "Cineplexx Zagreb",
+    "price": "35,00 kn"
   },
   {
     "caption": "Orašar",
     "captionText": "Kultura",
     "image": { "src": "orasar1.jpg" },
-    "icon": { "src": "culture.png" }
+    "icon": { "src": "culture.png" },
+    "date": "2. 2. 2020. u 18:45",
+    "place": "HNK Rijeka",
+    "price": "60,00 kn"
+  },
+  {
+    "caption": "One su bombe",
+    "captionText": "Film",
+    "image": { "src": "bombshell.jpg" },
+    "icon": { "src": "film.png" },
+    "date": "14. 3. 2020. u 21:30",
+    "place": "Cinestar Split",
+    "price": "25,00 kn"
+  },
+  {
+    "caption": "Cibona-Cedevita",
+    "captionText": "Sport",
+    "image": { "src": "cibona.jpg" },
+    "icon": { "src": "sport.png" },
+    "date": "20. 2. 2020. u 15:00",
+    "place": "KC Dražen Petrović",
+    "price": "75,00 kn"
+  },
+  {
+    "caption": "Djeca recesije",
+    "captionText": "Kultura",
+    "image": { "src": "djecaRecesije.jpg" },
+    "icon": { "src": "culture.png" },
+    "date": "15. 3. 2020. u 19:30",
+    "place": "HNK Split",
+    "price": "40,00 kn"
+  },
+  {
+    "caption": "Gospoda ",
+    "captionText": "Film",
+    "image": { "src": "gospoda.jpg" },
+    "icon": { "src": "film.png" },
+    "date": "30. 3. 2020. u 17:45",
+    "place": "Cinestar Zagreb",
+    "price": "35,00 kn"
+  },
+  {
+    "caption": "Hajduk-Dinamo",
+    "captionText": "Sport",
+    "image": { "src": "hajduk.jpeg" },
+    "icon": { "src": "sport.png" },
+    "date": "25. 2. 2020. u 16:00",
+    "place": "Poljud Split",
+    "price": "90,00 kn"
+  },
+  {
+    "caption": "Idiot",
+    "captionText": "Kultura",
+    "image": { "src": "idiot.jpg" },
+    "icon": { "src": "culture.png" },
+    "date": "21. 3. 2020. u 20:30",
+    "place": "HNK Zagreb",
+    "price": "45,00 kn"
   }
 ]

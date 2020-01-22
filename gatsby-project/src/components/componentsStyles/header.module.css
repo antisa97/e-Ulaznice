@@ -7,7 +7,9 @@
   background-color: var(--secondary-color);
   /* box-shadow: 0 0 20px 7px #e7f3f9; */
 
-  box-shadow: 0 0 20px 4px #eef6fa;
+  /* box-shadow: 0 0 20px 4px #eef6fa; ista boja kao header */
+
+  box-shadow: 0 0 10px 2px #92c5df;
   /* box-shadow: 0 0 50px 17px #e7f3f9; */
   /* background-color: #f1f0f6; */
   /* border-bottom: 1px solid #ced4da; */
@@ -35,8 +37,9 @@
   font-size: 2vw;
   /* letter-spacing: 1.1px; */
   color: var(--primary-color);
-  text-shadow: -1px 0 lightgrey, 0 1px lightgrey, 1px 0 lightgrey,
-    0 -1px lightgrey;
+  text-shadow: -0.2px 0 lightgrey, 0 0.2px lightgrey, 0.2px 0 lightgrey,
+    0 -0.2px lightgrey;
+  font-size: 2.25vw;
 }
 
 .navbarName {
@@ -75,6 +78,24 @@
   /* font-size: 0.93em; */
   /* margin-top: 1em; */
   /* text-align: center; */
+  /* background-color: var(--primary-color); */
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.button:focus {
+  box-shadow: none;
+}
+
+.button .active {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .button2 ~ .btn-outline-info {
@@ -93,7 +114,8 @@
 .navbarName__active {
   /* text-decoration: underline; */
   color: var(--primary-color);
-  font-weight: 700;
+  font-weight: 600;
+  /* text-shadow: -1px 0 #c7e1ee, 0 1px #c7e1ed, 1px 0 #c7e1ee, 0 -1px #c7e1ee; */
 }
 
 .navbarName:hover {

@@ -123,12 +123,12 @@ const DogadajiPage = props => {
                     </div>
                   </div>
                   <div className={DogadajiStyle.dateLocation}>
-                    <p className={DogadajiStyle.location}>Pulska arena</p>
-                    <p className={DogadajiStyle.date}>17.01.2020. u 20:00</p>
+                    <p className={DogadajiStyle.location}>{item.place}</p>
+                    <p className={DogadajiStyle.date}>{item.date}</p>
                   </div>
                 </div>
                 <div className={DogadajiStyle.priceButton}>
-                  <p className={DogadajiStyle.price}>80,00 kn</p>
+                  <p className={DogadajiStyle.price}>{item.price}</p>
                   <Button
                     className={DogadajiStyle.button}
                     outline

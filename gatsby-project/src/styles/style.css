@@ -110,11 +110,12 @@ Extra (xl) large devices (large desktops, 1200px and up)
 .carousel-caption p {
   position: relative;
   z-index: 1;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding-bottom: 0.3rem;
   letter-spacing: 1px;
   font-size: 18px;
   display: block !important;
+  font-weight: 600;
 }
 
 .d-block p {
@@ -231,6 +232,12 @@ button.swal2-confirm.swal2-styled:focus {
 
 :root {
   /* --primary-color: #ffff33; */
-  --primary-color: #ffe2ae;
+
+  /* --primary-color: #ffe2ae; */
+  --primary-color: #ffd07b;
   --secondary-color: #eef6fa;
 }
+
+/* body{
+  font-family: "Raleway",Helvetica,Arial,sans-serif;
+} */

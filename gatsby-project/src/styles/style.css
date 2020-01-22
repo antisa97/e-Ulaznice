@@ -243,7 +243,7 @@ button.swal2-confirm.swal2-styled:focus {
 } */
 
 .main-module--main--3Neyi {
-  background-color: #ffd07b;
+  background-color: #ffd07b !important;
 }
 .modal-content {
   background-color: #eef6fa;

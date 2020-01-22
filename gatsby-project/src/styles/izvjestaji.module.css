@@ -32,3 +32,11 @@
   font-size: 1.3vw;
   font-weight: 600;
 }
+.naslov {
+  margin-top: 50px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.9);
+}

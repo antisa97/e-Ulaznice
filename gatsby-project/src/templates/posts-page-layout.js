@@ -16,10 +16,8 @@ export default ({ pageContext, data }) => {
     <Layout>
       <div style={{ margin: "0 auto", maxWidth: 1000 }}>
         <div style={{ textAlign: "center" }}>
-          <h1 style={{ marginTop: 50 }}>{post.frontmatter.title}</h1>
-          <span
-            style={{ fontWeight: "400", fontSize: "1.1em", color: "#a0aec0" }}
-          >
+          <h1 className={IzvjestajiStyle.naslov}>{post.frontmatter.title}</h1>
+          <span style={{ letterSpacing: "0.035em", color: "#4a4a4a" }}>
             Objavio {post.frontmatter.author}, {post.frontmatter.date}
           </span>
         </div>

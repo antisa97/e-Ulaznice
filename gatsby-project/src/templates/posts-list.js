@@ -23,27 +23,29 @@ const BlogList = ({
 
   return (
     <Layout>
-      <div className={IzvjestajiStyle.pageDiv}>
-        <BlogExcerpt posts={posts} />
+      <div style={{ backgroundColor: "#ffd07b " }}>
+        <div className={IzvjestajiStyle.pageDiv}>
+          <BlogExcerpt posts={posts} />
+        </div>
+
+        <BlogNav>
+          <BlogNav.Previous>
+            {!isFirst && (
+              <BlogNav.Link to={previousPage}>
+                {leftArrow} Prethodna stranica
+              </BlogNav.Link>
+            )}
+          </BlogNav.Previous>
+
+          <BlogNav.Next>
+            {!isLast && (
+              <BlogNav.Link to={nextPage}>
+                Sljedeća stranica {rightArrow}
+              </BlogNav.Link>
+            )}
+          </BlogNav.Next>
+        </BlogNav>
       </div>
-
-      <BlogNav>
-        <BlogNav.Previous>
-          {!isFirst && (
-            <BlogNav.Link to={previousPage}>
-              {leftArrow} Prethodna stranica
-            </BlogNav.Link>
-          )}
-        </BlogNav.Previous>
-
-        <BlogNav.Next>
-          {!isLast && (
-            <BlogNav.Link to={nextPage}>
-              Sljedeća stranica {rightArrow}
-            </BlogNav.Link>
-          )}
-        </BlogNav.Next>
-      </BlogNav>
     </Layout>
   )
 }

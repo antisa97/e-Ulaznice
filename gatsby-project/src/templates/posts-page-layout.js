@@ -14,35 +14,37 @@ export default ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <div style={{ margin: "0 auto", maxWidth: 1000 }}>
-        <div style={{ textAlign: "center" }}>
-          <h1 className={IzvjestajiStyle.naslov}>{post.frontmatter.title}</h1>
-          <span style={{ letterSpacing: "0.035em", color: "#4a4a4a" }}>
-            Objavio {post.frontmatter.author}, {post.frontmatter.date}
-          </span>
+      <div style={{ backgroundColor: "#ffd07b " }}>
+        <div style={{ margin: "0 auto", maxWidth: 1000 }}>
+          <div style={{ textAlign: "center" }}>
+            <h1 className={IzvjestajiStyle.naslov}>{post.frontmatter.title}</h1>
+            <span style={{ letterSpacing: "0.035em", color: "#4a4a4a" }}>
+              Objavio {post.frontmatter.author}, {post.frontmatter.date}
+            </span>
+          </div>
+          <div style={{ marginTop: 20 }}>
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </div>
         </div>
-        <div style={{ marginTop: 20 }}>
-          <MDXRenderer>{post.body}</MDXRenderer>
-        </div>
+
+        <BlogNav>
+          <BlogNav.Previous>
+            {previous && (
+              <BlogNav.Link to={`/izvjestaji/${previous.frontmatter.slug}`}>
+                {leftArrow} Prethodni izvještaj
+              </BlogNav.Link>
+            )}
+          </BlogNav.Previous>
+
+          <BlogNav.Next>
+            {next && (
+              <BlogNav.Link to={`/izvjestaji/${next.frontmatter.slug}`}>
+                <span>Sljedeći izvještaj {rightArrow}</span>
+              </BlogNav.Link>
+            )}
+          </BlogNav.Next>
+        </BlogNav>
       </div>
-
-      <BlogNav>
-        <BlogNav.Previous>
-          {previous && (
-            <BlogNav.Link to={`/izvjestaji/${previous.frontmatter.slug}`}>
-              {leftArrow} Prethodni izvještaj
-            </BlogNav.Link>
-          )}
-        </BlogNav.Previous>
-
-        <BlogNav.Next>
-          {next && (
-            <BlogNav.Link to={`/izvjestaji/${next.frontmatter.slug}`}>
-              <span>Sljedeći izvještaj {rightArrow}</span>
-            </BlogNav.Link>
-          )}
-        </BlogNav.Next>
-      </BlogNav>
     </Layout>
   )
 }

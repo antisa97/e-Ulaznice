@@ -690,7 +690,10 @@ const NovostiPage = props => {
                   </Media>
                 </Media>
               </Media>
-              <Media className={NovostiStyle.secondMedia}>
+              <Media
+                className={NovostiStyle.secondMedia}
+                id={NovostiStyle.last}
+              >
                 <Media left>
                   <Media
                     className={NovostiStyle.slika2}

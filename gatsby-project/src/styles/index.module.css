@@ -1,6 +1,5 @@
 .Carousel {
   margin: 0 auto;
-  /* max-width: 1000px; */
 }
 
 .rest {
@@ -9,26 +8,18 @@
 }
 
 .divCarousel {
-  /* box-shadow: 0 0 200px 7px rgba(225, 226, 228, 0.7); */
-  /* box-shadow: 0 0 50px 17px rgba(225, 226, 228, 0.7); */
   box-shadow: 0 0 200px 7px rgba(225, 226, 228, 0.7);
   z-index: 1;
-  /* background-color: #f7f7f9; */
   background-color: var(--secondary-color);
 }
 
 .crouselImage {
-  /* height: 470px; */
   width: 100%;
   height: 470px;
 }
 
 .divRest {
-  /* background-color: #86b2e3; */
-  /* background-color: lightpink; */
-  /* background-color: #ffc5c5; */
   background-color: var(--primary-color);
-  /* box-shadow: inset 0 -21px 35px -8px rgba(225, 226, 228, 0.7); */
 }
 
 .rest {
@@ -65,13 +56,10 @@
 }
 
 .card:hover {
-  /* background-color: #f7f7f9; */
   background-color: var(--secondary-color);
-  /* transform: scaleY(1.1); */
   transform: scale(1.05);
   z-index: 1;
   box-shadow: 0 0 20px 7px rgba(230, 231, 233, 0.5);
-  /* border-radius: 0.5em; */
 }
 
 .category {
@@ -131,7 +119,6 @@
   }
 
   .crouselImage {
-    /* height: 470px; */
     width: 100%;
     height: 400px;
   }
@@ -139,7 +126,6 @@
 
 @media screen and (max-width: 500px) {
   .crouselImage {
-    /* height: 470px; */
     width: 100%;
     height: 325px;
   }

@@ -1,7 +1,5 @@
 .page {
   background-color: var(--primary-color);
-  /* background-color: #ffb366; */
-  /* background-color: #ffa257; */
 }
 
 .pageDiv {
@@ -14,6 +12,7 @@
   margin: 1em 0 0 1em;
   letter-spacing: 2px;
   margin-bottom: 0.5em;
+  color: #4a4a4a;
 }
 
 #searchContainer {
@@ -36,8 +35,6 @@
 #search {
   border: none;
   text-align: center;
-  /* font-weight: 500; */
-  /* text-transform: uppercase; */
   letter-spacing: 1px;
   background-color: var(--secondary-color);
   max-width: 170px;
@@ -58,24 +55,15 @@
   grid-column-gap: 15px;
   grid-row-gap: 135px;
   margin-top: 80px;
-  /* grid-template-columns: auto auto auto; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   padding: 62px 0 65px 0;
-
-  /* -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center; */
-  /* box-sizing: border-box; */
 }
 
 .card {
   background-color: var(--secondary-color);
   border-radius: 4px;
-  /* box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.08); promijeniti */
   box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.16);
-
   display: flex;
   flex-direction: column;
   height: 367px;
@@ -94,11 +82,9 @@
 
 .cardImage {
   border-radius: 4px;
-  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04),
-    0 2px 20px 0 rgba(13, 34, 30, 0.25); promijeniti */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15),
     0 2px 20px 0 rgba(13, 34, 30, 0.3);
-  display: block; /*ovo*/
+  display: block;
   height: 180px;
   left: 50%;
   overflow: hidden;
@@ -126,9 +112,7 @@
 .categoryTitle {
   text-transform: uppercase;
   font-size: 17px;
-  /* color: #c5c4c4; */
   color: #7b7b7b;
-  /* letter-spacing: 2px; */
   margin-right: 7px;
   margin-bottom: 2px;
 }

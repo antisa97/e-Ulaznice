@@ -19,12 +19,7 @@ const Header = props => {
     <div className={HeaderBottomStyle.nav}>
       <div className={HeaderBottomStyle.iconContainer}>
         <Link to="/">
-          <img
-            className={HeaderBottomStyle.icon}
-            id={HeaderBottomStyle.homeIcon}
-            src={home}
-            alt="home"
-          ></img>
+          <img className={HeaderBottomStyle.icon} src={home} alt="home"></img>
         </Link>
         <Link
           to="/"
@@ -71,7 +66,7 @@ const Header = props => {
           className={HeaderBottomStyle.navbarName}
           activeClassName={HeaderBottomStyle.navbarName__active}
         >
-          IZVJEŠTAJI
+          DOJMOVI
         </Link>
       </div>
 

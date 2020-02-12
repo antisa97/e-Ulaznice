@@ -12,6 +12,7 @@
   padding: 1em 0 1em 1.3em;
   letter-spacing: 2px;
   margin-bottom: 0;
+  color: #4a4a4a;
 }
 
 .form {
@@ -24,7 +25,6 @@
 
 .forms {
   display: grid;
-  /* grid-template-columns: auto auto; */
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   margin-bottom: 18px;
@@ -63,28 +63,15 @@
   margin-top: 40px;
   font-size: 18px;
   width: 230px;
-  /* color: red;
-  border-color: red; */
 }
-
-/* .button:hover {
-  background-color: red;
-  border-color: red;
-} */
 
 @media screen and (max-width: 530px) {
   .pageTitle {
-    /* margin-bottom: 0.8em; */
     text-align: center;
     padding-left: 0;
   }
 
-  /* .label {
-    margin-bottom: 0;
-  } */
-
   .forms {
-    /* grid-template-columns: auto; */
     margin-bottom: 0;
     display: flex;
     flex-direction: column;

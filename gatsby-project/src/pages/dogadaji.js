@@ -72,10 +72,6 @@ const DogadajiPage = props => {
             {searchResult.map(item => (
               <div className={DogadajiStyle.card}>
                 <div className={DogadajiStyle.cardImage}>
-                  {/* <Img
-                    className={DogadajiStyle.image}
-                    fluid={props.data.kazaliste.childImageSharp.fluid}
-                  /> */}
                   <DogadajImage
                     className={DogadajiStyle.image}
                     filename={item.image.src}
@@ -87,39 +83,8 @@ const DogadajiPage = props => {
                     <p className={DogadajiStyle.categoryTitle}>
                       {item.captionText}
                     </p>
-                    {/* <Img
-                      className={DogadajiStyle.categoryImage}
-                      fluid={props.data.cultureIcon.childImageSharp.fluid}
-                    /> */}
-                    {/* <IconImage
-                      className={DogadajiStyle.categoryImage}
-                      filename={item.icon.src}
-                    /> */}
-                    <div
-                      className={DogadajiStyle.categoryImage}
-                      // style={{
-                      //   position: "relative",
-                      // }}
-                    >
-                      <IconImage
-                        // className={DogadajiStyle.categoryImage}
-                        filename={item.icon.src}
-                        // style={{
-                        //   display: "flex",
-                        //   flexDirection: "column",
-                        //   justifyContent: "center",
-                        // }}
-                        // imgStyle={{
-                        //   objectFit: "fill ", //PROMIJENITI
-                        // }}
-                        // style={
-                        //   {
-                        //     // maxWidth: "22px",
-                        //     // maxHeight: "22px",
-                        //     // position: "absolute",
-                        //   }
-                        // }
-                      />
+                    <div className={DogadajiStyle.categoryImage}>
+                      <IconImage filename={item.icon.src} />
                     </div>
                   </div>
                   <div className={DogadajiStyle.dateLocation}>
@@ -142,140 +107,6 @@ const DogadajiPage = props => {
             ))}
           </div>
         </div>
-        {/* <div className={DogadajiStyle.cardContainer} id="cardCont">
-            <div className={DogadajiStyle.card}>
-              <div className={DogadajiStyle.cardImage}>
-                <Img
-                  className={DogadajiStyle.image}
-                  fluid={props.data.glazba.childImageSharp.fluid}
-                />
-              </div>
-              <div className={DogadajiStyle.content}>
-                <p className={DogadajiStyle.cardTitle}>Parni valjak</p>
-                <div className={DogadajiStyle.category}>
-                  <p className={DogadajiStyle.categoryTitle}>Kultura</p>
-                  <Img
-                    className={DogadajiStyle.categoryImage}
-                    fluid={props.data.cultureIcon.childImageSharp.fluid}
-                  />
-                </div>
-                <div className={DogadajiStyle.dateLocation}>
-                  <p className={DogadajiStyle.location}>Pulska arena</p>
-                  <p className={DogadajiStyle.date}>17.01.2020. u 20:00</p>
-                </div>
-              </div>
-              <div className={DogadajiStyle.priceButton}>
-                <p className={DogadajiStyle.price}>80,00 kn</p>
-                <Button
-                  className={DogadajiStyle.button}
-                  outline
-                  color="danger"
-                  onClick={ok}
-                >
-                  Kupi ulaznice
-                </Button>
-              </div>
-            </div>
-            <div className={DogadajiStyle.card}>
-              <div className={DogadajiStyle.cardImage}>
-                <Img
-                  className={DogadajiStyle.image}
-                  fluid={props.data.ostalo.childImageSharp.fluid}
-                />
-              </div>
-              <div className={DogadajiStyle.content}>
-                <p className={DogadajiStyle.cardTitle}>Kralj lavova</p>
-                <div className={DogadajiStyle.category}>
-                  <p className={DogadajiStyle.categoryTitle}>Film</p>
-                  <Img
-                    className={DogadajiStyle.categoryImage}
-                    fluid={props.data.filmIcon.childImageSharp.fluid}
-                  />
-                </div>
-                <div className={DogadajiStyle.dateLocation}>
-                  <p className={DogadajiStyle.location}>Cinestar Split</p>
-                  <p className={DogadajiStyle.date}>05.02.2020. u 17:00</p>
-                </div>
-              </div>
-              <div className={DogadajiStyle.priceButton}>
-                <p className={DogadajiStyle.price}>35,00 kn</p>
-                <Button
-                  className={DogadajiStyle.button}
-                  outline
-                  color="danger"
-                  onClick={ok}
-                >
-                  Kupi ulaznice
-                </Button>
-              </div>
-            </div>
-            <div className={DogadajiStyle.card}>
-              <div className={DogadajiStyle.cardImage}>
-                <Img
-                  className={DogadajiStyle.image}
-                  fluid={props.data.sport.childImageSharp.fluid}
-                />
-              </div>
-              <div className={DogadajiStyle.content}>
-                <p className={DogadajiStyle.cardTitle}>Hajduk-Dinamo</p>
-                <div className={DogadajiStyle.category}>
-                  <p className={DogadajiStyle.categoryTitle}>Sport</p>
-                  <Img
-                    className={DogadajiStyle.categoryImage}
-                    fluid={props.data.sportIcon.childImageSharp.fluid}
-                  />
-                </div>
-                <div className={DogadajiStyle.dateLocation}>
-                  <p className={DogadajiStyle.location}>Poljud</p>
-                  <p className={DogadajiStyle.date}>22.01.2020. u 15:00</p>
-                </div>
-              </div>
-              <div className={DogadajiStyle.priceButton}>
-                <p className={DogadajiStyle.price}>100,00 kn</p>
-                <Button
-                  className={DogadajiStyle.button}
-                  outline
-                  color="danger"
-                  onClick={ok}
-                >
-                  Kupi ulaznice
-                </Button>
-              </div>
-            </div>
-            <div className={DogadajiStyle.card}>
-              <div className={DogadajiStyle.cardImage}>
-                <Img
-                  className={DogadajiStyle.image}
-                  fluid={props.data.glazba.childImageSharp.fluid}
-                />
-              </div>
-              <div className={DogadajiStyle.content}>
-                <p className={DogadajiStyle.cardTitle}>Parni valjak</p>
-                <div className={DogadajiStyle.category}>
-                  <p className={DogadajiStyle.categoryTitle}>Kultura</p>
-                  <Img
-                    className={DogadajiStyle.categoryImage}
-                    fluid={props.data.cultureIcon.childImageSharp.fluid}
-                  />
-                </div>
-                <div className={DogadajiStyle.dateLocation}>
-                  <p className={DogadajiStyle.location}>Pulska arena</p>
-                  <p className={DogadajiStyle.date}>17.01.2020. u 20:00</p>
-                </div>
-              </div>
-              <div className={DogadajiStyle.priceButton}>
-                <p className={DogadajiStyle.price}>80,00 kn</p>
-                <Button
-                  className={DogadajiStyle.button}
-                  outline
-                  color="danger"
-                  onClick={ok}
-                >
-                  Kupi ulaznice
-                </Button>
-              </div>
-            </div>
-          </div> */}
       </div>
     </Layout>
   )
@@ -285,70 +116,7 @@ export default DogadajiPage
 
 export const query = graphql`
   query {
-    orasar: file(relativePath: { eq: "orasar1.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    once: file(relativePath: { eq: "once1.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    glazba: file(relativePath: { eq: "kralj.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    kazaliste: file(relativePath: { eq: "parni.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    sport: file(relativePath: { eq: "sp.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    ostalo: file(relativePath: { eq: "ero.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    cultureIcon: file(relativePath: { eq: "culture.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    sportIcon: file(relativePath: { eq: "sport.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    searchIcon: file(relativePath: { eq: "searchModro.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    filmIcon: file(relativePath: { eq: "film.png" }) {
+    searchIcon: file(relativePath: { eq: "search.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

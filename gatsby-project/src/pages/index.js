@@ -27,7 +27,6 @@ const NaslovnicaPage = props => {
       caption: "Parni valjak",
       captionText: "Pulska arena 17.01.2020.",
     },
-
     {
       src: props.data.carousel3.childImageSharp.fluid,
       altText: "Hrvatska-Engleska",
@@ -81,7 +80,7 @@ const NaslovnicaPage = props => {
           alt={item.altText}
           className={NaslovnicaStyle.crouselImage}
           imgStyle={{
-            objectFit: "cover ", //PROMIJENITI
+            objectFit: "cover ",
           }}
         />
         <Link to="/dogadaji">

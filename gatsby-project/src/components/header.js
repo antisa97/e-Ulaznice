@@ -1,9 +1,9 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Navbar, NavbarBrand, InputGroup, Input, Button } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
-import logo from "../images/logo1.png"
 import HeaderStyle from "../components/componentsStyles/header.module.css"
-import NavLink from "./links"
+import logo from "../images/logo.png"
 
 const Header = props => {
   return (
@@ -24,21 +24,42 @@ const Header = props => {
         <h1 className={HeaderStyle.logoName}>e-Ulaznice</h1>
       </NavbarBrand>
       <div className={HeaderStyle.navbarNames}>
-        <NavLink to="/" exact="true" className={HeaderStyle.navbarName}>
+        <Link
+          to="/"
+          exact="true"
+          className={HeaderStyle.navbarName}
+          activeClassName={HeaderStyle.navbarName__active}
+        >
           NASLOVNICA
-        </NavLink>
-        <NavLink to="/dogadaji" className={HeaderStyle.navbarName}>
+        </Link>
+        <Link
+          to="/dogadaji"
+          className={HeaderStyle.navbarName}
+          activeClassName={HeaderStyle.navbarName__active}
+        >
           DOGAĐAJI
-        </NavLink>
-        <NavLink to="/novosti" className={HeaderStyle.navbarName}>
+        </Link>
+        <Link
+          to="/novosti"
+          className={HeaderStyle.navbarName}
+          activeClassName={HeaderStyle.navbarName__active}
+        >
           NOVOSTI
-        </NavLink>
-        <NavLink to="/izvjestaji" className={HeaderStyle.navbarName}>
-          IZVJEŠTAJI
-        </NavLink>
-        <NavLink to="/registracija" className={HeaderStyle.navbarName}>
+        </Link>
+        <Link
+          to="/izvjestaji"
+          className={HeaderStyle.navbarName}
+          activeClassName={HeaderStyle.navbarName__active}
+        >
+          DOJMOVI
+        </Link>
+        <Link
+          to="/registracija"
+          className={HeaderStyle.navbarName}
+          activeClassName={HeaderStyle.navbarName__active}
+        >
           REGISTRACIJA
-        </NavLink>
+        </Link>
       </div>
 
       <div className={HeaderStyle.input}>
@@ -48,12 +69,7 @@ const Header = props => {
         <InputGroup className={HeaderStyle.lozinka} size="sm">
           <Input placeholder="lozinka" />
         </InputGroup>
-        <Button
-          className={HeaderStyle.button}
-          outline
-          color="warning"
-          outline="false"
-        >
+        <Button className={HeaderStyle.button} color="warning" outline="false">
           PRIJAVI ME
         </Button>{" "}
       </div>

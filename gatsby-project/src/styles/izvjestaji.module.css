@@ -24,7 +24,7 @@
 .blogLink {
   padding-bottom: 30px;
   display: inline-block;
-  color: red;
+  color: #cc5200;
   /* text-decoration: overline; */
   text-transform: uppercase;
   transition: all 0.25s linear 0s;
@@ -46,15 +46,12 @@
   text-decoration-color: #179add;
   color: #179add;
 }
+
 .link:visited {
-  color: red !important;
-}
-.Link:visited {
-  color: red !important;
+  color: #003e80;
 }
 
-@media screen and (max-width: 731px) {
-  .Circle {
-    grid-template-columns: auto;
-  }
+.link:visited:hover {
+  color: #003e80;
+  text-decoration-color: #003e80;
 }

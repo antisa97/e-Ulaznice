@@ -26,7 +26,7 @@
   grid-template-columns: 1.5fr 1fr;
   grid-gap: 30px;
   margin-bottom: 18px;
-  max-height: 620px;
+  max-height: 645px;
 }
 
 .slika1 {
@@ -45,7 +45,7 @@
 }
 .modalMainImage {
   height: 190px;
-  max-width: 466px;
+  max-width: 100%;
 }
 .media-heading {
   margin-top: 20px !important;
@@ -115,4 +115,38 @@
   background-color: #003e80;
   color: var(--secondary-color);
   border-color: #003e80;
+}
+
+.subText {
+  display: none;
+}
+
+@media screen and (max-width: 731px) {
+  .media {
+    grid-template-columns: auto;
+    justify-items: center;
+    max-height: none;
+    padding: 3em 0.5em 3em 0.5em;
+  }
+  .pageTitle {
+    text-transform: uppercase;
+    padding: 1em 0;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    color: #4a4a4a;
+    text-align: center;
+  }
+  .subText {
+    display: block;
+  }
+  .subTekst {
+    display: none;
+  }
+  .slika1 {
+    max-width: 100%;
+    height: 270px;
+  }
+  .left {
+    border-bottom: 1px solid var(--primary-color);
+  }
 }

@@ -46,3 +46,15 @@
   text-decoration-color: #179add;
   color: #179add;
 }
+.link:visited {
+  color: red !important;
+}
+.Link:visited {
+  color: red !important;
+}
+
+@media screen and (max-width: 731px) {
+  .Circle {
+    grid-template-columns: auto;
+  }
+}

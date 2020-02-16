@@ -53,25 +53,48 @@ const NovostiPage = props => {
                 <Media heading style={{ marginTop: 20 }}>
                   CELINE DION DOLAZI U ZAGREB{" "}
                 </Media>
-                Jedna od najpoznatijih i najcjenjenijih zvijezda u povijesti pop
-                glazbe, Celine Dion, 05. lipnja 2020. godine dolazi u Arenu
-                ZAGREB! ZAGREBAČKI KONCERT, U ORGANIZACIJI STAR PRODUKCIJE, DIO
-                je velike svjetske turneje na kojoj će promovirati svoje
-                najnovije studijsko izdanje (“Courage”), a koja je započela 18.
-                rujna u Quebecu. COURAGE WORLD TOUR uključivati će više od 100
-                gradova diljem svijeta, a za produkciju na najvećem svjetskom
-                nivou, uz Star produkciju, zadužen će biti i Concerts West...
-                <a
-                  href="#celineModal"
-                  data-target="#celineModal"
-                  onClick={toggle}
-                  data-modal="#celineModal"
-                  className={NovostiStyle.link}
-                >
-                  <h7 style={{ color: "#179add", fontWeight: "600" }}>
-                    Pročitaj više{" "}
-                  </h7>
-                </a>
+                <div className={NovostiStyle.subText}>
+                  <p>
+                    Jedna od najpoznatijih i najcjenjenijih zvijezda u povijesti
+                    pop glazbe, Celine Dion, 05. lipnja 2020. godine dolazi u
+                    Arenu ZAGREB!
+                    <a
+                      href="#celineModal"
+                      data-target="#celineModal"
+                      onClick={toggle}
+                      data-modal="#celineModal"
+                      className={NovostiStyle.link}
+                    >
+                      <h7 style={{ color: "#179add", fontWeight: "600" }}>
+                        <emsp /> Pročitaj više{" "}
+                      </h7>
+                    </a>
+                  </p>
+                </div>
+                <div className={NovostiStyle.subTekst}>
+                  <p>
+                    Jedna od najpoznatijih i najcjenjenijih zvijezda u povijesti
+                    pop glazbe, Celine Dion, 05. lipnja 2020. godine dolazi u
+                    Arenu ZAGREB! ZAGREBAČKI KONCERT, U ORGANIZACIJI STAR
+                    PRODUKCIJE, DIO je velike svjetske turneje na kojoj će
+                    promovirati svoje najnovije studijsko izdanje (“Courage”), a
+                    koja je započela 18. rujna u Quebecu. COURAGE WORLD TOUR
+                    uključivati će više od 100 gradova diljem svijeta, a za
+                    produkciju na najvećem svjetskom nivou, uz Star produkciju,
+                    zadužen će biti i Concerts West...{" "}
+                    <a
+                      href="#celineModal"
+                      data-target="#celineModal"
+                      onClick={toggle}
+                      data-modal="#celineModal"
+                      className={NovostiStyle.link}
+                    >
+                      <h7 style={{ color: "#179add", fontWeight: "600" }}>
+                        <emsp /> Pročitaj više{" "}
+                      </h7>
+                    </a>
+                  </p>
+                </div>
                 <Modal
                   isOpen={modal}
                   toggle={toggle}

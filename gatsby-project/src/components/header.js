@@ -69,7 +69,16 @@ const Header = props => {
         <InputGroup className={HeaderStyle.lozinka} size="sm">
           <Input placeholder="lozinka" />
         </InputGroup>
-        <Button className={HeaderStyle.button} color="warning" outline="false">
+        <Button
+          className={HeaderStyle.button}
+          color="warning"
+          outline="false"
+          onClick={console.log(
+            <div
+              dangerouslySetInnerHTML={{ _html: "Dobrodošao korisnik1" }}
+            ></div>
+          )}
+        >
           PRIJAVI ME
         </Button>{" "}
       </div>

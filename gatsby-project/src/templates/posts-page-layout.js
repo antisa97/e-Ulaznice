@@ -22,7 +22,7 @@ export default ({ pageContext, data }) => {
               Objavio {post.frontmatter.author}, {post.frontmatter.date}
             </span>
           </div>
-          <div style={{ marginTop: 20 }}>
+          <div className={IzvjestajiStyle.layDiv} style={{ marginTop: 20 }}>
             <MDXRenderer>{post.body}</MDXRenderer>
           </div>
         </div>

@@ -1,6 +1,17 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { ButtonDropdown, DropdownToggle, DropdownMenu } from "reactstrap"
+import {
+  ButtonDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  InputGroup,
+  Input,
+  Button,
+} from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import HeaderBottomStyle from "../components/componentsStyles/headerBottom.module.css"
 import home from "../images/iconHome.png"
@@ -13,8 +24,10 @@ import login from "../images/iconUser.png"
 
 const Header = props => {
   const [dropdownOpen, setOpen] = useState(false)
+  const [modal, setModal] = useState(false)
 
   const toggle = () => setOpen(!dropdownOpen)
+  const toggle2 = () => setModal(!modal)
   return (
     <div className={HeaderBottomStyle.nav}>
       <div className={HeaderBottomStyle.iconContainer}>
@@ -80,20 +93,47 @@ const Header = props => {
               className={HeaderBottomStyle.iconContainer}
               id={HeaderBottomStyle.loginContainer}
             >
-              <Link to="/registracija">
+              <a
+                href="#Prijava"
+                onClick={toggle2}
+                className={HeaderBottomStyle.navbarName}
+                activeClassName={HeaderBottomStyle.navbarName__active}
+              >
                 <img
                   className={HeaderBottomStyle.icon}
                   src={login}
                   alt="login"
-                ></img>
-              </Link>
-              <Link
-                to="/registracija"
-                className={HeaderBottomStyle.navbarName}
-                activeClassName={HeaderBottomStyle.navbarName__active}
+                ></img>{" "}
+              </a>
+              PRIJAVA
+              <Modal
+                isOpen={modal}
+                toggle={toggle2}
+                className={HeaderBottomStyle.prijavaModal}
               >
-                PRIJAVA
-              </Link>
+                <ModalHeader toggle={toggle2}>PRIJAVA </ModalHeader>
+                <ModalBody className={HeaderBottomStyle.modBod}>
+                  <div className={HeaderBottomStyle.input}>
+                    <InputGroup className={HeaderBottomStyle.mail} size="sm">
+                      <Input placeholder="e-mail" />
+                    </InputGroup>
+                    <InputGroup className={HeaderBottomStyle.lozinka} size="sm">
+                      <Input placeholder="lozinka" />
+                    </InputGroup>
+                  </div>
+                </ModalBody>
+                <ModalFooter className={HeaderBottomStyle.btnFot}>
+                  <div className={HeaderBottomStyle.divBtn}>
+                    <Button
+                      className={HeaderBottomStyle.button2}
+                      color="secondary"
+                      onClick={toggle2}
+                    >
+                      PRIJAVI ME
+                    </Button>{" "}
+                  </div>
+                </ModalFooter>
+              </Modal>
             </div>
             <div className={HeaderBottomStyle.iconContainer}>
               <Link to="/registracija">

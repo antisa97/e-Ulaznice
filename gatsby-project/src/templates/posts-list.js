@@ -24,6 +24,7 @@ const BlogList = ({
   return (
     <Layout>
       <div style={{ backgroundColor: "#ffd07b " }}>
+        <h3 className={IzvjestajiStyle.pageTitle}>Dojmovi</h3>
         <div className={IzvjestajiStyle.pageDiv}>
           <BlogExcerpt posts={posts} />
         </div>

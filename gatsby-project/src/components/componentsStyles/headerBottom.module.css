@@ -58,4 +58,51 @@
   #loginContainer {
     margin-bottom: 1em;
   }
+
+  .button2 {
+    letter-spacing: 1.1px;
+    border-width: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 25px;
+    padding-top: 13px;
+    padding-right: 32px;
+    padding-bottom: 13px;
+    padding-left: 32px;
+    font-size: 0.93em;
+    margin-top: 2px;
+    width: 155px;
+    background-color: var(--secondary-color);
+    color: #003e80;
+    border: 1.5px solid #003e80;
+  }
+
+  .button2:hover {
+    outline: 0 !important;
+    background-color: #003e80;
+    color: var(--secondary-color);
+    border-color: #003e80;
+  }
+
+  .prijavaModal {
+    margin-top: 300px;
+  }
+  .mail {
+    height: 40px !important;
+    margin-bottom: 10px;
+  }
+  .lozinka {
+    height: 40px !important;
+    margin-bottom: 10px;
+  }
+  .btnFot {
+    display: block !important;
+    text-align: center;
+    border-top: none !important;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+  }
+  .modBod {
+    padding: 1.5rem 0.75rem 0 0.75rem;
+  }
 }

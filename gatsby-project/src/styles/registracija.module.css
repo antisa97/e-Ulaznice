@@ -9,10 +9,10 @@
 
 .pageTitle {
   text-transform: uppercase;
-  padding: 1em 0 1em 1.3em;
+  margin: 1em 0;
   letter-spacing: 2px;
-  margin-bottom: 0;
   color: #4a4a4a;
+  text-align: center;
 }
 
 .form {
@@ -67,8 +67,11 @@
 
 @media screen and (max-width: 530px) {
   .pageTitle {
+    text-transform: uppercase;
+    margin: 1em 0;
+    letter-spacing: 2px;
+    color: #4a4a4a;
     text-align: center;
-    padding-left: 0;
   }
 
   .forms {

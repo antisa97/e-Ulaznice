@@ -16,7 +16,7 @@
   z-index: 1;
 }
 .pageDiv {
-  margin: 0 auto;
+  margin: 0 -10px 0 100px;
   max-width: 1000px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -54,4 +54,39 @@
 .link:visited:hover {
   color: #003e80;
   text-decoration-color: #003e80;
+}
+
+.pageTitle {
+  text-transform: uppercase;
+  margin: 1em 0;
+  letter-spacing: 2px;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+@media screen and (max-width: 731px) {
+  .pageDiv {
+    grid-template-columns: auto;
+    margin: 0 auto;
+  }
+  .blogLink {
+    font-size: 3.8vw;
+  }
+  .naslov {
+    margin-top: 20px;
+  }
+  .Circle {
+    max-width: 350px;
+    margin: 40px 10px;
+  }
+  .layDiv {
+    padding: 0 1em;
+  }
+  .pageTitle {
+    text-transform: uppercase;
+    margin: 1em 0;
+    letter-spacing: 2px;
+    color: #4a4a4a;
+    text-align: center;
+  }
 }

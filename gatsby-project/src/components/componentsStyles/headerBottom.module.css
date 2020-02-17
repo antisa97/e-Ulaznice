@@ -84,10 +84,6 @@
     color: var(--secondary-color);
     border-color: #003e80;
   }
-
-  .prijavaModal {
-    margin-top: 300px;
-  }
   .mail {
     height: 40px !important;
     margin-bottom: 10px;

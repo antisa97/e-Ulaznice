@@ -110,17 +110,17 @@ const Header = props => {
                 isOpen={modal}
                 toggle={toggle2}
                 className={HeaderBottomStyle.prijavaModal}
+                centered={true}
+                autoFocus={true}
               >
                 <ModalHeader toggle={toggle2}>PRIJAVA </ModalHeader>
                 <ModalBody className={HeaderBottomStyle.modBod}>
-                  <div className={HeaderBottomStyle.input}>
-                    <InputGroup className={HeaderBottomStyle.mail} size="sm">
-                      <Input placeholder="e-mail" />
-                    </InputGroup>
-                    <InputGroup className={HeaderBottomStyle.lozinka} size="sm">
-                      <Input placeholder="lozinka" />
-                    </InputGroup>
-                  </div>
+                  <InputGroup className={HeaderBottomStyle.mail} size="sm">
+                    <Input placeholder="e-mail" />
+                  </InputGroup>
+                  <InputGroup className={HeaderBottomStyle.lozinka} size="sm">
+                    <Input placeholder="lozinka" />
+                  </InputGroup>
                 </ModalBody>
                 <ModalFooter className={HeaderBottomStyle.btnFot}>
                   <div className={HeaderBottomStyle.divBtn}>

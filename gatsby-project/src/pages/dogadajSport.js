@@ -6,14 +6,27 @@ import DogadajiStyle from "../styles/dogadaji.module.css"
 import { Button } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Swal from "sweetalert2"
-
+import SEO from "../components/seo"
 import "../styles/style.css"
 import eventsList from "../data/dogadaji.json"
 import DogadajImage from "../components/dogadajImage"
 import IconImage from "../components/iconImage"
 
 function ok() {
-  Swal.fire("Vaša kupnja je uspješno obavljena!", "", "success")
+  Swal.fire({
+    title: "Jeste li sigurni da želite kupiti ovu ulaznicu?",
+    text: "Nakon pristanka na kupnju nećete moći odustati!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "success",
+    cancelButtonColor: "#ff0000",
+    confirmButtonText: "Da",
+    cancelButtonText: "Odustani",
+  }).then(result => {
+    if (result.value) {
+      Swal.fire("Vaša kupnja je uspješno obavljena!", "", "success")
+    }
+  })
 }
 
 /* function myFunction() {
@@ -49,6 +62,7 @@ const DogadajiPage = props => {
   //do tu
   return (
     <Layout>
+      <SEO title="Događaji" />
       <div className={DogadajiStyle.page}>
         <div className={DogadajiStyle.pageDiv}>
           <h3 className={DogadajiStyle.pageTitle}>Događaji</h3>

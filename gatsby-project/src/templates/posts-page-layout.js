@@ -1,7 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-//import PozadinskaSlika from "../components/pozadinskaslika"
-//import SEO from "../components/seo"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import BlogNav, { leftArrow, rightArrow } from "../components/blog-navigation"

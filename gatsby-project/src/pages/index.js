@@ -12,6 +12,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css"
 import Layout from "../components/layout"
 import NaslovnicaStyle from "../styles/index.module.css"
+import SEO from "../components/seo"
 
 const NaslovnicaPage = props => {
   const items = [
@@ -96,6 +97,7 @@ const NaslovnicaPage = props => {
 
   return (
     <Layout>
+      <SEO title="Naslovnica" />
       <div className={NaslovnicaStyle.divCarousel}>
         <Carousel
           className={NaslovnicaStyle.Carousel}

@@ -10,11 +10,13 @@ import {
   FormText,
   CustomInput,
 } from "reactstrap"
+import SEO from "../components/seo"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const RegistracijaPage = () => {
   return (
     <Layout>
+      <SEO title="Registracija" />
       <div className={RegistracijaStyle.page}>
         <div className={RegistracijaStyle.pageDiv}>
           <h3 className={RegistracijaStyle.pageTitle}>Registracija</h3>

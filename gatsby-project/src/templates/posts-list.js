@@ -5,6 +5,7 @@ import BlogExcerpt from "../components/blog-excerpt"
 import BlogNav, { leftArrow, rightArrow } from "../components/blog-navigation"
 import "../styles/style.css"
 import IzvjestajiStyle from "../styles/izvjestaji.module.css"
+import SEO from "../components/seo"
 
 const BlogList = ({
   pageContext,
@@ -23,6 +24,7 @@ const BlogList = ({
 
   return (
     <Layout>
+      <SEO title="Dojmovi" />
       <div style={{ backgroundColor: "#ffd07b " }}>
         <h3 className={IzvjestajiStyle.pageTitle}>Dojmovi</h3>
         <div className={IzvjestajiStyle.pageDiv}>

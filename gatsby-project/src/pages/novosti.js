@@ -12,6 +12,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 const NovostiPage = props => {
   const [modal, setModal] = useState(false)
@@ -29,6 +30,7 @@ const NovostiPage = props => {
   const toggle5 = () => setModal5(!modal5)
   return (
     <Layout>
+      <SEO title="Novosti" />
       <div className={NovostiStyle.page}>
         <div className={NovostiStyle.pageDiv}>
           <h3 className={NovostiStyle.pageTitle}>Novosti</h3>

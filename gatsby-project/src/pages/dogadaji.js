@@ -10,6 +10,7 @@ import "../styles/style.css"
 import eventsList from "../data/dogadaji.json"
 import DogadajImage from "../components/dogadajImage"
 import IconImage from "../components/iconImage"
+import SEO from "../components/seo"
 
 function ok() {
   Swal.fire({
@@ -61,6 +62,7 @@ const DogadajiPage = props => {
   //do tu
   return (
     <Layout>
+      <SEO title="Događaji" />
       <div className={DogadajiStyle.page}>
         <div className={DogadajiStyle.pageDiv}>
           <h3 className={DogadajiStyle.pageTitle}>Događaji</h3>

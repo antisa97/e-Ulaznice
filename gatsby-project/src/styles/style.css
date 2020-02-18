@@ -185,6 +185,36 @@ button.swal2-confirm.swal2-styled:focus {
   box-shadow: none;
 }
 
+button.swal2-cancel.swal2-styled {
+  letter-spacing: 1.1px;
+  border-width: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 25px;
+  padding-top: 13px;
+  padding-right: 32px;
+  padding-bottom: 13px;
+  padding-left: 32px;
+  margin-top: 2px;
+  width: 190px;
+  background-color: white !important;
+  color: red;
+  border: 1.5px solid red;
+  border-left-color: red !important;
+  border-right-color: red !important;
+}
+
+button.swal2-cancel.swal2-styled:hover {
+  outline: 0 !important;
+  background-color: red !important;
+  color: white;
+}
+
+button.swal2-cancel.swal2-styled:focus {
+  box-shadow: none;
+}
+
 /*dropUp*/
 .dropup .dropdown-toggle::after {
   display: none;

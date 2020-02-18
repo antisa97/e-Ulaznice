@@ -16,10 +16,10 @@
   z-index: 1;
 }
 .pageDiv {
-  margin: 0 -10px 0 100px;
+  margin: 0 auto;
   max-width: 1000px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
 }
 .blogLink {
   padding-bottom: 30px;

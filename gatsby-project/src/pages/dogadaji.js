@@ -12,7 +12,20 @@ import DogadajImage from "../components/dogadajImage"
 import IconImage from "../components/iconImage"
 
 function ok() {
-  Swal.fire("Vaša kupnja je uspješno obavljena!", "", "success")
+  Swal.fire({
+    title: "Jeste li sigurni da želite kupiti ovu ulaznicu?",
+    text: "Nakon pristanka na kupnju nećete moći odustati!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "success",
+    cancelButtonColor: "#ff0000",
+    confirmButtonText: "Da",
+    cancelButtonText: "Odustani",
+  }).then(result => {
+    if (result.value) {
+      Swal.fire("Vaša kupnja je uspješno obavljena!", "", "success")
+    }
+  })
 }
 
 /* function myFunction() {

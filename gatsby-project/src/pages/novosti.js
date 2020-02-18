@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import NovostiStyle from "../styles/novosti.module.css"
 import {
@@ -12,13 +11,7 @@ import {
 } from "reactstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { graphql } from "gatsby"
-import img1 from "../images/celine.jpg"
-import img11 from "../images/celine.png"
-import img2 from "../images/boticeli.jpg"
-import img3 from "../images/zorica.jpg"
-import img4 from "../images/toni.jpg"
-import img5 from "../images/massimo.jpg"
-import img6 from "../images/parnivaljak.jpg"
+import Img from "gatsby-image"
 
 const NovostiPage = props => {
   const [modal, setModal] = useState(false)
@@ -41,16 +34,21 @@ const NovostiPage = props => {
           <h3 className={NovostiStyle.pageTitle}>Novosti</h3>
           <div className={NovostiStyle.media}>
             <div className={NovostiStyle.left}>
-              <Media left>
+              <Media className={NovostiStyle.slika1}>
+                {" "}
+                <div className={NovostiStyle.slika2}>
+                  <Img
+                    className={NovostiStyle.mainImage}
+                    fluid={props.data.celine.childImageSharp.fluid}
+                  />
+                </div>
+              </Media>
+              <Media body className={NovostiStyle.body}>
                 <Media
                   className={NovostiStyle.slika1}
-                  object
-                  src={img11}
-                  alt="Generic placeholder image"
-                />
-              </Media>
-              <Media body>
-                <Media heading style={{ marginTop: 20 }}>
+                  heading
+                  style={{ marginTop: 20 }}
+                >
                   CELINE DION DOLAZI U ZAGREB{" "}
                 </Media>
                 <div className={NovostiStyle.subText}>
@@ -104,10 +102,10 @@ const NovostiPage = props => {
                     CELINE DION DOLAZI ZAGREB{" "}
                   </ModalHeader>
                   <ModalBody>
-                    <img
-                      src={img1}
+                    <Img
                       className={NovostiStyle.modalMainImage}
-                    ></img>
+                      fluid={props.data.celine.childImageSharp.fluid}
+                    />
                     <p style={{ marginTop: 15 }}>
                       Jedna od najpoznatijih i najcjenjenijih zvijezda u
                       povijesti pop glazbe, Celine Dion, 05. lipnja 2020. godine
@@ -202,12 +200,13 @@ const NovostiPage = props => {
             <div className={NovostiStyle.right}>
               <Media className={NovostiStyle.secondMedia}>
                 <Media left>
-                  <Media
-                    className={NovostiStyle.slika2}
-                    object
-                    src={img2}
-                    alt="Generic placeholder image"
-                  />
+                  <Media className={NovostiStyle.slika1}>
+                    {" "}
+                    <Img
+                      className={NovostiStyle.supportImage}
+                      fluid={props.data.bocelli.childImageSharp.fluid}
+                    />
+                  </Media>
                 </Media>
                 <Media body>
                   <Media heading>
@@ -234,10 +233,10 @@ const NovostiPage = props => {
                         DVORANI STOŽICE{" "}
                       </ModalHeader>
                       <ModalBody>
-                        <img
-                          src={img2}
+                        <Img
                           className={NovostiStyle.modalMainImage}
-                        ></img>
+                          fluid={props.data.bocelli.childImageSharp.fluid}
+                        />
                         <p style={{ marginTop: 15 }}>
                           Nakon četiri godine slavni talijanski tenor ponovno će
                           nastupiti pred slovenskom publikom, koja će u njegovoj
@@ -312,12 +311,13 @@ const NovostiPage = props => {
               </Media>
               <Media className={NovostiStyle.secondMedia}>
                 <Media left>
-                  <Media
-                    className={NovostiStyle.slika2}
-                    object
-                    src={img3}
-                    alt="Generic placeholder image"
-                  />
+                  <Media className={NovostiStyle.slika1}>
+                    {" "}
+                    <Img
+                      className={NovostiStyle.supportImage}
+                      fluid={props.data.zore.childImageSharp.fluid}
+                    />
+                  </Media>
                 </Media>
                 <Media body>
                   <Media heading>
@@ -344,10 +344,10 @@ const NovostiPage = props => {
                         ARSENALU{" "}
                       </ModalHeader>
                       <ModalBody>
-                        <img
-                          src={img3}
+                        <Img
                           className={NovostiStyle.modalMainImage}
-                        ></img>
+                          fluid={props.data.zore.childImageSharp.fluid}
+                        />
                         <p style={{ marginTop: 15 }}>
                           Ovogodišnju koncertnu sezonu otvorit će jedinstvena
                           glazbena diva Zorica Kondža u pratnji klape Cambi.
@@ -422,12 +422,13 @@ const NovostiPage = props => {
               </Media>
               <Media className={NovostiStyle.secondMedia}>
                 <Media left>
-                  <Media
-                    className={NovostiStyle.slika2}
-                    object
-                    src={img4}
-                    alt="Generic placeholder image"
-                  />
+                  <Media className={NovostiStyle.slika1}>
+                    {" "}
+                    <Img
+                      className={NovostiStyle.supportImage}
+                      fluid={props.data.tony.childImageSharp.fluid}
+                    />
+                  </Media>
                 </Media>
                 <Media body>
                   <Media heading>
@@ -454,10 +455,10 @@ const NovostiPage = props => {
                         ZAGREB!{" "}
                       </ModalHeader>
                       <ModalBody>
-                        <img
-                          src={img4}
+                        <Img
                           className={NovostiStyle.modalMainImage}
-                        ></img>
+                          fluid={props.data.tony.childImageSharp.fluid}
+                        />
                         <p style={{ marginTop: 15 }}>
                           Izuzetno uspješna turneja #samoljubav{" "}
                           <a
@@ -570,12 +571,13 @@ const NovostiPage = props => {
               </Media>
               <Media className={NovostiStyle.secondMedia}>
                 <Media left>
-                  <Media
-                    className={NovostiStyle.slika2}
-                    object
-                    src={img5}
-                    alt="Generic placeholder image"
-                  />
+                  <Media className={NovostiStyle.slika1}>
+                    {" "}
+                    <Img
+                      className={NovostiStyle.supportImage}
+                      fluid={props.data.massimo.childImageSharp.fluid}
+                    />
+                  </Media>
                 </Media>
                 <Media body>
                   <Media heading>
@@ -602,10 +604,10 @@ const NovostiPage = props => {
                         SPECIJALNO ZA VAS{" "}
                       </ModalHeader>
                       <ModalBody>
-                        <img
-                          src={img5}
+                        <Img
                           className={NovostiStyle.modalMainImage}
-                        ></img>
+                          fluid={props.data.massimo.childImageSharp.fluid}
+                        />
                         <p style={{ marginTop: 15 }}>
                           „U tvom poljupcu je za mene spas“, „Oba nam srca spaja
                           isti osjećaj“, „Mogu čuti srcem“, „Ljubit ću dok usne
@@ -762,12 +764,13 @@ const NovostiPage = props => {
                 id={NovostiStyle.last}
               >
                 <Media left>
-                  <Media
-                    className={NovostiStyle.slika2}
-                    object
-                    src={img6}
-                    alt="Generic placeholder image"
-                  />
+                  <Media className={NovostiStyle.slika1}>
+                    {" "}
+                    <Img
+                      className={NovostiStyle.supportImage}
+                      fluid={props.data.parnivaljak.childImageSharp.fluid}
+                    />
+                  </Media>
                 </Media>
                 <Media body>
                   <Media heading>
@@ -794,10 +797,10 @@ const NovostiPage = props => {
                         #TURNEJARUNDA44{" "}
                       </ModalHeader>
                       <ModalBody>
-                        <img
-                          src={img6}
+                        <Img
                           className={NovostiStyle.modalMainImage}
-                        ></img>
+                          fluid={props.data.parnivaljak.childImageSharp.fluid}
+                        />
                         <p style={{ marginTop: 15 }}>
                           Parni valjak hrvatska je rock grupa. Sastav čine
                           Husein Hasanefendić – Hus, Aki Rahimovski, Marijan
@@ -854,58 +857,44 @@ export default NovostiPage
 
 export const query = graphql`
   query {
-    glazba: file(relativePath: { eq: "slika1.jpg" }) {
+    celine: file(relativePath: { eq: "celine.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 1724, maxHeight: 850) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    kazaliste: file(relativePath: { eq: "naslovnica_kazaliste.jpg" }) {
+    bocelli: file(relativePath: { eq: "boticeli.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 960, maxHeight: 360) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    sport: file(relativePath: { eq: "naslovnica_sport.jpeg" }) {
+    zore: file(relativePath: { eq: "zorica.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 960, maxHeight: 360) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    ostalo: file(relativePath: { eq: "naslovnica_ostalo.jpg" }) {
+    tony: file(relativePath: { eq: "toni.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 960, maxHeight: 360) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    koncert: file(relativePath: { eq: "naslovna_konc.jpg" }) {
+    massimo: file(relativePath: { eq: "massimo.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 960, maxHeight: 360) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
-    cultureIcon: file(relativePath: { eq: "celine.jpg" }) {
+    parnivaljak: file(relativePath: { eq: "parnivaljak.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    sportIcon: file(relativePath: { eq: "sport.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    filmIcon: file(relativePath: { eq: "film.png" }) {
-      childImageSharp {
-        fluid {
+        fluid(maxWidth: 960, maxHeight: 360) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

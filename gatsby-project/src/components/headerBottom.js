@@ -22,7 +22,7 @@ import dots from "../images/iconDots.png"
 import registration from "../images/iconRegistration.png"
 import login from "../images/iconUser.png"
 
-const Header = props => {
+const Header = () => {
   const [dropdownOpen, setOpen] = useState(false)
   const [modal, setModal] = useState(false)
 
@@ -109,7 +109,7 @@ const Header = props => {
               <Modal
                 isOpen={modal}
                 toggle={toggle2}
-                className={HeaderBottomStyle.prijavaModal}
+                id={HeaderBottomStyle.prijavaModal}
                 centered={true}
                 autoFocus={true}
               >

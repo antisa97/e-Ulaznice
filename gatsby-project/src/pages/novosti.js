@@ -36,12 +36,10 @@ const NovostiPage = props => {
             <div className={NovostiStyle.left}>
               <Media className={NovostiStyle.slika1}>
                 {" "}
-                <div className={NovostiStyle.slika2}>
-                  <Img
-                    className={NovostiStyle.mainImage}
-                    fluid={props.data.celine.childImageSharp.fluid}
-                  />
-                </div>
+                <Img
+                  className={NovostiStyle.mainImage}
+                  fluid={props.data.celine.childImageSharp.fluid}
+                />
               </Media>
               <Media body className={NovostiStyle.body}>
                 <Media
@@ -137,6 +135,7 @@ const NovostiPage = props => {
                       <a
                         href="https://www.youtube.com/watch?v=_8EokLztgMo"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         OVDJE
                       </a>
@@ -145,6 +144,7 @@ const NovostiPage = props => {
                       <a
                         href="https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsmarturl.it%2FCelineDionCourage&amp;data=02%7C01%7Cerica.silver%40sonymusic.com%7C13b28830f3fe417981e608d73adf0ee3%7Cf0aff3b791a54aaeaf71c63e1dda2049%7C0%7C0%7C637042602003445808&amp;sdata=a3u72PaYqzJeDBN4DIsOuvIScf8IceXnT1pcylVSDYY%3D&amp;reserved=0"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         {" "}
                         OVDJE.
@@ -183,6 +183,7 @@ const NovostiPage = props => {
                       color="primary"
                       href="https://www.facebook.com/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Podijeli
                     </Button>{" "}
@@ -293,6 +294,7 @@ const NovostiPage = props => {
                           color="primary"
                           href="https://www.facebook.com/"
                           target="_blank"
+                          rel="noopener noreferrer"
                           className={NovostiStyle.button}
                         >
                           Podijeli
@@ -404,6 +406,7 @@ const NovostiPage = props => {
                           color="primary"
                           href="https://www.facebook.com/"
                           target="_blank"
+                          rel="noopener noreferrer"
                           className={NovostiStyle.button}
                         >
                           Podijeli
@@ -464,6 +467,7 @@ const NovostiPage = props => {
                           <a
                             href="https://www.facebook.com/tonycetinskiofficial/?epa=SEARCH_BOX"
                             target="_blank"
+                            rel="noopener noreferrer"
                             data-saferedirecturl="https://www.google.com/url?q=https://www.facebook.com/tonycetinskiofficial/?epa%3DSEARCH_BOX&amp;source=gmail&amp;ust=1576666730321000&amp;usg=AFQjCNElLjF5Z8vSFW1XvR1290duV7io-w"
                           >
                             Tonyja Cetinskog
@@ -553,6 +557,7 @@ const NovostiPage = props => {
                           color="primary"
                           href="https://www.facebook.com/"
                           target="_blank"
+                          rel="noopener noreferrer"
                           className={NovostiStyle.button}
                         >
                           Podijeli
@@ -743,6 +748,7 @@ const NovostiPage = props => {
                           color="primary"
                           href="https://www.facebook.com/"
                           target="_blank"
+                          rel="noopener noreferrer"
                           className={NovostiStyle.button}
                         >
                           Podijeli
@@ -829,6 +835,7 @@ const NovostiPage = props => {
                           color="primary"
                           href="https://www.facebook.com/"
                           target="_blank"
+                          rel="noopener noreferrer"
                           className={NovostiStyle.button}
                         >
                           Podijeli

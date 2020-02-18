@@ -1,21 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-import {
-  Card,
-  Button,
-  CardImg,
-  CardTitle,
-  CardText,
-  CardColumns,
-  CardSubtitle,
-  CardBody,
-} from "reactstrap"
 import IzvjestajiStyle from "../styles/izvjestaji.module.css"
 
 export default ({ posts }) => {
   const postsList = posts.map(({ post }) => {
     const { id } = post
-    const { title, date, author, slug, description } = post.frontmatter
+    const { title, date, author, slug } = post.frontmatter
     return (
       <div className={IzvjestajiStyle.pageDiv}>
         <div className={IzvjestajiStyle.asd}>

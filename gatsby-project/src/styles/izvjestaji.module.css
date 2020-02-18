@@ -65,7 +65,7 @@
 }
 @media only screen and (max-width: 900px) {
   .pageDiv {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
   }
   .Circle {
     max-width: 320px;

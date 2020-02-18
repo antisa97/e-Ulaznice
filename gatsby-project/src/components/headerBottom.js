@@ -105,7 +105,14 @@ const Header = () => {
                   alt="login"
                 ></img>{" "}
               </a>
-              PRIJAVA
+              <a
+                href="#Prijava"
+                onClick={toggle2}
+                className={HeaderBottomStyle.navbarName}
+                activeClassName={HeaderBottomStyle.navbarName__active}
+              >
+                PRIJAVA
+              </a>
               <Modal
                 isOpen={modal}
                 toggle={toggle2}

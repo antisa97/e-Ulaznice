@@ -40,6 +40,10 @@
   max-width: 170px;
   font-size: 20px;
 }
+#search:focus,
+input:focus {
+  outline: none;
+}
 
 ::placeholder {
   color: #7b7b7b;

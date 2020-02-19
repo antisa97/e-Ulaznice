@@ -57,6 +57,7 @@ const DogadajiPage = props => {
               value={searchInput}
               onChange={handleChange}
               id={DogadajiStyle.search}
+              autoFocus={false}
               placeholder="Pretraživanje"
             />
           </div>

@@ -1,6 +1,8 @@
 # e-Ulaznice
 Projekt za Korisnička sučelja (250)
 
+LINK NA STRANICU : https://relaxed-torvalds-d722fb.netlify.com/
+
 ## Low Fidelity:
 
 ![LF Naslovnica](slike/low_fidelity1.jpeg)

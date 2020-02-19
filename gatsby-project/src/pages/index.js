@@ -75,7 +75,6 @@ const NaslovnicaPage = props => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        {/* <img src={item.src} alt={item.altText} /> */}
         <Img
           fluid={item.src}
           alt={item.altText}

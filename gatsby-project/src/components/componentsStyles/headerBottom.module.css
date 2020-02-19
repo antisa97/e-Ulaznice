@@ -12,8 +12,6 @@
     padding: 0.6em 0.4em 0.4em 0.4em;
     background-color: var(--secondary-color);
     z-index: 1;
-    /* border-top: solid 1px grey; */
-    /* box-shadow: 0 0 12px 2px #e7f3f9; */
     box-shadow: 0 0 7px 2px #adb5ba;
   }
 

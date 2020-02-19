@@ -5,6 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import HeaderStyle from "../components/componentsStyles/header.module.css"
 import logo from "../images/logo.png"
 
+function refreshPage() {
+  window.location.reload(false)
+}
+
 const Header = props => {
   return (
     <Navbar
@@ -64,12 +68,17 @@ const Header = props => {
 
       <div className={HeaderStyle.input}>
         <InputGroup className={HeaderStyle.mail} size="sm">
-          <Input placeholder="e-mail" />
+          <Input placeholder="e-mail" type="email" />
         </InputGroup>
         <InputGroup className={HeaderStyle.lozinka} size="sm">
-          <Input placeholder="lozinka" />
+          <Input placeholder="lozinka" type="password" />
         </InputGroup>
-        <Button className={HeaderStyle.button} color="warning" outline="false">
+        <Button
+          className={HeaderStyle.button}
+          color="warning"
+          outline="false"
+          onClick={refreshPage}
+        >
           PRIJAVI ME
         </Button>{" "}
       </div>

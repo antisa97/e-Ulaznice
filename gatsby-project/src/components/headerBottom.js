@@ -127,7 +127,7 @@ const Header = () => {
                 <ModalHeader toggle={toggle2}>PRIJAVA </ModalHeader>
                 <ModalBody className={HeaderBottomStyle.modBod}>
                   <InputGroup className={HeaderBottomStyle.mail} size="sm">
-                    <Input placeholder="e-mail" />
+                    <Input placeholder="e-mail" type="email" />
                   </InputGroup>
                   <InputGroup className={HeaderBottomStyle.lozinka} size="sm">
                     <Input placeholder="lozinka" type="password" />

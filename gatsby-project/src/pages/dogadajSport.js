@@ -29,25 +29,7 @@ function ok() {
   })
 }
 
-/* function myFunction() {
-  var input, filter, cards, cardContainer, h5, title, i
-  input = document.getElementById("search")
-  filter = input.value.toUpperCase()
-  cardContainer = document.getElementById("cardCont")
-  cards = cardContainer.getElementsByClassName("card")
-  for (i = 0; i < cards.length; i++) {
-    title = cards[i].querySelector(".category p.cardTitle")
-    if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-      cards[i].style.display = ""
-    } else {
-      cards[i].style.display = "none"
-    }
-  }
-} */
-
 const DogadajiPage = props => {
-  //dodano
-
   const [searchInput, setSearchInput] = useState("sport")
   const [searchResult, setSearchResult] = useState([])
   const handleChange = e => {
@@ -59,7 +41,6 @@ const DogadajiPage = props => {
     )
     setSearchResult(results)
   }, [searchInput])
-  //do tu
   return (
     <Layout>
       <SEO title="Događaji" />
@@ -73,7 +54,6 @@ const DogadajiPage = props => {
             />
             <input
               type="text"
-              //ovdje
               value={searchInput}
               onChange={handleChange}
               id={DogadajiStyle.search}

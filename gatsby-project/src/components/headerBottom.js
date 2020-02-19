@@ -28,6 +28,10 @@ const Header = () => {
 
   const toggle = () => setOpen(!dropdownOpen)
   const toggle2 = () => setModal(!modal)
+  const toggleAll = () => {
+    setOpen(!dropdownOpen)
+    setModal(!modal)
+  }
   return (
     <div className={HeaderBottomStyle.nav}>
       <div className={HeaderBottomStyle.iconContainer}>
@@ -95,7 +99,7 @@ const Header = () => {
             >
               <a
                 href="#Prijava"
-                onClick={toggle2}
+                onClick={toggleAll}
                 className={HeaderBottomStyle.navbarName}
                 activeClassName={HeaderBottomStyle.navbarName__active}
               >
@@ -107,7 +111,7 @@ const Header = () => {
               </a>
               <a
                 href="#Prijava"
-                onClick={toggle2}
+                onClick={toggleAll}
                 className={HeaderBottomStyle.navbarName}
                 activeClassName={HeaderBottomStyle.navbarName__active}
               >
@@ -126,7 +130,7 @@ const Header = () => {
                     <Input placeholder="e-mail" />
                   </InputGroup>
                   <InputGroup className={HeaderBottomStyle.lozinka} size="sm">
-                    <Input placeholder="lozinka" />
+                    <Input placeholder="lozinka" type="password" />
                   </InputGroup>
                 </ModalBody>
                 <ModalFooter className={HeaderBottomStyle.btnFot}>
